@@ -82,7 +82,7 @@ export default function Header() {
             </a>
             <a
               href="#kontakt"
-              className="cursor-pointer rounded-lg bg-cta px-5 py-2.5 text-sm font-semibold text-white shadow-[0_2px_8px_rgba(13,148,136,0.35)] transition-all duration-200 hover:bg-cta/90 hover:shadow-[0_4px_16px_rgba(13,148,136,0.4)] hover:-translate-y-0.5"
+              className="cursor-pointer rounded-lg bg-cta px-5 py-2.5 text-sm font-semibold text-white shadow-[0_2px_8px_rgba(234,88,12,0.35)] transition-all duration-200 hover:bg-cta/90 hover:shadow-[0_4px_16px_rgba(234,88,12,0.4)] hover:-translate-y-0.5"
             >
               Erstgespräch buchen
             </a>

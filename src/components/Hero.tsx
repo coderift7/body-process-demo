@@ -55,10 +55,17 @@ export default function Hero() {
             transition={{ duration: 0.7, delay: 0.35, ease }}
             className="font-heading text-[2.75rem] font-bold leading-[1.08] tracking-tight text-white sm:text-6xl md:text-7xl lg:text-[5.25rem]"
           >
-            Ihr Lächeln.{" "}
-            <span className="bg-gradient-to-r from-cyan-300 to-teal-300 bg-clip-text text-transparent">
-              In besten Händen.
-            </span>
+            {hero.headline.split(".").slice(0, -1).map((part, i, arr) => (
+              <span key={i}>
+                {i === arr.length - 1 ? (
+                  <span className="bg-gradient-to-r from-orange-400 to-amber-300 bg-clip-text text-transparent">
+                    {part.trim()}.
+                  </span>
+                ) : (
+                  <>{part.trim()}. </>
+                )}
+              </span>
+            ))}
           </motion.h1>
 
           {/* Subheadline */}
@@ -79,14 +86,14 @@ export default function Hero() {
             className="mt-10 flex flex-col items-center gap-4 sm:flex-row sm:justify-center"
           >
             <a
-              href="#termin"
-              className="group inline-flex cursor-pointer items-center gap-2.5 rounded-xl bg-cta px-8 py-4 text-base font-semibold text-white shadow-[0_4px_24px_rgba(13,148,136,0.35)] transition-all duration-200 hover:bg-cta/90 hover:shadow-[0_8px_32px_rgba(13,148,136,0.45)] hover:-translate-y-0.5"
+              href="#kontakt"
+              className="group inline-flex cursor-pointer items-center gap-2.5 rounded-xl bg-cta px-8 py-4 text-base font-semibold text-white shadow-[0_4px_24px_rgba(234,88,12,0.35)] transition-all duration-200 hover:bg-cta/90 hover:shadow-[0_8px_32px_rgba(234,88,12,0.45)] hover:-translate-y-0.5"
             >
               {hero.cta1}
               <ArrowRight className="h-4 w-4 transition-transform duration-200 group-hover:translate-x-1" />
             </a>
             <a
-              href="#behandlungen"
+              href="#leistungen"
               className="inline-flex cursor-pointer items-center gap-2 rounded-xl border border-white/15 px-8 py-4 text-base font-medium text-white/80 backdrop-blur-sm transition-all duration-200 hover:border-white/30 hover:bg-white/[0.06] hover:text-white"
             >
               {hero.cta2}

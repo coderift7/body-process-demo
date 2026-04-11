@@ -30,14 +30,13 @@ export default function Header() {
         <div className="flex h-16 items-center justify-between lg:h-20">
           {/* Logo */}
           <a href="#" className="group flex items-center gap-3">
-            {/* BP Logo */}
             {/* eslint-disable-next-line @next/next/no-img-element */}
             <img
-              src={`${process.env.__NEXT_ROUTER_BASEPATH || ""}/logo.jpeg`}
+              src={`${process.env.__NEXT_ROUTER_BASEPATH || ""}/${isScrolled ? "logo-full.svg" : "logo-dark-bg.svg"}`}
               alt="Body Process"
-              className={`h-12 w-auto transition-all duration-300 ${
-                isScrolled ? "" : "brightness-0 invert"
-              }`}
+              width={180}
+              height={36}
+              className="h-9 w-auto transition-opacity duration-300"
             />
           </a>
 

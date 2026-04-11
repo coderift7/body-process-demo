@@ -4,11 +4,18 @@ import { Star, Quote } from "lucide-react";
 import { siteConfig } from "@/config/site";
 import { Reveal, StaggerContainer, StaggerItem } from "./Motion";
 
-const basePath = process.env.__NEXT_ROUTER_BASEPATH || "";
+const avatarColors = [
+  "bg-accent/10 text-accent",
+  "bg-emerald-500/10 text-emerald-600",
+  "bg-blue-500/10 text-blue-600",
+];
 
 export default function Testimonials() {
   return (
-    <section id="bewertungen" className="relative overflow-hidden bg-muted py-24 lg:py-32">
+    <section
+      id="bewertungen"
+      className="relative overflow-hidden bg-muted py-24 lg:py-32"
+    >
       {/* Subtle gradient accent */}
       <div className="absolute left-0 top-0 h-full w-1/3 bg-gradient-to-r from-accent/[0.03] to-transparent" />
 
@@ -17,13 +24,14 @@ export default function Testimonials() {
         <Reveal>
           <div className="max-w-xl">
             <span className="text-sm font-semibold uppercase tracking-widest text-accent">
-              Patientenstimmen
+              Kundenstimmen
             </span>
             <h2 className="mt-3 font-heading text-3xl font-bold tracking-tight text-primary sm:text-4xl lg:text-5xl">
-              Das sagen unsere Patienten
+              Das sagen meine Kunden
             </h2>
             <p className="mt-4 text-lg leading-relaxed text-muted-foreground">
-              Über 3.500 zufriedene Patienten vertrauen {siteConfig.company.name}.
+              Über 100 zufriedene Kunden vertrauen{" "}
+              {siteConfig.company.name}.
             </p>
           </div>
         </Reveal>
@@ -58,12 +66,13 @@ export default function Testimonials() {
 
                 {/* Author */}
                 <div className="mt-6 flex items-center gap-3 border-t border-border pt-5">
-                  {/* eslint-disable-next-line @next/next/no-img-element */}
-                  <img
-                    src={`${basePath}${testimonial.image}`}
-                    alt={testimonial.name}
-                    className="h-10 w-10 rounded-full object-cover"
-                  />
+                  <div
+                    className={`flex h-10 w-10 shrink-0 items-center justify-center rounded-full ${avatarColors[i % avatarColors.length]}`}
+                  >
+                    <span className="text-sm font-semibold">
+                      {testimonial.name.charAt(0)}
+                    </span>
+                  </div>
                   <div>
                     <div className="text-sm font-semibold text-primary">
                       {testimonial.name}

@@ -5,8 +5,6 @@ import { motion } from "framer-motion";
 import { siteConfig } from "@/config/site";
 import { Reveal, slideFromLeft, slideFromRight } from "./Motion";
 
-const basePath = process.env.__NEXT_ROUTER_BASEPATH || "";
-
 const statIcons = [Users, Award, BookOpen];
 const statColors = [
   "bg-accent/8 text-accent",
@@ -16,65 +14,53 @@ const statColors = [
 
 export default function Team() {
   const { team } = siteConfig;
+  const member = team.members[0];
 
   return (
-    <section id="ueber-mich" className="noise-overlay relative bg-white py-24 lg:py-32">
+    <section
+      id="ueber-mich"
+      className="noise-overlay relative bg-white py-24 lg:py-32"
+    >
       <div className="relative z-10 mx-auto max-w-7xl px-5 sm:px-6 lg:px-8">
-        {/* Section Header */}
-        <Reveal>
-          <div className="max-w-xl">
-            <span className="text-sm font-semibold uppercase tracking-widest text-accent">
-              Lernen Sie uns kennen
-            </span>
-            <h2 className="mt-3 font-heading text-3xl font-bold tracking-tight text-primary sm:text-4xl lg:text-5xl">
-              {team.heading}
-            </h2>
-            <p className="mt-4 text-lg leading-relaxed text-muted-foreground">
-              {team.description}
-            </p>
-          </div>
-        </Reveal>
+        <div className="grid items-center gap-12 lg:grid-cols-2 lg:gap-16">
+          {/* Left: About text */}
+          <Reveal variants={slideFromLeft}>
+            <div>
+              <span className="text-sm font-semibold uppercase tracking-widest text-accent">
+                Dein Trainer
+              </span>
+              <h2 className="mt-3 font-heading text-3xl font-bold tracking-tight text-primary sm:text-4xl lg:text-5xl">
+                {team.heading}
+              </h2>
+              <p className="mt-4 text-lg leading-relaxed text-muted-foreground">
+                {team.description}
+              </p>
 
-        <div className="mt-14 grid items-start gap-12 lg:grid-cols-5">
-          {/* Team members */}
-          <Reveal variants={slideFromLeft} className="lg:col-span-3">
-            <div className="grid gap-5 sm:grid-cols-3">
-              {team.members.map((member, i) => (
-                <motion.div
-                  key={i}
-                  initial={{ opacity: 0, y: 24 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  viewport={{ once: true }}
-                  transition={{
-                    delay: 0.2 + i * 0.12,
-                    duration: 0.5,
-                    ease: [0.22, 1, 0.36, 1],
-                  }}
-                  className="group rounded-2xl border border-border bg-card p-6 transition-shadow duration-300 hover:shadow-md"
-                >
-                  {/* Avatar */}
-                  {/* eslint-disable-next-line @next/next/no-img-element */}
-                  <img
-                    src={`${basePath}${member.image}`}
-                    alt={member.name}
-                    className="mb-4 h-20 w-20 rounded-2xl object-cover"
-                  />
+              {/* Member info */}
+              <div className="mt-8 flex items-center gap-4">
+                <div className="flex h-14 w-14 items-center justify-center rounded-2xl bg-accent/10">
+                  <span className="font-heading text-lg font-bold text-accent">
+                    JD
+                  </span>
+                </div>
+                <div>
                   <h3 className="font-heading text-base font-semibold text-primary">
                     {member.name}
                   </h3>
-                  <p className="mt-0.5 text-sm font-medium text-accent">
+                  <p className="text-sm font-medium text-accent">
                     {member.role}
                   </p>
-                  <p className="mt-3 text-sm leading-relaxed text-muted-foreground">
-                    {member.description}
-                  </p>
-                </motion.div>
-              ))}
+                </div>
+              </div>
+
+              <p className="mt-4 text-sm leading-relaxed text-muted-foreground">
+                {member.description}
+              </p>
             </div>
           </Reveal>
 
-          {/* Stats */}
-          <Reveal variants={slideFromRight} delay={0.15} className="lg:col-span-2">
+          {/* Right: Stats */}
+          <Reveal variants={slideFromRight} delay={0.15}>
             <div className="relative">
               <div className="absolute -right-6 -top-6 h-32 w-32 rounded-full bg-accent/5 blur-3xl" />
               <div className="absolute -bottom-6 -left-6 h-24 w-24 rounded-full bg-cta/5 blur-2xl" />

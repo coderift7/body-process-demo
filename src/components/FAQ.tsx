@@ -45,6 +45,8 @@ export default function FAQ() {
                 >
                   <button
                     onClick={() => setOpenIndex(isOpen ? null : i)}
+                    aria-expanded={isOpen}
+                    aria-controls={`faq-answer-${i}`}
                     className="flex w-full cursor-pointer items-center justify-between px-6 py-5 text-left"
                   >
                     <span className="pr-4 font-heading text-[15px] font-semibold text-primary">
@@ -54,12 +56,14 @@ export default function FAQ() {
                       animate={{ rotate: isOpen ? 180 : 0 }}
                       transition={{ duration: 0.2 }}
                     >
-                      <ChevronDown className="h-5 w-5 shrink-0 text-muted-foreground" />
+                      <ChevronDown className="h-5 w-5 shrink-0 text-muted-foreground" aria-hidden="true" />
                     </motion.div>
                   </button>
                   <AnimatePresence initial={false}>
                     {isOpen && (
                       <motion.div
+                        id={`faq-answer-${i}`}
+                        role="region"
                         initial={{ height: 0, opacity: 0 }}
                         animate={{ height: "auto", opacity: 1 }}
                         exit={{ height: 0, opacity: 0 }}

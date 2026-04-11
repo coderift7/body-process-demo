@@ -113,6 +113,8 @@ export default function AppointmentForm() {
                         <input
                           type="text"
                           id="name"
+                          name="name"
+                          autoComplete="name"
                           required
                           placeholder="Max Mustermann"
                           className={inputClasses}
@@ -125,6 +127,9 @@ export default function AppointmentForm() {
                         <input
                           type="email"
                           id="email"
+                          name="email"
+                          autoComplete="email"
+                          spellCheck={false}
                           required
                           placeholder="max@beispiel.de"
                           className={inputClasses}
@@ -141,16 +146,19 @@ export default function AppointmentForm() {
                         <input
                           type="tel"
                           id="phone"
+                          name="phone"
+                          autoComplete="tel"
                           placeholder="+49 123 456 789"
                           className={inputClasses}
                         />
                       </div>
                       <div>
                         <label htmlFor="treatment" className={labelClasses}>
-                          Behandlung *
+                          Trainingsart *
                         </label>
                         <select
                           id="treatment"
+                          name="treatment"
                           required
                           className={inputClasses}
                         >
@@ -173,6 +181,7 @@ export default function AppointmentForm() {
                         <input
                           type="date"
                           id="date"
+                          name="date"
                           required
                           className={inputClasses}
                         />
@@ -183,6 +192,7 @@ export default function AppointmentForm() {
                         </label>
                         <select
                           id="timeSlot"
+                          name="timeSlot"
                           className={inputClasses}
                         >
                           <option value="">Bitte wählen</option>
@@ -202,8 +212,9 @@ export default function AppointmentForm() {
                       </label>
                       <textarea
                         id="message"
+                        name="message"
                         rows={3}
-                        placeholder="Besondere Wünsche, Angstpatient, Erstbesuch..."
+                        placeholder="Besondere Wünsche, Verletzungen, Ziele…"
                         className={inputClasses}
                       />
                     </div>
@@ -218,7 +229,7 @@ export default function AppointmentForm() {
                       <span className="text-xs leading-relaxed text-white/40">
                         Ich stimme der{" "}
                         <a
-                          href="/datenschutz"
+                          href={`${process.env.__NEXT_ROUTER_BASEPATH || ""}/datenschutz`}
                           className="text-accent underline decoration-accent/30 hover:decoration-accent/60"
                         >
                           Datenschutzerklärung
@@ -230,7 +241,7 @@ export default function AppointmentForm() {
                     {/* Submit */}
                     <button
                       type="submit"
-                      className="group flex w-full cursor-pointer items-center justify-center gap-2 rounded-xl bg-cta px-6 py-3.5 font-semibold text-white shadow-[0_4px_16px_rgba(13,148,136,0.3)] transition-all duration-200 hover:bg-cta/90 hover:shadow-[0_6px_24px_rgba(13,148,136,0.4)] hover:-translate-y-0.5"
+                      className="group flex w-full cursor-pointer items-center justify-center gap-2 rounded-xl bg-cta px-6 py-3.5 font-semibold text-white shadow-[0_4px_16px_rgba(234,88,12,0.3)] transition-all duration-200 hover:bg-cta/90 hover:shadow-[0_6px_24px_rgba(234,88,12,0.4)] hover:-translate-y-0.5"
                     >
                       <CalendarDays className="h-4 w-4" />
                       {appointment.submitLabel}

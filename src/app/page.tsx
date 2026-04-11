@@ -3,6 +3,8 @@ import Hero from "@/components/Hero";
 import TrustSignals from "@/components/TrustSignals";
 import Services from "@/components/Services";
 import Team from "@/components/Team";
+import Pricing from "@/components/Pricing";
+import Guarantee from "@/components/Guarantee";
 import Testimonials from "@/components/Testimonials";
 import AppointmentForm from "@/components/AppointmentForm";
 import FAQ from "@/components/FAQ";
@@ -12,11 +14,13 @@ export default function Home() {
   return (
     <>
       <Header />
-      <main>
+      <main id="main-content">
         <Hero />
         <TrustSignals />
         <Services />
         <Team />
+        <Pricing />
+        <Guarantee />
         <Testimonials />
         <AppointmentForm />
         <FAQ />

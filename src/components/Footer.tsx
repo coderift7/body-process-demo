@@ -2,6 +2,7 @@
 
 import { Phone, Mail, MapPin, Clock } from "lucide-react";
 import { motion } from "framer-motion";
+import Link from "next/link";
 import { siteConfig } from "@/config/site";
 
 export default function Footer() {
@@ -45,20 +46,20 @@ export default function Footer() {
                 </li>
               ))}
               <li>
-                <a
+                <Link
                   href="/impressum"
                   className="text-sm text-white/50 transition-colors duration-200 hover:text-white"
                 >
                   Impressum
-                </a>
+                </Link>
               </li>
               <li>
-                <a
+                <Link
                   href="/datenschutz"
                   className="text-sm text-white/50 transition-colors duration-200 hover:text-white"
                 >
                   Datenschutz
-                </a>
+                </Link>
               </li>
             </ul>
           </div>

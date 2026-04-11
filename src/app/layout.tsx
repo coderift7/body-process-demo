@@ -53,6 +53,7 @@ export default function RootLayout({
   return (
     <html lang="de" className={`${lexend.variable} ${sourceSans.variable}`}>
       <head>
+        <meta name="theme-color" content="#0F172A" />
         {/* FAQ Schema */}
         <script
           type="application/ld+json"
@@ -100,7 +101,12 @@ export default function RootLayout({
           }}
         />
       </head>
-      <body className="antialiased">{children}</body>
+      <body className="antialiased">
+        <a href="#main-content" className="sr-only focus:not-sr-only focus:fixed focus:left-4 focus:top-4 focus:z-[100] focus:rounded-lg focus:bg-cta focus:px-4 focus:py-2 focus:text-white">
+          Zum Inhalt springen
+        </a>
+        {children}
+      </body>
     </html>
   );
 }

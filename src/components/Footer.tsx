@@ -15,12 +15,12 @@ export default function Footer() {
           {/* Company */}
           <div>
             <div className="mb-5">
-              <span className="block font-heading text-lg font-bold leading-tight tracking-tight text-white">
-                BODY <span className="text-accent">PROCESS</span>
-              </span>
-              <span className="block text-[10px] font-medium uppercase tracking-[0.2em] text-white/40 mt-1">
-                Just in form
-              </span>
+              {/* eslint-disable-next-line @next/next/no-img-element */}
+              <img
+                src={`${process.env.__NEXT_ROUTER_BASEPATH || ""}/logo.jpeg`}
+                alt="Body Process"
+                className="h-12 w-auto brightness-0 invert"
+              />
             </div>
             <p className="text-sm leading-relaxed text-white/45">
               {siteConfig.company.tagline} Personal Training in Hadamar,

@@ -31,25 +31,14 @@ export default function Header() {
           {/* Logo */}
           <a href="#" className="group flex items-center gap-3">
             {/* BP Logo */}
-            <div className="flex items-center gap-3">
-              <div>
-                <span
-                  className={`block font-heading text-xl font-bold leading-tight tracking-tight transition-colors duration-300 ${
-                    isScrolled ? "text-primary" : "text-white"
-                  }`}
-                >
-                  BODY{" "}
-                  <span className="text-accent">PROCESS</span>
-                </span>
-                <span
-                  className={`block text-[10px] font-medium tracking-[0.2em] uppercase transition-colors duration-300 ${
-                    isScrolled ? "text-muted-foreground" : "text-white/50"
-                  }`}
-                >
-                  Just in form
-                </span>
-              </div>
-            </div>
+            {/* eslint-disable-next-line @next/next/no-img-element */}
+            <img
+              src={`${process.env.__NEXT_ROUTER_BASEPATH || ""}/logo.jpeg`}
+              alt="Body Process"
+              className={`h-12 w-auto transition-all duration-300 ${
+                isScrolled ? "" : "brightness-0 invert"
+              }`}
+            />
           </a>
 
           {/* Desktop Nav */}

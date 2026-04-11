@@ -13,20 +13,12 @@ export default function Hero() {
 
   return (
     <section className="grain relative flex min-h-[100dvh] items-center justify-center overflow-hidden bg-primary">
-      {/* Background photo */}
+      {/* Background gradient (placeholder until real photos) */}
       <div className="absolute inset-0">
-        {/* eslint-disable-next-line @next/next/no-img-element */}
-        <img
-          src={`${basePath}/images/hero-bg.jpg`}
-          alt="Personal Training mit Justin Doms — Body Process"
-          className="h-full w-full object-cover"
-        />
-        {/* Dark overlay for text contrast */}
-        <div className="absolute inset-0 bg-primary/70" />
-        {/* Gradient mesh on top of photo */}
-        <div className="absolute inset-0 bg-[radial-gradient(ellipse_80%_50%_at_50%_-20%,rgba(249,115,22,0.25),transparent)]" />
-        <div className="absolute inset-0 bg-[radial-gradient(ellipse_60%_40%_at_80%_80%,rgba(13,148,136,0.1),transparent)]" />
-        <div className="absolute inset-0 bg-gradient-to-b from-primary/30 via-transparent to-primary/60" />
+        <div className="absolute inset-0 bg-primary" />
+        <div className="absolute inset-0 bg-[radial-gradient(ellipse_80%_50%_at_50%_-20%,rgba(249,115,22,0.2),transparent)]" />
+        <div className="absolute inset-0 bg-[radial-gradient(ellipse_60%_60%_at_80%_80%,rgba(249,115,22,0.08),transparent)]" />
+        <div className="absolute inset-0 bg-[radial-gradient(ellipse_40%_40%_at_10%_60%,rgba(30,41,59,0.8),transparent)]" />
       </div>
 
       {/* Geometric accent lines */}

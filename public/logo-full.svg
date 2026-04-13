@@ -1,16 +1,19 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 240 48" fill="none">
-  <!-- BP Monogram -->
+  <!-- BP Icon -->
   <g transform="translate(0, 4)">
-    <!-- B letter -->
-    <path d="M0 0h14c5.5 0 10 2.5 10 7.5 0 3-1.5 5-4 6.2 3 1 5.2 3.5 5.2 7.3 0 5.5-4.5 8.5-10.5 8.5H0V0zm8 11.5h5c2.2 0 3.5-1.2 3.5-3.2s-1.3-3-3.5-3H8v6.2zm0 12.5h6.2c2.5 0 4-1.4 4-3.5s-1.5-3.5-4-3.5H8V24z" fill="#0F172A"/>
-    <!-- P letter (overlapping) -->
-    <path d="M22 0h14c7 0 11.5 4.5 11.5 11S43 22 36 22h-6v7.5h-8V0zm8 15.5h5c2.8 0 4.5-2 4.5-4.5s-1.7-4.5-4.5-4.5h-5v9z" fill="#0F172A"/>
-    <!-- Orange slash -->
-    <rect x="30" y="-2" width="4.5" height="36" rx="2" transform="rotate(20 32 16)" fill="#F97316"/>
+    <!-- Top bar -->
+    <rect x="0" y="0" width="18" height="5" rx="1" fill="#f39200"/>
+    <!-- Middle bar (longer) -->
+    <rect x="0" y="8" width="24" height="5" rx="1" fill="#f39200"/>
+    <!-- Vertical stroke right -->
+    <rect x="19" y="0" width="5" height="13" rx="1" fill="#f39200"/>
+    <!-- Small accent bottom-right -->
+    <rect x="14" y="16" width="10" height="5" rx="1" fill="#f39200"/>
   </g>
-  <!-- BODY PROCESS text -->
-  <text x="58" y="20" font-family="system-ui, -apple-system, sans-serif" font-size="16" font-weight="800" fill="#0F172A" letter-spacing="1.5">BODY</text>
-  <text x="122" y="20" font-family="system-ui, -apple-system, sans-serif" font-size="16" font-weight="800" fill="#0F172A" letter-spacing="1.5">PROCESS</text>
-  <!-- Just in form tagline -->
-  <text x="58" y="38" font-family="system-ui, -apple-system, sans-serif" font-size="11" font-weight="400" fill="#64748B" letter-spacing="0.5" font-style="italic">Just in form</text>
+  <!-- BODY text -->
+  <text x="36" y="18" font-family="'Inter', 'Helvetica Neue', Arial, sans-serif" font-size="17" font-weight="700" fill="#f39200" letter-spacing="1">BODY</text>
+  <!-- PROCESS text -->
+  <text x="103" y="18" font-family="'Inter', 'Helvetica Neue', Arial, sans-serif" font-size="17" font-weight="700" fill="#0F172A" letter-spacing="1">PROCESS</text>
+  <!-- Tagline -->
+  <text x="36" y="36" font-family="'Inter', 'Helvetica Neue', Arial, sans-serif" font-size="9" font-weight="400" fill="#64748B" letter-spacing="0.3">Personal Training &amp; Ernährungscoaching</text>
 </svg>

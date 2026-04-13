@@ -21,11 +21,11 @@ export default function Datenschutz() {
               1. Verantwortlicher
             </h2>
             <p className="mt-2">
-              Zahnarztpraxis Dr. med. dent. Sarah Weber
+              Justin Doms — Body Process Personal Training
               <br />
-              Schönhauser Allee 128, 10437 Berlin
+              Mainzer Landstraße 54, 65589 Hadamar
               <br />
-              E-Mail: praxis@dr-weber-zahnarzt.de
+              E-Mail: info@body-process.de
             </p>
           </div>
 
@@ -44,12 +44,12 @@ export default function Datenschutz() {
 
           <div>
             <h2 className="font-heading text-lg font-semibold text-primary">
-              3. Kontaktformular / Terminbuchung
+              3. Kontaktformular
             </h2>
             <p className="mt-2">
-              Wenn Sie uns über das Terminformular kontaktieren, werden die von
-              Ihnen angegebenen Daten (Name, E-Mail, Telefon, gewünschte
-              Behandlung) zwecks Bearbeitung Ihrer Anfrage und für den Fall von
+              Wenn Sie uns über das Kontaktformular kontaktieren, werden die von
+              Ihnen angegebenen Daten (Name, E-Mail, Telefon, gewünschtes
+              Training) zwecks Bearbeitung Ihrer Anfrage und für den Fall von
               Anschlussfragen bei uns gespeichert. Diese Daten geben wir nicht
               ohne Ihre Einwilligung weiter.
             </p>
@@ -62,7 +62,7 @@ export default function Datenschutz() {
             <p className="mt-2">
               Sie haben das Recht auf Auskunft, Berichtigung, Löschung und
               Einschränkung der Verarbeitung Ihrer personenbezogenen Daten. Bei
-              Fragen wenden Sie sich an: praxis@dr-weber-zahnarzt.de
+              Fragen wenden Sie sich an: info@body-process.de
             </p>
           </div>
 
@@ -71,8 +71,8 @@ export default function Datenschutz() {
               Hinweis
             </h2>
             <p className="mt-2">
-              Dies ist eine Demo-Webseite zu Präsentationszwecken. Es werden
-              keine echten Daten erhoben oder verarbeitet.
+              Diese Webseite befindet sich im Aufbau. Die vollständige
+              Datenschutzerklärung wird vor Veröffentlichung ergänzt.
             </p>
           </div>
         </div>

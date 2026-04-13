@@ -3,7 +3,7 @@
 import {
   Dumbbell,
   Apple,
-  Users,
+  MapPin,
   Activity,
   Target,
   Brain,
@@ -16,7 +16,7 @@ import { Reveal, StaggerContainer, StaggerItem } from "./Motion";
 const iconMap: Record<string, React.ComponentType<{ className?: string }>> = {
   Dumbbell,
   Apple,
-  Users,
+  MapPin,
   Activity,
   Target,
   Brain,

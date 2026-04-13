@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import { Award, Users, BookOpen } from "lucide-react";
 import { motion } from "framer-motion";
 import { siteConfig } from "@/config/site";
@@ -38,10 +39,14 @@ export default function Team() {
 
               {/* Member info */}
               <div className="mt-8 flex items-center gap-4">
-                <div className="flex h-14 w-14 items-center justify-center rounded-2xl bg-accent/10">
-                  <span className="font-heading text-lg font-bold text-accent">
-                    JD
-                  </span>
+                <div className="relative h-14 w-14 overflow-hidden rounded-2xl">
+                  <Image
+                    src={member.image}
+                    alt={member.name}
+                    fill
+                    className="object-cover"
+                    sizes="56px"
+                  />
                 </div>
                 <div>
                   <h3 className="font-heading text-base font-semibold text-primary">

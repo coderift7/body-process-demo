@@ -27,7 +27,7 @@ export default function Hero() {
 
       <div className="relative z-10 mx-auto max-w-7xl px-5 py-32 sm:px-6 lg:px-8">
         <div className="mx-auto max-w-4xl text-center">
-          {/* Badge */}
+          {/* Location Badge */}
           <motion.div
             initial={{ opacity: 0, y: 16 }}
             animate={{ opacity: 1, y: 0 }}
@@ -36,7 +36,7 @@ export default function Hero() {
           >
             <Heart className="h-4 w-4 text-cta" />
             <span className="text-sm font-medium tracking-wide text-white/80">
-              {hero.badge}
+              Personal Training in Hadamar, Limburg &amp; Diez
             </span>
           </motion.div>
 

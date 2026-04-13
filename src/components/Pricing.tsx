@@ -20,8 +20,8 @@ export default function Pricing() {
               Finde dein passendes Paket
             </h2>
             <p className="mt-4 text-lg leading-relaxed text-muted-foreground">
-              Ernährungscoaching ab 100 € / Monat. Alle Pakete inklusive
-              persönlicher Betreuung.
+              Personal Training mit flexiblen Kartenpaketen. Erstgespräch immer
+              kostenlos.
             </p>
           </div>
         </Reveal>
@@ -67,14 +67,9 @@ export default function Pricing() {
                       {plan.price} €
                     </span>
                     <span className="text-sm text-muted-foreground">
-                      / Monat
+                      {plan.unit}
                     </span>
                   </div>
-                  {plan.partnerPrice && (
-                    <p className="mt-1.5 text-sm text-accent">
-                      Partner-Training: {plan.partnerPrice} € / Person
-                    </p>
-                  )}
                 </div>
 
                 <ul className="mb-8 flex-1 space-y-3">
@@ -107,8 +102,8 @@ export default function Pricing() {
         {/* Bottom note */}
         <Reveal>
           <p className="mx-auto mt-10 max-w-lg text-center text-sm text-muted-foreground">
-            Alle Preise inklusive MwSt. Personal Training separat buchbar.
-            Erstgespräch immer kostenlos.
+            Preise auf Anfrage. Erstgespräch immer kostenlos und
+            unverbindlich.
           </p>
         </Reveal>
       </div>

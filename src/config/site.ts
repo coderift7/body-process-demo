@@ -22,14 +22,12 @@ export const siteConfig = {
       "Individuelles Personal Training mit wissenschaftlichem Ansatz — für Menschen, die nicht nur fit werden wollen, sondern es bleiben.",
     cta1: "Kostenloses Erstgespräch",
     cta2: "Mein Angebot",
-    badge: "25 % Geld-zurück-Garantie",
   },
 
   trustStats: [
     { value: "100+", label: "Zufriedene Kunden" },
     { value: "4.9/5", label: "Google-Bewertung" },
     { value: "10+", label: "Jahre Erfahrung" },
-    { value: "25%", label: "Geld-zurück-Garantie" },
   ],
 
   services: [
@@ -45,14 +43,14 @@ export const siteConfig = {
       title: "Ernährungscoaching",
       description:
         "Kein Diät-Wahnsinn, sondern ein Ernährungsplan, der zu deinem Alltag passt. Wissenschaftlich fundiert, alltagstauglich umgesetzt.",
-      image: "/images/service-ernaehrung.png",
+      image: "/images/ernaehrung-coaching.webp",
     },
     {
-      icon: "Users",
-      title: "Partner-Training",
+      icon: "MapPin",
+      title: "Outdoor-Training",
       description:
-        "Gemeinsam trainieren, gemeinsam wachsen. Zu zweit macht's mehr Spaß — und die zweite Person spart bis zu 50 %.",
-      image: "/images/service-partner.png",
+        "Training an der frischen Luft — Parks, Sportplätze und Natur rund um Hadamar, Limburg und Diez.",
+      image: "/images/service-outdoor.png",
     },
     {
       icon: "Activity",
@@ -87,7 +85,7 @@ export const siteConfig = {
         role: "Personal Trainer & Ernährungscoach",
         description:
           "Ex-Leistungssportler mit Hintergrund im Profifußball. Wissenschaftlich fundierter Trainingsansatz, der Körper, Ernährung und Mindset verbindet. Zertifizierter Personal Trainer mit über 10 Jahren Erfahrung.",
-        image: "/images/justin.png",
+        image: "/images/justin-profile.webp",
       },
     ],
     stats: [
@@ -99,44 +97,45 @@ export const siteConfig = {
 
   pricing: [
     {
-      name: "Basic",
-      price: "100",
-      description: "Ernährungscoaching für Einsteiger",
+      name: "5er Karte",
+      price: "---",
+      unit: "5 Einheiten",
+      description: "Ideal zum Einstieg",
       features: [
-        "Individuelle Ernährungsberatung",
-        "Ernährungsplan für 4 Wochen",
-        "Wöchentliches Check-in",
-        "E-Mail-Support",
+        "5 Personal Training Sessions",
+        "Individueller Trainingsplan",
+        "Flexible Terminwahl",
+        "3 Monate gültig",
       ],
-      partnerPrice: "75",
       featured: false,
     },
     {
-      name: "Professionell",
-      price: "200",
-      description: "Für ambitionierte Sportler",
+      name: "10er Karte",
+      price: "---",
+      unit: "10 Einheiten",
+      description: "Für nachhaltige Ergebnisse",
       features: [
-        "Alles aus Basic",
-        "Detaillierter Makro-Plan",
-        "Supplement-Beratung",
-        "2x wöchentliches Check-in",
-        "WhatsApp-Support",
+        "10 Personal Training Sessions",
+        "Individueller Trainingsplan",
+        "Regelmäßige Anpassung",
+        "Ernährungstipps",
+        "6 Monate gültig",
       ],
-      partnerPrice: "150",
       featured: true,
     },
     {
-      name: "Profi",
-      price: "400",
-      description: "Wettkampfvorbereitung & Bodybuilding",
+      name: "24er Karte",
+      price: "---",
+      unit: "24 Einheiten",
+      description: "Dein Jahresprogramm",
       features: [
-        "Alles aus Professionell",
-        "Tägliche Anpassung",
-        "Wettkampf-Peaking",
-        "Videocalls 3x/Woche",
-        "Prioritäts-Support 24/7",
+        "24 Personal Training Sessions",
+        "Individueller Trainingsplan",
+        "Regelmäßige Plan-Anpassung",
+        "Ernährungscoaching inklusive",
+        "WhatsApp-Support",
+        "12 Monate gültig",
       ],
-      partnerPrice: "300",
       featured: false,
     },
   ],
@@ -172,8 +171,8 @@ export const siteConfig = {
     treatmentTypes: [
       "Personal Training",
       "Ernährungscoaching",
-      "Partner-Training",
       "Regeneration / Comeback",
+      "Outdoor-Training",
       "Allgemeine Beratung",
     ],
     timeSlots: [
@@ -186,12 +185,6 @@ export const siteConfig = {
     submitLabel: "Erstgespräch anfragen",
     successMessage:
       "Danke für deine Anfrage! Ich melde mich innerhalb von 24 Stunden bei dir — per WhatsApp oder E-Mail.",
-  },
-
-  guarantee: {
-    headline: "25 % Geld-zurück-Garantie",
-    description:
-      "Ich bin überzeugt von meiner Arbeit. Wenn du nach 4 Wochen nicht zufrieden bist, bekommst du 25 % deiner Mitgliedschaft zurück — ohne Diskussion.",
   },
 
   faq: [
@@ -209,16 +202,6 @@ export const siteConfig = {
       question: "Was kostet ein Erstgespräch?",
       answer:
         "Das Erstgespräch ist komplett kostenlos und unverbindlich. Wir schauen gemeinsam, wo du stehst, was du erreichen willst und welches Angebot am besten zu dir passt.",
-    },
-    {
-      question: "Wie funktioniert die Geld-zurück-Garantie?",
-      answer:
-        "Ganz einfach: Wenn du nach 4 Wochen Training nicht zufrieden bist, bekommst du 25 % deiner Mitgliedschaft zurück. Keine Bedingungen, keine Diskussion. Ich will, dass du Ergebnisse siehst.",
-    },
-    {
-      question: "Kann ich auch mit einem Partner trainieren?",
-      answer:
-        "Ja! Beim Partner-Training spart die zweite Person bis zu 50 %. Egal ob Freund, Partnerin oder Kollegin — gemeinsam trainieren macht mehr Spaß und die Abbruchquote sinkt nachweislich.",
     },
     {
       question: "Was unterscheidet dich von anderen Trainern?",

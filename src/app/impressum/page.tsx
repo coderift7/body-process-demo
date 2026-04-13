@@ -21,11 +21,11 @@ export default function Impressum() {
               Angaben gemäß § 5 TMG
             </h2>
             <p className="mt-2">
-              Zahnarztpraxis Dr. med. dent. Sarah Weber
+              Justin Doms — Body Process Personal Training
               <br />
-              Schönhauser Allee 128
+              Mainzer Landstraße 54
               <br />
-              10437 Berlin
+              65589 Hadamar
             </p>
           </div>
 
@@ -34,22 +34,20 @@ export default function Impressum() {
               Kontakt
             </h2>
             <p className="mt-2">
-              Telefon: +49 30 987 654 32
+              Telefon: +49 176 XXXXXXXX
               <br />
-              E-Mail: praxis@dr-weber-zahnarzt.de
+              E-Mail: info@body-process.de
             </p>
           </div>
 
           <div>
             <h2 className="font-heading text-lg font-semibold text-primary">
-              Berufsbezeichnung
+              Haftung für Inhalte
             </h2>
             <p className="mt-2">
-              Zahnärztin (verliehen in der Bundesrepublik Deutschland)
-              <br />
-              Zuständige Kammer: Zahnärztekammer Berlin
-              <br />
-              Zuständige Aufsichtsbehörde: Kassenzahnärztliche Vereinigung Berlin
+              Die Inhalte dieser Seiten wurden mit größter Sorgfalt erstellt.
+              Für die Richtigkeit, Vollständigkeit und Aktualität der Inhalte
+              kann jedoch keine Gewähr übernommen werden.
             </p>
           </div>
 
@@ -58,8 +56,8 @@ export default function Impressum() {
               Hinweis
             </h2>
             <p className="mt-2">
-              Dies ist eine Demo-Webseite zu Präsentationszwecken. Die genannten
-              Personen und die Praxis sind fiktiv.
+              Diese Webseite befindet sich im Aufbau. Angaben werden vor
+              Veröffentlichung vervollständigt.
             </p>
           </div>
         </div>

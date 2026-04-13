@@ -102,8 +102,8 @@ export default function Pricing() {
         {/* Bottom note */}
         <Reveal>
           <p className="mx-auto mt-10 max-w-lg text-center text-sm text-muted-foreground">
-            Preise auf Anfrage. Erstgespräch immer kostenlos und
-            unverbindlich.
+            Alle Preise inkl. gesetzl. MwSt. Ratenzahlung möglich.
+            Erstgespräch immer kostenlos und unverbindlich.
           </p>
         </Reveal>
       </div>

@@ -143,24 +143,21 @@ export const siteConfig = {
   testimonials: [
     {
       rating: 5,
-      text: "Justin hat mir nicht nur beim Abnehmen geholfen, sondern mir einen komplett neuen Lebensstil beigebracht. 15 kg weniger in 4 Monaten — und ich halte das Gewicht seit über einem Jahr!",
-      name: "Tobias H.",
-      location: "Hadamar",
-      image: "/images/testimonial-tobias.png",
+      text: "Justin ist ein sympathischer und kompetenter Trainer, welcher mich jede Trainingseinheit ans Limit gebracht hat. Er hat mir gezeigt, wie ich meine Ernährung umstellen muss, ohne auf alles verzichten zu müssen und erfolgreich abzunehmen. Egal ob es geregnet hat oder ob ich mal nicht so motiviert war, er hat mich immer motiviert weiterzumachen und das Training komplett durchzuziehen. #Hassliebe!",
+      name: "Theo Stahl",
+      location: "Special Student Assistant bei BioNTech SE",
     },
     {
       rating: 5,
-      text: "Nach meiner Knieverletzung dachte ich, Sport wäre vorbei für mich. Justin hat mich Schritt für Schritt zurückgebracht. Heute bin ich fitter als vorher. Absolute Empfehlung!",
-      name: "Janine M.",
-      location: "Limburg",
-      image: "/images/testimonial-janine.png",
+      text: "Justin ist ein absolut freundlicher und offener Trainer, der auf individuelle Bedürfnisse und Wünsche eingeht. Die Trainingspläne sind so aufgebaut, dass ich stetig wöchentliche Fortschritte dokumentieren kann, Spaß am Training habe und dennoch jedes Mal meinen inneren Schweinehund überwinden muss. Er ist einfach so, wie ein professioneller Trainer sein sollte — und das ist heutzutage sehr schwer zu finden.",
+      name: "Tobias Hansmann",
+      location: "Pädagogische Fachkraft",
     },
     {
       rating: 5,
-      text: "Das Partner-Training mit meiner Frau ist das Beste, was wir für unsere Gesundheit getan haben. Justin motiviert, fordert und erklärt alles verständlich. Top Trainer!",
-      name: "Theo S.",
-      location: "Diez",
-      image: "/images/testimonial-theo.png",
+      text: "Dank Justin habe ich erkannt, wie wichtig eine ausgewogene Ernährung für einen gesunden Körper ist und wie sich mein Wohlbefinden und Selbstbewusstsein durch den Sport ins Positive gewandelt hat. Da ich nach nur einem Monat schon die ersten Veränderungen feststellen konnte, war ich noch motivierter. Er gestaltet seine Trainingsprogramme sehr professionell, erklärt viel und achtet auf genaue Ausführungstechniken.",
+      name: "Janine Müller",
+      location: "Verkäuferin",
     },
   ],
 

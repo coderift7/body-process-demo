@@ -60,7 +60,7 @@ export default function Testimonials() {
                 </div>
 
                 {/* Quote */}
-                <p className="text-[15px] leading-relaxed text-card-foreground">
+                <p className="text-sm leading-relaxed text-card-foreground">
                   &ldquo;{testimonial.text}&rdquo;
                 </p>
 

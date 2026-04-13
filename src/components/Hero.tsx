@@ -1,6 +1,6 @@
 "use client";
 
-import { ArrowRight, ChevronDown, Heart, Shield, Star, Clock } from "lucide-react";
+import { ArrowRight, ChevronDown, Heart, Star, Clock } from "lucide-react";
 import { motion } from "framer-motion";
 import { siteConfig } from "@/config/site";
 
@@ -13,12 +13,26 @@ export default function Hero() {
 
   return (
     <section className="grain relative flex min-h-[100dvh] items-center justify-center overflow-hidden bg-primary">
-      {/* Background gradient (placeholder until real photos) */}
+      {/* Hero Background Image — Kling AI generated gym shot */}
       <div className="absolute inset-0">
-        <div className="absolute inset-0 bg-primary" />
-        <div className="absolute inset-0 bg-[radial-gradient(ellipse_80%_50%_at_50%_-20%,rgba(249,115,22,0.2),transparent)]" />
-        <div className="absolute inset-0 bg-[radial-gradient(ellipse_60%_60%_at_80%_80%,rgba(249,115,22,0.08),transparent)]" />
-        <div className="absolute inset-0 bg-[radial-gradient(ellipse_40%_40%_at_10%_60%,rgba(30,41,59,0.8),transparent)]" />
+        {/* Mobile: gym version (more context) */}
+        <img
+          src={`${basePath}/images/hero-gym.webp`}
+          alt=""
+          aria-hidden="true"
+          className="h-full w-full object-cover object-[25%_center] md:hidden"
+        />
+        {/* Desktop: clean version (space for text on right) */}
+        <img
+          src={`${basePath}/images/hero-clean.webp`}
+          alt=""
+          aria-hidden="true"
+          className="hidden h-full w-full object-cover object-[30%_center] md:block"
+        />
+        {/* Dark overlay for text readability */}
+        <div className="absolute inset-0 bg-gradient-to-r from-primary/70 via-primary/50 to-primary/80" />
+        {/* Extra darkening at bottom for scroll indicator */}
+        <div className="absolute inset-x-0 bottom-0 h-32 bg-gradient-to-t from-primary to-transparent" />
       </div>
 
       {/* Geometric accent lines */}
@@ -45,7 +59,7 @@ export default function Hero() {
             initial={{ opacity: 0, y: 24 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.7, delay: 0.35, ease }}
-            className="font-heading text-[2.75rem] font-bold leading-[1.08] tracking-tight text-white sm:text-6xl md:text-7xl lg:text-[5.25rem]"
+            className="font-heading text-[2.75rem] font-bold leading-[1.08] tracking-tight text-white drop-shadow-lg sm:text-6xl md:text-7xl lg:text-[5.25rem]"
           >
             {hero.headline.split(".").slice(0, -1).map((part, i, arr) => (
               <span key={i}>
@@ -65,7 +79,7 @@ export default function Hero() {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.5, ease }}
-            className="mx-auto mt-6 max-w-2xl text-lg leading-relaxed text-white/60 sm:text-xl"
+            className="mx-auto mt-6 max-w-2xl text-lg leading-relaxed text-white/70 drop-shadow-md sm:text-xl"
           >
             {hero.subheadline}
           </motion.p>
@@ -106,9 +120,8 @@ export default function Hero() {
                 {i === 2 && (
                   <Star className="h-4 w-4 fill-yellow-400 text-yellow-400" />
                 )}
-                {i === 3 && <Shield className="h-4 w-4 text-accent" />}
-                <span className="text-sm text-white/50">
-                  <span className="font-semibold text-white/80">
+                <span className="text-sm text-white/60 drop-shadow-sm">
+                  <span className="font-semibold text-white/90">
                     {stat.value}
                   </span>{" "}
                   {stat.label}

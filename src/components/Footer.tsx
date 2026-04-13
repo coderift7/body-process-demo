@@ -18,11 +18,11 @@ export default function Footer() {
             <div className="mb-5">
               {/* eslint-disable-next-line @next/next/no-img-element */}
               <img
-                src={`${process.env.__NEXT_ROUTER_BASEPATH || ""}/logo-real-dark.webp`}
+                src={`${process.env.__NEXT_ROUTER_BASEPATH || ""}/logo-dark-bg.svg`}
                 alt="Body Process — Personal Training"
                 width={180}
-                height={90}
-                className="h-9 w-auto"
+                height={26}
+                className="h-10 w-auto"
               />
             </div>
             <p className="text-sm leading-relaxed text-white/45">

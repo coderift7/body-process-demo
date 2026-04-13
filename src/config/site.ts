@@ -121,7 +121,7 @@ export const siteConfig = {
         "Ernährungscoaching inklusive",
         "6 Monate gültig",
       ],
-      featured: true,
+      featured: false,
     },
     {
       name: "24er Karte",
@@ -136,7 +136,7 @@ export const siteConfig = {
         "Ernährungsbegleitung im gesamten Zeitraum",
         "12 Monate gültig",
       ],
-      featured: false,
+      featured: true,
     },
   ],
 

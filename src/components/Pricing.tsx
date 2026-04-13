@@ -50,7 +50,7 @@ export default function Pricing() {
                     <div className="flex items-center justify-center gap-1.5 bg-accent/5 py-2.5">
                       <Star className="h-3.5 w-3.5 fill-accent text-accent" />
                       <span className="text-xs font-bold uppercase tracking-wider text-accent">
-                        Beliebteste Wahl
+                        Bester Preis pro Stunde
                       </span>
                     </div>
                   </>

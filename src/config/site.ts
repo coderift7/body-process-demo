@@ -193,7 +193,7 @@ export const siteConfig = {
     {
       question: "Wo findet das Training statt?",
       answer:
-        "Ich trainiere mit dir im GYM%100 in Hadamar oder auf Wunsch auch outdoor. Für Ernährungscoaching und Beratungen sind auch Online-Termine möglich.",
+        "Ich trainiere mit dir im GYM100 in Limburg oder auf Wunsch auch outdoor. Für Ernährungscoaching und Beratungen sind auch Online-Termine möglich.",
     },
     {
       question: "Was kostet ein Erstgespräch?",

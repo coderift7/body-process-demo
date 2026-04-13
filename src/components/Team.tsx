@@ -23,9 +23,38 @@ export default function Team() {
       className="noise-overlay relative bg-white py-24 lg:py-32"
     >
       <div className="relative z-10 mx-auto max-w-7xl px-5 sm:px-6 lg:px-8">
-        <div className="grid items-center gap-12 lg:grid-cols-2 lg:gap-16">
-          {/* Left: About text */}
+        <div className="grid items-center gap-12 lg:grid-cols-2 lg:gap-20">
+          {/* Left: Large Justin Photo */}
           <Reveal variants={slideFromLeft}>
+            <div className="relative">
+              {/* Decorative accent frame */}
+              <div className="absolute -bottom-4 -right-4 h-full w-full rounded-3xl bg-gradient-to-br from-accent/20 to-cta/10" />
+              <div className="relative aspect-[3/4] overflow-hidden rounded-3xl shadow-2xl">
+                <Image
+                  src="/images/justin-profile.webp"
+                  alt={member.name}
+                  fill
+                  className="object-cover object-top"
+                  sizes="(max-width: 768px) 100vw, 50vw"
+                  priority
+                />
+                {/* Gradient overlay at bottom */}
+                <div className="absolute inset-x-0 bottom-0 h-1/3 bg-gradient-to-t from-primary/80 to-transparent" />
+                {/* Name badge on photo */}
+                <div className="absolute bottom-6 left-6 right-6">
+                  <h3 className="font-heading text-xl font-bold text-white">
+                    {member.name}
+                  </h3>
+                  <p className="mt-1 text-sm font-medium text-accent">
+                    {member.role}
+                  </p>
+                </div>
+              </div>
+            </div>
+          </Reveal>
+
+          {/* Right: About text + Stats */}
+          <Reveal variants={slideFromRight} delay={0.15}>
             <div>
               <span className="text-sm font-semibold uppercase tracking-widest text-accent">
                 Dein Trainer
@@ -33,44 +62,15 @@ export default function Team() {
               <h2 className="mt-3 font-heading text-3xl font-bold tracking-tight text-primary sm:text-4xl lg:text-5xl">
                 {team.heading}
               </h2>
-              <p className="mt-4 text-lg leading-relaxed text-muted-foreground">
+              <p className="mt-5 text-lg leading-relaxed text-muted-foreground">
                 {team.description}
               </p>
-
-              {/* Member info */}
-              <div className="mt-8 flex items-center gap-4">
-                <div className="relative h-14 w-14 overflow-hidden rounded-2xl">
-                  <Image
-                    src={member.image}
-                    alt={member.name}
-                    fill
-                    className="object-cover"
-                    sizes="56px"
-                  />
-                </div>
-                <div>
-                  <h3 className="font-heading text-base font-semibold text-primary">
-                    {member.name}
-                  </h3>
-                  <p className="text-sm font-medium text-accent">
-                    {member.role}
-                  </p>
-                </div>
-              </div>
-
-              <p className="mt-4 text-sm leading-relaxed text-muted-foreground">
+              <p className="mt-4 text-base leading-relaxed text-muted-foreground">
                 {member.description}
               </p>
-            </div>
-          </Reveal>
 
-          {/* Right: Stats */}
-          <Reveal variants={slideFromRight} delay={0.15}>
-            <div className="relative">
-              <div className="absolute -right-6 -top-6 h-32 w-32 rounded-full bg-accent/5 blur-3xl" />
-              <div className="absolute -bottom-6 -left-6 h-24 w-24 rounded-full bg-cta/5 blur-2xl" />
-
-              <div className="relative space-y-4">
+              {/* Stats row */}
+              <div className="mt-10 space-y-4">
                 {team.stats.map((stat, i) => {
                   const Icon = statIcons[i];
                   return (

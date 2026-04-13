@@ -32,11 +32,11 @@ export default function Header() {
           <a href="#" className="group flex items-center gap-3">
             {/* eslint-disable-next-line @next/next/no-img-element */}
             <img
-              src={`${process.env.__NEXT_ROUTER_BASEPATH || ""}/${isScrolled ? "logo-full.svg" : "logo-dark-bg.svg"}`}
+              src={`${process.env.__NEXT_ROUTER_BASEPATH || ""}/${isScrolled ? "logo-full.svg" : "logo-real-dark.webp"}`}
               alt="Body Process — Personal Training"
-              width={180}
-              height={26}
-              className="h-8 w-auto transition-opacity duration-300 sm:h-10"
+              width={200}
+              height={70}
+              className="h-10 w-auto transition-opacity duration-300 sm:h-12"
             />
           </a>
 

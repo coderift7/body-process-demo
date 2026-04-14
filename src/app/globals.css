@@ -5,12 +5,12 @@
   --primary: #0F172A;
   --primary-foreground: #FFFFFF;
 
-  /* Accent - Vibrant Orange (from BP logo) */
-  --accent: #F97316;
+  /* Accent - Original BP Logo Orange */
+  --accent: #F39200;
   --accent-foreground: #FFFFFF;
 
-  /* CTA - Bold Orange */
-  --cta: #EA580C;
+  /* CTA - Darker Orange */
+  --cta: #D97B00;
   --cta-foreground: #FFFFFF;
 
   /* Secondary - Dark Slate */
@@ -33,7 +33,7 @@
   --border: #E2E8F0;
 
   /* Ring */
-  --ring: #F97316;
+  --ring: #F39200;
 
   /* Destructive */
   --destructive: #DC2626;

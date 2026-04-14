@@ -13,6 +13,8 @@ import { motion } from "framer-motion";
 import { siteConfig } from "@/config/site";
 import { Reveal, StaggerContainer, StaggerItem } from "./Motion";
 
+const basePath = process.env.__NEXT_ROUTER_BASEPATH || "";
+
 const iconMap: Record<string, React.ComponentType<{ className?: string }>> = {
   Dumbbell,
   Apple,
@@ -22,15 +24,6 @@ const iconMap: Record<string, React.ComponentType<{ className?: string }>> = {
   Brain,
   Sparkles,
 };
-
-const cardAccents = [
-  "from-orange-500/10 to-amber-500/5",
-  "from-emerald-500/10 to-teal-500/5",
-  "from-blue-500/10 to-indigo-500/5",
-  "from-rose-500/10 to-pink-500/5",
-  "from-violet-500/10 to-purple-500/5",
-  "from-cyan-500/10 to-sky-500/5",
-];
 
 export default function Services() {
   return (
@@ -54,32 +47,45 @@ export default function Services() {
 
         {/* Service Grid */}
         <StaggerContainer
-          className="mt-14 grid gap-4 sm:grid-cols-2 lg:grid-cols-3"
+          className="mt-14 grid gap-5 sm:grid-cols-2 lg:grid-cols-3"
           staggerDelay={0.08}
         >
           {siteConfig.services.map((service, i) => {
             const Icon = iconMap[service.icon] || Sparkles;
             return (
-              <StaggerItem key={i}>
+              <StaggerItem key={i} className="h-full">
                 <motion.div
-                  whileHover={{ y: -4 }}
-                  transition={{ duration: 0.2 }}
-                  className="group relative overflow-hidden rounded-2xl border border-border bg-card p-6 transition-shadow duration-300 hover:shadow-lg"
+                  whileHover={{ y: -5 }}
+                  transition={{ duration: 0.25, ease: [0.22, 1, 0.36, 1] }}
+                  className="group flex h-full flex-col overflow-hidden rounded-2xl border border-border bg-card shadow-sm transition-shadow duration-300 hover:shadow-xl"
                 >
-                  {/* Gradient accent top */}
-                  <div
-                    className={`absolute inset-x-0 top-0 h-1 bg-gradient-to-r ${cardAccents[i % cardAccents.length]}`}
-                  />
-
-                  <div className="mb-4 flex h-12 w-12 items-center justify-center rounded-xl bg-accent/8 transition-colors duration-200 group-hover:bg-accent/15">
-                    <Icon className="h-5 w-5 text-accent" />
+                  {/* Photo */}
+                  <div className="relative aspect-[3/2] overflow-hidden">
+                    <img
+                      src={`${basePath}${service.image}`}
+                      alt={service.title}
+                      width={600}
+                      height={400}
+                      loading="lazy"
+                      className="h-full w-full object-cover transition-transform duration-500 ease-out group-hover:scale-105"
+                    />
+                    {/* Gradient blend into card */}
+                    <div className="absolute inset-x-0 bottom-0 h-16 bg-gradient-to-t from-card to-transparent" />
+                    {/* Icon badge — floats at bottom-left of photo */}
+                    <div className="absolute bottom-3 left-4 flex h-10 w-10 items-center justify-center rounded-xl bg-primary/90 shadow-lg backdrop-blur-sm">
+                      <Icon className="h-4.5 w-4.5 text-accent" />
+                    </div>
                   </div>
-                  <h3 className="font-heading text-lg font-semibold text-primary">
-                    {service.title}
-                  </h3>
-                  <p className="mt-2 text-sm leading-relaxed text-muted-foreground">
-                    {service.description}
-                  </p>
+
+                  {/* Content */}
+                  <div className="flex flex-1 flex-col p-5 pt-4">
+                    <h3 className="font-heading text-lg font-semibold tracking-tight text-primary">
+                      {service.title}
+                    </h3>
+                    <p className="mt-2 flex-1 text-sm leading-relaxed text-muted-foreground">
+                      {service.description}
+                    </p>
+                  </div>
                 </motion.div>
               </StaggerItem>
             );

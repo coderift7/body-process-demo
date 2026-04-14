@@ -36,42 +36,42 @@ export const siteConfig = {
       title: "Personal Training",
       description:
         "Eins-zu-eins Training, perfekt auf deine Ziele abgestimmt. Ob Muskelaufbau, Fettreduktion oder Leistungssteigerung — dein Plan, dein Tempo.",
-      image: "/images/service-training.png",
+      image: "/images/service-training.webp",
     },
     {
       icon: "Apple",
       title: "Ernährungscoaching",
       description:
         "Kein Diät-Wahnsinn, sondern ein Ernährungsplan, der zu deinem Alltag passt. Wissenschaftlich fundiert, alltagstauglich umgesetzt.",
-      image: "/images/ernaehrung-coaching.webp",
+      image: "/images/service-ernaehrung.webp",
     },
     {
       icon: "MapPin",
       title: "Outdoor-Training",
       description:
         "Training an der frischen Luft — Parks, Sportplätze und Natur rund um Hadamar, Limburg und Diez.",
-      image: "/images/service-outdoor.png",
+      image: "/images/service-outdoor.webp",
     },
     {
       icon: "Activity",
       title: "Regeneration & Comeback",
       description:
         "Nach Verletzung oder Pause wieder stark werden. Aus eigener Erfahrung als Ex-Leistungssportler weiß ich, wie man sicher zurückkommt.",
-      image: "/images/service-regeneration.png",
+      image: "/images/service-regeneration.webp",
     },
     {
       icon: "Target",
       title: "Leistungsdiagnostik",
       description:
         "Keine Vermutungen, sondern Daten. Körperanalyse, Leistungstests und regelmäßige Fortschrittsmessung für optimale Ergebnisse.",
-      image: "/images/service-diagnostik.png",
+      image: "/images/service-diagnostik.webp",
     },
     {
       icon: "Brain",
       title: "Mentales Coaching",
       description:
         "Fitness beginnt im Kopf. Motivation, Gewohnheiten und Mindset — die Grundlage für langfristigen Erfolg.",
-      image: "/images/service-mental.png",
+      image: "/images/service-mental.webp",
     },
   ],
 
@@ -110,6 +110,21 @@ export const siteConfig = {
       featured: false,
     },
     {
+      name: "24er Karte",
+      price: "1.600",
+      unit: "24 Einheiten",
+      description: "Das volle Programm",
+      features: [
+        "24 Personal Training Sessions à 90 Min",
+        "Anamnese und Vorbereitungsgespräch",
+        "2x Trainingsplan-Anpassung",
+        "Ernährungscoaching inklusive",
+        "Ernährungsbegleitung im gesamten Zeitraum",
+        "12 Monate gültig",
+      ],
+      featured: true,
+    },
+    {
       name: "10er Karte",
       price: "850",
       unit: "10 Einheiten",
@@ -122,21 +137,6 @@ export const siteConfig = {
         "6 Monate gültig",
       ],
       featured: false,
-    },
-    {
-      name: "24er Karte",
-      price: "1.600",
-      unit: "24 Einheiten",
-      description: "Dein Jahresprogramm",
-      features: [
-        "24 Personal Training Sessions à 90 Min",
-        "Anamnese und Vorbereitungsgespräch",
-        "2x Trainingsplan-Anpassung",
-        "Ernährungscoaching inklusive",
-        "Ernährungsbegleitung im gesamten Zeitraum",
-        "12 Monate gültig",
-      ],
-      featured: true,
     },
   ],
 

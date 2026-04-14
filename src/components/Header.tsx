@@ -1,13 +1,14 @@
 "use client";
 
-import { useState, useEffect } from "react";
-import { Menu, X, Phone } from "lucide-react";
+import { useState, useEffect, useCallback } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { siteConfig } from "@/config/site";
 
+const ease = [0.16, 1, 0.3, 1] as const;
+
 export default function Header() {
   const [isScrolled, setIsScrolled] = useState(false);
-  const [isMobileOpen, setIsMobileOpen] = useState(false);
+  const [isOpen, setIsOpen] = useState(false);
 
   useEffect(() => {
     const onScroll = () => setIsScrolled(window.scrollY > 20);
@@ -15,117 +16,137 @@ export default function Header() {
     return () => window.removeEventListener("scroll", onScroll);
   }, []);
 
+  // Lock body scroll when menu is open
+  useEffect(() => {
+    document.body.style.overflow = isOpen ? "hidden" : "";
+    return () => { document.body.style.overflow = ""; };
+  }, [isOpen]);
+
+  // Close on Escape
+  useEffect(() => {
+    const onKey = (e: KeyboardEvent) => { if (e.key === "Escape") setIsOpen(false); };
+    window.addEventListener("keydown", onKey);
+    return () => window.removeEventListener("keydown", onKey);
+  }, []);
+
+  const toggle = useCallback(() => setIsOpen((o) => !o), []);
+
+  // Color logic: open → always white, scrolled → dark, default → white
+  const lineColor = "bg-white";
+
   return (
-    <motion.header
-      initial={{ y: -100 }}
-      animate={{ y: 0 }}
-      transition={{ duration: 0.5, ease: [0.22, 1, 0.36, 1] }}
-      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${
-        isScrolled
-          ? "bg-white/90 backdrop-blur-xl shadow-[0_1px_3px_rgba(0,0,0,0.08)]"
-          : "bg-transparent"
-      }`}
-    >
-      <div className="mx-auto max-w-7xl px-5 sm:px-6 lg:px-8">
-        <div className="flex h-16 items-center justify-between lg:h-20">
-          {/* Logo */}
-          <a href="#" className="group flex items-center gap-3">
+    <>
+      <motion.header
+        initial={{ y: -100 }}
+        animate={{ y: 0 }}
+        transition={{ duration: 0.6, ease }}
+        className={`fixed inset-x-0 top-0 z-50 transition-all duration-500 ${
+          isScrolled && !isOpen
+            ? "bg-primary/85 shadow-[0_1px_2px_rgba(0,0,0,0.15)] backdrop-blur-xl"
+            : "bg-transparent"
+        }`}
+      >
+        <div className="mx-auto flex h-16 max-w-7xl items-center justify-between px-6 sm:h-20 sm:px-8 lg:px-12">
+          {/* Logo — always the same, dark header keeps it consistent */}
+          <a
+            href="#"
+            className="relative z-50 focus-visible:rounded-sm focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent/60"
+            aria-label="Body Process — Startseite"
+          >
             {/* eslint-disable-next-line @next/next/no-img-element */}
             <img
-              src={`${process.env.__NEXT_ROUTER_BASEPATH || ""}/${isScrolled ? "logo-full.svg" : "logo-real-dark.webp"}`}
-              alt="Body Process — Personal Training"
+              src={`${process.env.__NEXT_ROUTER_BASEPATH || ""}/logo-real-dark.webp`}
+              alt="Body Process"
               width={200}
               height={70}
-              className="h-10 w-auto transition-opacity duration-300 sm:h-12"
+              className="h-9 w-auto transition-opacity duration-300 sm:h-11"
             />
           </a>
 
-          {/* Desktop Nav */}
-          <nav className="hidden items-center gap-1 lg:flex">
-            {siteConfig.nav.map((item) => (
-              <a
-                key={item.href}
-                href={item.href}
-                className={`relative rounded-lg px-4 py-2 text-sm font-medium transition-all duration-200 hover:bg-white/10 ${
-                  isScrolled
-                    ? "text-secondary hover:bg-muted hover:text-primary"
-                    : "text-white/85 hover:text-white"
-                }`}
-              >
-                {item.label}
-              </a>
-            ))}
-          </nav>
-
-          {/* Desktop CTA */}
-          <div className="hidden items-center gap-5 lg:flex">
-            <a
-              href={`tel:${siteConfig.company.phone.replace(/\s/g, "")}`}
-              className={`flex items-center gap-1.5 text-sm font-medium transition-colors ${
-                isScrolled ? "text-muted-foreground" : "text-white/75"
-              }`}
-            >
-              <Phone className="h-3.5 w-3.5" />
-              {siteConfig.company.phone}
-            </a>
-            <a
-              href="#kontakt"
-              className="cursor-pointer rounded-lg bg-cta px-5 py-2.5 text-sm font-semibold text-white shadow-[0_2px_8px_rgba(234,88,12,0.35)] transition-all duration-200 hover:bg-cta/90 hover:shadow-[0_4px_16px_rgba(234,88,12,0.4)] hover:-translate-y-0.5"
-            >
-              Erstgespräch buchen
-            </a>
-          </div>
-
-          {/* Mobile Toggle */}
+          {/* Custom burger — two asymmetric lines, animated to X */}
           <button
-            onClick={() => setIsMobileOpen(!isMobileOpen)}
-            className={`cursor-pointer rounded-lg p-2 transition-colors lg:hidden ${
-              isScrolled
-                ? "text-primary hover:bg-muted"
-                : "text-white hover:bg-white/10"
-            }`}
-            aria-label="Menü öffnen"
+            onClick={toggle}
+            className="group fixed right-5 top-4 z-50 flex h-12 w-12 flex-col items-center justify-center gap-[6px] rounded-sm sm:right-8 sm:top-5 lg:right-12 lg:top-6 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent/60"
+            aria-label={isOpen ? "Menü schließen" : "Menü öffnen"}
+            aria-expanded={isOpen}
           >
-            {isMobileOpen ? (
-              <X className="h-5 w-5" />
-            ) : (
-              <Menu className="h-5 w-5" />
-            )}
+            {/* Top line */}
+            <motion.span
+              className={`block h-[2px] rounded-full transition-colors duration-300 ${lineColor}`}
+              animate={
+                isOpen
+                  ? { width: 28, rotate: 45, y: 8 }
+                  : { width: 28, rotate: 0, y: 0 }
+              }
+              transition={{ duration: 0.4, ease }}
+            />
+            {/* Middle line */}
+            <motion.span
+              className={`block h-[2px] rounded-full transition-colors duration-300 ${lineColor}`}
+              animate={
+                isOpen
+                  ? { width: 28, opacity: 0, x: 10 }
+                  : { width: 28, opacity: 1, x: 0 }
+              }
+              transition={{ duration: 0.3, ease }}
+            />
+            {/* Bottom line */}
+            <motion.span
+              className={`block h-[2px] rounded-full transition-colors duration-300 ${lineColor}`}
+              animate={
+                isOpen
+                  ? { width: 28, rotate: -45, y: -8 }
+                  : { width: 28, rotate: 0, y: 0 }
+              }
+              transition={{ duration: 0.4, ease }}
+            />
           </button>
         </div>
-      </div>
+      </motion.header>
 
-      {/* Mobile Menu */}
+      {/* Fullscreen overlay menu */}
       <AnimatePresence>
-        {isMobileOpen && (
+        {isOpen && (
           <motion.div
-            initial={{ opacity: 0, height: 0 }}
-            animate={{ opacity: 1, height: "auto" }}
-            exit={{ opacity: 0, height: 0 }}
-            transition={{ duration: 0.3, ease: [0.22, 1, 0.36, 1] }}
-            className="overflow-hidden border-t border-border bg-white shadow-xl lg:hidden"
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
+            transition={{ duration: 0.4, ease }}
+            className="fixed inset-0 z-40 flex flex-col items-center justify-center bg-primary/[0.97] backdrop-blur-md"
           >
-            <nav className="flex flex-col gap-1 px-5 py-4">
+            <nav className="flex flex-col items-center gap-1">
               {siteConfig.nav.map((item, i) => (
                 <motion.a
                   key={item.href}
                   href={item.href}
-                  onClick={() => setIsMobileOpen(false)}
-                  initial={{ opacity: 0, x: -16 }}
-                  animate={{ opacity: 1, x: 0 }}
-                  transition={{ delay: i * 0.05 }}
-                  className="rounded-lg px-3 py-2.5 text-secondary transition-colors hover:bg-muted"
+                  onClick={() => setIsOpen(false)}
+                  initial={{ opacity: 0, y: 20 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  exit={{ opacity: 0, y: -10 }}
+                  transition={{ delay: 0.1 + i * 0.06, duration: 0.5, ease }}
+                  className="group relative px-4 py-3 focus-visible:rounded-sm focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent/60"
                 >
-                  {item.label}
+                  <span className="font-heading text-2xl font-medium tracking-tight text-white/70 transition-colors duration-200 group-hover:text-white sm:text-3xl">
+                    {item.label}
+                  </span>
+                  {/* Hover underline — slides in from left */}
+                  <span className="absolute bottom-2 left-4 right-4 h-px origin-left scale-x-0 bg-accent/60 transition-transform duration-300 ease-out group-hover:scale-x-100" />
                 </motion.a>
               ))}
+
+              {/* CTA */}
               <motion.a
                 href="#kontakt"
-                onClick={() => setIsMobileOpen(false)}
-                initial={{ opacity: 0, x: -16 }}
-                animate={{ opacity: 1, x: 0 }}
-                transition={{ delay: 0.2 }}
-                className="mt-2 cursor-pointer rounded-lg bg-cta px-5 py-3 text-center text-sm font-semibold text-white"
+                onClick={() => setIsOpen(false)}
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                exit={{ opacity: 0, y: -10 }}
+                transition={{
+                  delay: 0.1 + siteConfig.nav.length * 0.06 + 0.08,
+                  duration: 0.5,
+                  ease,
+                }}
+                className="mt-8 inline-flex items-center gap-2 rounded-lg border border-accent/30 bg-accent/10 px-8 py-3.5 font-heading text-sm font-semibold uppercase tracking-widest text-accent transition-all duration-200 hover:border-accent/50 hover:bg-accent/20 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent/60"
               >
                 Erstgespräch buchen
               </motion.a>
@@ -133,6 +154,6 @@ export default function Header() {
           </motion.div>
         )}
       </AnimatePresence>
-    </motion.header>
+    </>
   );
 }

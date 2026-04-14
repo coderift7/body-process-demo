@@ -48,6 +48,14 @@ export default function Hero() {
       {/* Editorial name block — bottom left, golden ratio spacing */}
       <div className="relative z-10 w-full pb-24 sm:pb-24 lg:pb-32">
         <div className="mx-auto max-w-7xl px-6 sm:px-8 lg:px-12">
+          {/* Accent line — slides in from left with subtle glow */}
+          <motion.div
+            initial={{ scaleX: 0, opacity: 0 }}
+            animate={{ scaleX: 1, opacity: 1 }}
+            transition={{ duration: 1.2, delay: 0.2, ease }}
+            className="mb-6 h-[1.5px] w-12 origin-left bg-accent shadow-[0_0_8px_rgba(243,146,0,0.3)] sm:mb-8 sm:w-20 lg:w-24"
+          />
+
           <h1 className="sr-only">Justin Doms — Personal Training</h1>
 
           <div className="overflow-hidden" aria-hidden="true">
@@ -55,7 +63,7 @@ export default function Hero() {
               className="block font-heading text-[3.5rem] font-bold uppercase leading-[0.88] tracking-[-0.02em] text-white sm:text-[4.5rem] lg:text-[6rem] xl:text-[7rem]"
               initial={{ y: "110%" }}
               animate={{ y: 0 }}
-              transition={{ duration: 0.9, delay: 0.3, ease }}
+              transition={{ duration: 0.9, delay: 0.4, ease }}
             >
               Justin
             </motion.span>
@@ -65,11 +73,30 @@ export default function Hero() {
               className="block font-heading text-[3.5rem] font-bold uppercase leading-[0.88] tracking-[-0.02em] text-white sm:text-[4.5rem] lg:text-[6rem] xl:text-[7rem]"
               initial={{ y: "110%" }}
               animate={{ y: 0 }}
-              transition={{ duration: 0.9, delay: 0.45, ease }}
+              transition={{ duration: 0.9, delay: 0.55, ease }}
             >
               Doms
             </motion.span>
           </div>
+
+          {/* Subtitle with extending accent line */}
+          <motion.div
+            className="mt-5 flex items-center gap-4 sm:mt-6 lg:mt-8"
+            initial={{ opacity: 0, x: -8 }}
+            animate={{ opacity: 1, x: 0 }}
+            transition={{ duration: 0.8, delay: 1.0, ease }}
+          >
+            <p className="text-[0.6rem] font-medium uppercase tracking-[0.35em] text-white/60 sm:text-[0.7rem] sm:tracking-[0.4em] lg:text-xs lg:tracking-[0.45em]">
+              Personal Training
+            </p>
+            <motion.div
+              className="h-px max-w-24 flex-1 bg-gradient-to-r from-white/20 to-transparent sm:max-w-32 lg:max-w-48"
+              initial={{ scaleX: 0 }}
+              animate={{ scaleX: 1 }}
+              transition={{ duration: 1, delay: 1.2, ease }}
+              style={{ originX: 0 }}
+            />
+          </motion.div>
         </div>
       </div>
     </section>

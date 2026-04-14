@@ -3,6 +3,7 @@ import Hero from "@/components/Hero";
 import TrustSignals from "@/components/TrustSignals";
 import Services from "@/components/Services";
 import Team from "@/components/Team";
+import Transformation from "@/components/Transformation";
 import Pricing from "@/components/Pricing";
 
 import Testimonials from "@/components/Testimonials";
@@ -19,6 +20,7 @@ export default function Home() {
         <TrustSignals />
         <Services />
         <Team />
+        <Transformation />
         <Pricing />
 
         <Testimonials />

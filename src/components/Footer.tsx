@@ -25,7 +25,7 @@ export default function Footer() {
                 className="h-10 w-auto"
               />
             </div>
-            <p className="text-sm leading-relaxed text-white/45">
+            <p className="text-sm leading-relaxed text-white/70">
               {siteConfig.company.tagline} Personal Training in Hadamar,
               Limburg und Diez.
             </p>
@@ -41,7 +41,7 @@ export default function Footer() {
                 <li key={item.href}>
                   <a
                     href={item.href}
-                    className="text-sm text-white/50 transition-colors duration-200 hover:text-white"
+                    className="text-sm text-white/70 transition-colors duration-200 hover:text-white"
                   >
                     {item.label}
                   </a>
@@ -50,7 +50,7 @@ export default function Footer() {
               <li>
                 <Link
                   href="/impressum"
-                  className="text-sm text-white/50 transition-colors duration-200 hover:text-white"
+                  className="text-sm text-white/70 transition-colors duration-200 hover:text-white"
                 >
                   Impressum
                 </Link>
@@ -58,7 +58,7 @@ export default function Footer() {
               <li>
                 <Link
                   href="/datenschutz"
-                  className="text-sm text-white/50 transition-colors duration-200 hover:text-white"
+                  className="text-sm text-white/70 transition-colors duration-200 hover:text-white"
                 >
                   Datenschutz
                 </Link>
@@ -74,7 +74,7 @@ export default function Footer() {
             <ul className="space-y-3">
               <li className="flex items-start gap-2.5">
                 <MapPin className="mt-0.5 h-4 w-4 shrink-0 text-accent/70" />
-                <span className="text-sm text-white/50">
+                <span className="text-sm text-white/70">
                   {siteConfig.company.address}
                 </span>
               </li>
@@ -82,7 +82,7 @@ export default function Footer() {
                 <Phone className="h-4 w-4 shrink-0 text-accent/70" />
                 <a
                   href={`tel:${siteConfig.company.phone.replace(/\s/g, "")}`}
-                  className="text-sm text-white/50 transition-colors hover:text-white"
+                  className="text-sm text-white/70 transition-colors hover:text-white"
                 >
                   {siteConfig.company.phone}
                 </a>
@@ -91,7 +91,7 @@ export default function Footer() {
                 <Mail className="h-4 w-4 shrink-0 text-accent/70" />
                 <a
                   href={`mailto:${siteConfig.company.email}`}
-                  className="text-sm text-white/50 transition-colors hover:text-white"
+                  className="text-sm text-white/70 transition-colors hover:text-white"
                 >
                   {siteConfig.company.email}
                 </a>
@@ -106,7 +106,7 @@ export default function Footer() {
             </h3>
             <div className="flex items-start gap-2.5">
               <Clock className="mt-0.5 h-4 w-4 shrink-0 text-accent/70" />
-              <div className="whitespace-pre-line text-sm leading-relaxed text-white/50">
+              <div className="whitespace-pre-line text-sm leading-relaxed text-white/70">
                 {siteConfig.company.hours}
               </div>
             </div>

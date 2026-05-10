@@ -30,11 +30,35 @@ export default function Hero() {
               {siteConfig.hero.eyebrow}
             </motion.p>
 
+            <motion.div
+              initial={reduceMotion ? false : { opacity: 0, y: 12 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.7, delay: 0.04, ease }}
+              className="mt-5 inline-flex max-w-full items-center gap-3 rounded-2xl border border-white/10 bg-white/[0.05] px-3 py-2.5 backdrop-blur-sm"
+            >
+              <Image
+                src={assetPath("/images/justin-consulting-portrait-premium.png")}
+                alt="Justin Doms"
+                width={48}
+                height={48}
+                className="h-11 w-11 rounded-xl object-cover object-top"
+                priority
+              />
+              <div>
+                <p className="font-heading text-sm font-semibold text-white">
+                  Justin Doms
+                </p>
+                <p className="text-xs leading-snug text-white/58">
+                  Personal Trainer & Ernährungscoach in Hadamar
+                </p>
+              </div>
+            </motion.div>
+
             <motion.h1
               initial={reduceMotion ? false : { opacity: 0, y: 18 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.08, ease }}
-              className="mt-5 max-w-4xl font-heading text-4xl font-bold leading-[0.96] tracking-[-0.03em] text-white sm:text-5xl lg:text-7xl"
+              className="mt-5 max-w-4xl font-heading text-3xl font-bold leading-[0.98] tracking-[-0.03em] text-white sm:text-5xl lg:text-7xl"
             >
               {siteConfig.hero.headline}
             </motion.h1>

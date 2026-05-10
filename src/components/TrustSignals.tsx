@@ -11,7 +11,7 @@ export default function TrustSignals() {
     <section id="trust" className="relative bg-primary py-6">
       {/* Subtle top accent line */}
       <div className="absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-accent/40 to-transparent" />
-      <div className="mx-auto max-w-5xl px-5 sm:px-6 lg:px-8">
+      <div className="mx-auto max-w-6xl px-5 sm:px-6 lg:px-8">
         <StaggerContainer
           className="flex flex-wrap items-center justify-center gap-x-10 gap-y-4 lg:justify-between"
           staggerDelay={0.08}
@@ -35,6 +35,15 @@ export default function TrustSignals() {
             );
           })}
         </StaggerContainer>
+
+        <div className="mt-6 rounded-2xl border border-white/10 bg-white/[0.04] px-5 py-4 text-center sm:px-7">
+          <p className="font-heading text-base font-semibold leading-relaxed text-white sm:text-lg">
+            {siteConfig.proof.quote}
+          </p>
+          <p className="mt-2 text-xs font-semibold uppercase tracking-[0.18em] text-accent">
+            {siteConfig.proof.author}
+          </p>
+        </div>
       </div>
     </section>
   );

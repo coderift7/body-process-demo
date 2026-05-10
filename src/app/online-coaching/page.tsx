@@ -5,6 +5,7 @@ import {
   ArrowRight,
   CheckCircle2,
   ClipboardList,
+  HelpCircle,
   MessageSquareText,
   PlayCircle,
   ShieldCheck,
@@ -41,7 +42,25 @@ export default function OnlineCoachingPage() {
               <p className="text-xs font-semibold uppercase tracking-[0.28em] text-accent sm:text-sm">
                 {coaching.hero.eyebrow}
               </p>
-              <h1 className="mt-5 max-w-4xl font-heading text-4xl font-bold leading-[0.98] tracking-[-0.03em] text-white sm:text-5xl lg:text-7xl">
+              <div className="mt-5 inline-flex max-w-full items-center gap-3 rounded-2xl border border-white/10 bg-white/[0.05] px-3 py-2.5 backdrop-blur-sm">
+                <Image
+                  src={assetPath("/images/justin-consulting-portrait-premium.png")}
+                  alt="Justin Doms"
+                  width={48}
+                  height={48}
+                  className="h-11 w-11 rounded-xl object-cover object-top"
+                  priority
+                />
+                <div>
+                  <p className="font-heading text-sm font-semibold text-white">
+                    Justin Doms
+                  </p>
+                  <p className="text-xs leading-snug text-white/58">
+                    Plan, Formcheck und Ernährungsfeedback
+                  </p>
+                </div>
+              </div>
+              <h1 className="mt-5 max-w-4xl font-heading text-3xl font-bold leading-[0.98] tracking-[-0.03em] text-white sm:text-5xl lg:text-7xl">
                 {coaching.hero.headline}
               </h1>
               <p className="mt-6 max-w-2xl text-lg leading-relaxed text-white/72 sm:text-xl">
@@ -188,6 +207,57 @@ export default function OnlineCoachingPage() {
           </div>
         </section>
 
+        <section className="bg-primary py-24 text-white lg:py-28">
+          <div className="mx-auto max-w-7xl px-5 sm:px-6 lg:px-8">
+            <div className="grid gap-10 lg:grid-cols-[0.85fr_1.15fr]">
+              <div>
+                <span className="text-sm font-semibold uppercase tracking-widest text-accent">
+                  Praxis
+                </span>
+                <h2 className="mt-3 font-heading text-3xl font-bold tracking-tight sm:text-4xl">
+                  So sieht eine Coaching-Woche aus.
+                </h2>
+                <p className="mt-4 max-w-xl text-lg leading-relaxed text-white/68">
+                  Online-Coaching wird greifbarer, wenn klar ist, was du
+                  wirklich machst und was Justin prüft.
+                </p>
+              </div>
+
+              <div className="grid gap-3">
+                {coaching.weeklyRhythm.map((item, index) => (
+                  <article
+                    key={item}
+                    className="grid grid-cols-[auto_1fr] gap-4 rounded-2xl border border-white/10 bg-white/[0.045] p-5"
+                  >
+                    <div className="flex h-10 w-10 items-center justify-center rounded-xl bg-accent font-heading text-sm font-bold text-white">
+                      {index + 1}
+                    </div>
+                    <p className="self-center text-sm leading-relaxed text-white/78 sm:text-base">
+                      {item}
+                    </p>
+                  </article>
+                ))}
+              </div>
+            </div>
+
+            <div className="mt-12 grid gap-4 md:grid-cols-3">
+              {coaching.expectations.map((item) => (
+                <article
+                  key={item.title}
+                  className="rounded-2xl border border-white/10 bg-white/[0.04] p-6"
+                >
+                  <h3 className="font-heading text-xl font-semibold text-white">
+                    {item.title}
+                  </h3>
+                  <p className="mt-3 text-sm leading-relaxed text-white/64">
+                    {item.description}
+                  </p>
+                </article>
+              ))}
+            </div>
+          </div>
+        </section>
+
         <section
           id="online-preise"
           className="scroll-mt-24 bg-background py-24 lg:py-28"
@@ -267,6 +337,42 @@ export default function OnlineCoachingPage() {
               >
                 Alle Angebote vergleichen
               </Link>
+            </div>
+          </div>
+        </section>
+
+        <section className="bg-white py-24 lg:py-28">
+          <div className="mx-auto max-w-4xl px-5 sm:px-6 lg:px-8">
+            <div className="text-center">
+              <span className="text-sm font-semibold uppercase tracking-widest text-accent">
+                Fragen vor dem Start
+              </span>
+              <h2 className="mt-3 font-heading text-3xl font-bold tracking-tight text-primary sm:text-4xl">
+                Gute Einwände, klare Antworten.
+              </h2>
+            </div>
+
+            <div className="mt-10 grid gap-4">
+              {coaching.faq.map((item) => (
+                <article
+                  key={item.question}
+                  className="rounded-2xl border border-border bg-card p-6 shadow-sm"
+                >
+                  <div className="flex items-start gap-4">
+                    <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-xl bg-accent/10 text-accent">
+                      <HelpCircle className="h-5 w-5" aria-hidden="true" />
+                    </div>
+                    <div>
+                      <h3 className="font-heading text-lg font-semibold text-primary">
+                        {item.question}
+                      </h3>
+                      <p className="mt-2 text-base leading-relaxed text-muted-foreground">
+                        {item.answer}
+                      </p>
+                    </div>
+                  </div>
+                </article>
+              ))}
             </div>
           </div>
         </section>

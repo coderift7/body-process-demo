@@ -21,15 +21,15 @@ export const siteConfig = {
 
   hero: {
     eyebrow: "Personal Training vor Ort · Online-Coaching digital",
-    headline: "Ein klarer Trainingsweg, der zu deinem Alltag passt.",
+    headline: "Training, Ernährung und Kontrolle — mit Justin an deiner Seite.",
     subheadline:
-      "Body Process verbindet Personal Training, Ernährungsstruktur und digitale Begleitung. Vor Ort in Hadamar, Limburg und Diez oder online, wenn du eigenständig trainierst und trotzdem persönliche Kontrolle willst.",
+      "Personal Training in Hadamar, Limburg und Diez oder Online-Coaching, wenn du selbst trainierst und trotzdem einen klaren Plan, Technik-Feedback und echte Anpassung willst.",
     cta1: "Kostenloses Erstgespräch anfragen",
     cta2: "Online-Coaching ansehen",
     benefits: [
       "1:1 Training für Technik, Aufbau und Verbindlichkeit",
       "Online-Coaching für Plan, Formchecks und Ernährung",
-      "Ehrliche Betreuung im vereinbarten Rahmen statt leere 24/7-Versprechen",
+      "Ehrliche Betreuung im vereinbarten Rahmen statt anonymer Standardplan",
     ],
     note: "Vor Ort in Hadamar, Limburg & Diez. Digital begleitbar für Training und Ernährung.",
   },
@@ -39,6 +39,12 @@ export const siteConfig = {
     { value: "10+", label: "Jahre Trainingserfahrung" },
     { value: "24h", label: "Rückmeldung auf Anfragen" },
   ],
+
+  proof: {
+    quote:
+      "Justin geht auf individuelle Bedürfnisse ein, erklärt viel und achtet auf genaue Ausführungstechniken.",
+    author: "Kundenstimme zu Body Process",
+  },
 
   services: [
     {
@@ -161,9 +167,36 @@ export const siteConfig = {
   pricing: {
     heading: "Klare Pakete, echte Endpreise",
     intro:
-      "Du siehst direkt, welche Betreuung zu deinem Alltag passt. Alle Preise sind Endpreise inkl. gesetzlicher MwSt.; keine Netto-Optik, kein Kleingedrucktes.",
+      "Starte mit einem passenden Einstieg oder vergleiche darunter alle Karten und Laufzeiten. Alle Preise sind Endpreise inkl. gesetzlicher MwSt.; keine Netto-Optik, kein Kleingedrucktes.",
     note:
       "Das Erstgespräch ist kostenlos und unverbindlich. Die genaue Empfehlung richtet sich nach Ziel, Trainingsstand, Alltag und freien Betreuungskapazitäten.",
+    recommended: [
+      {
+        name: "5er Karte Personal Training",
+        price: "386,75 €",
+        unit: "60 Minuten",
+        description:
+          "Guter Einstieg, wenn du Technik, Ablauf und Verbindlichkeit testen willst.",
+        tag: "vor Ort",
+      },
+      {
+        name: "24er Karte Personal Training",
+        price: "ab 71,40 €",
+        unit: "pro 60-Min.-Einheit",
+        description:
+          "Sinnvoll, wenn du über mehrere Monate planbar Fortschritt aufbauen willst.",
+        tag: "bester PT-Wert",
+        featured: true,
+      },
+      {
+        name: "Online-Coaching 3 Monate",
+        price: "154,70 €",
+        unit: "pro Monat",
+        description:
+          "Für eigenständiges Training mit Plan, Formcheck, Ernährung und Feedback.",
+        tag: "digital",
+      },
+    ],
     personalTraining: {
       eyebrow: "Personal Training",
       title: "1:1 Training mit Justin",
@@ -176,7 +209,7 @@ export const siteConfig = {
             { label: "Einzeltraining", price: "83,30 €" },
             { label: "5er Karte", price: "386,75 €", note: "3 Monate gültig" },
             { label: "10er Karte", price: "743,75 €" },
-            { label: "24er Karte", price: "1.713,60 €", note: "bester Preis pro Stunde" },
+            { label: "24er Karte", price: "1.713,60 €", note: "71,40 € pro Einheit" },
           ],
         },
         {
@@ -185,7 +218,7 @@ export const siteConfig = {
             { label: "Einzeltraining", price: "107,10 €" },
             { label: "5er Karte", price: "505,75 €", note: "3 Monate gültig" },
             { label: "10er Karte", price: "981,75 €" },
-            { label: "24er Karte", price: "2.284,80 €", note: "bester Preis pro Stunde" },
+            { label: "24er Karte", price: "2.284,80 €", note: "95,20 € pro Einheit" },
           ],
         },
       ],
@@ -293,6 +326,51 @@ export const siteConfig = {
           "Formchecks, Rückfragen und Fortschritt fließen in die nächste Anpassung ein.",
       },
     ],
+    weeklyRhythm: [
+      "Du trainierst mit deinem Plan im Studio oder zuhause.",
+      "Du schickst Formcheck-Videos und relevante Fragen gebündelt.",
+      "Justin prüft Technik, Fortschritt, Ernährung und Alltag.",
+      "Der Plan wird angepasst, bevor du wieder wochenlang falsch weitermachst.",
+    ],
+    expectations: [
+      {
+        title: "Du filmst nicht alles",
+        description:
+          "Formchecks sind gezielt: die Übungen, bei denen Technik und Gefühl wirklich wichtig sind.",
+      },
+      {
+        title: "Feedback kommt im Rahmen",
+        description:
+          "Keine Dauerbeschallung, sondern verlässliche Antworten und Anpassungen zu den vereinbarten Checkpoints.",
+      },
+      {
+        title: "Anfänger sind möglich",
+        description:
+          "Wichtig ist nicht dein Level, sondern dass du eigenständig trainieren und Rückmeldungen umsetzen kannst.",
+      },
+    ],
+    faq: [
+      {
+        question: "Muss ich mich bei jedem Training filmen?",
+        answer:
+          "Nein. Du filmst nur ausgewählte Übungen, bei denen Justin Technik, Bewegungsweg oder Belastung prüfen soll.",
+      },
+      {
+        question: "Wie oft bekomme ich Feedback?",
+        answer:
+          "Feedback läuft im vereinbarten Rahmen. Ziel ist verlässliche Betreuung, nicht ein Chat, der den ganzen Tag offen sein muss.",
+      },
+      {
+        question: "Passt Online-Coaching auch für Anfänger?",
+        answer:
+          "Ja, wenn du bereit bist, eigenständig umzusetzen. Wenn du sehr unsicher bist oder viel direkte Korrektur brauchst, ist 1:1 Training vor Ort oft der bessere Start.",
+      },
+      {
+        question: "Kann ich Online-Coaching nutzen, obwohl ich aus der Region komme?",
+        answer:
+          "Ja. Es ist nicht nur für Kunden weit weg gedacht, sondern auch für Menschen aus Hadamar, Limburg und Diez, die selbst trainieren und Justins Struktur digital nutzen wollen.",
+      },
+    ],
     boundaries:
       "Online-Coaching ist keine 24/7-Begleitung und kein Ersatz für medizinische Betreuung. Es ist ein klarer Coaching-Rahmen für Menschen, die eigenständig umsetzen können.",
   },
@@ -393,6 +471,21 @@ export const siteConfig = {
       question: "Für wen passt das Online-Coaching?",
       answer:
         "Online-Coaching passt, wenn du eigenständig trainieren kannst, aber Struktur, Kontrolle und Anpassungen brauchst. Du bekommst keinen anonymen Standardplan, sondern Training, Ernährung, Video-Feedback und Support im vereinbarten Rahmen.",
+    },
+    {
+      question: "Muss ich mich für Online-Coaching beim Training filmen?",
+      answer:
+        "Nur gezielt. Formchecks sind für Übungen gedacht, bei denen Technik, Belastung oder Ausführung wirklich wichtig sind. Du musst nicht jedes Training komplett aufnehmen.",
+    },
+    {
+      question: "Wie oft bekomme ich im Online-Coaching Feedback?",
+      answer:
+        "Feedback läuft im vereinbarten Rahmen. Du bekommst verlässliche Rückmeldungen und Anpassungen, aber kein unrealistisches 24/7-Versprechen.",
+    },
+    {
+      question: "Kann ich Online-Coaching auch nutzen, wenn ich aus Hadamar oder Limburg komme?",
+      answer:
+        "Ja. Online-Coaching ist nicht nur für weit entfernte Kunden gedacht, sondern auch für Menschen aus der Region, die selbst trainieren und Justins Struktur digital nutzen möchten.",
     },
     {
       question: "Kann ich auch vor Ort mit Justin trainieren?",

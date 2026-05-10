@@ -1,4 +1,5 @@
 import Link from "next/link";
+import { siteConfig } from "@/config/site";
 
 export default function Datenschutz() {
   return (
@@ -6,7 +7,7 @@ export default function Datenschutz() {
       <div className="mx-auto max-w-3xl px-5 py-24 sm:px-6">
         <Link
           href="/"
-          className="text-sm text-accent hover:underline"
+          className="text-sm text-accent transition-colors duration-200 hover:underline focus-visible:rounded-sm focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent/60"
         >
           ← Zurück zur Startseite
         </Link>
@@ -21,58 +22,97 @@ export default function Datenschutz() {
               1. Verantwortlicher
             </h2>
             <p className="mt-2">
-              Justin Doms — Body Process Personal Training
+              {siteConfig.company.responsiblePerson}
               <br />
-              Mainzer Landstraße 54, 65589 Hadamar
+              {siteConfig.company.address}
               <br />
-              E-Mail: info@body-process.de
+              E-Mail: {siteConfig.company.email}
             </p>
           </div>
 
           <div>
             <h2 className="font-heading text-lg font-semibold text-primary">
-              2. Erhebung und Verarbeitung von Daten
+              2. Zugriff auf die Website
             </h2>
             <p className="mt-2">
-              Beim Besuch unserer Webseite werden automatisch Informationen
-              allgemeiner Natur erfasst (z.B. IP-Adresse, Browsertyp,
-              Betriebssystem). Diese Daten lassen keine Rückschlüsse auf Ihre
-              Person zu und werden ausschließlich zur Sicherstellung eines
-              störungsfreien Betriebs ausgewertet.
+              Beim Aufruf dieser Website verarbeitet der technische Hoster
+              üblicherweise Verbindungsdaten wie IP-Adresse, Datum und Uhrzeit
+              des Zugriffs, Browserinformationen sowie angefragte Dateien in
+              Server-Log-Dateien. Diese Verarbeitung erfolgt, um die Website
+              sicher und stabil bereitzustellen.
             </p>
           </div>
 
           <div>
             <h2 className="font-heading text-lg font-semibold text-primary">
-              3. Kontaktformular
+              3. Kontaktaufnahme
             </h2>
             <p className="mt-2">
-              Wenn Sie uns über das Kontaktformular kontaktieren, werden die von
-              Ihnen angegebenen Daten (Name, E-Mail, Telefon, gewünschtes
-              Training) zwecks Bearbeitung Ihrer Anfrage und für den Fall von
-              Anschlussfragen bei uns gespeichert. Diese Daten geben wir nicht
-              ohne Ihre Einwilligung weiter.
+              Wenn Sie per E-Mail, Telefon oder WhatsApp Kontakt aufnehmen,
+              werden die von Ihnen übermittelten Angaben ausschließlich zur
+              Bearbeitung Ihrer Anfrage und für mögliche Rückfragen verwendet.
+              Bei der Kontaktaufnahme über WhatsApp gelten zusätzlich die
+              Datenschutzbestimmungen des jeweiligen Diensteanbieters.
             </p>
           </div>
 
           <div>
             <h2 className="font-heading text-lg font-semibold text-primary">
-              4. Ihre Rechte
+              4. Cookies und Analyse
+            </h2>
+            <p className="mt-2">
+              Auf dieser Website werden derzeit keine eigenen Analyse- oder
+              Marketing-Tools eingesetzt. Soweit der technische Betrieb durch
+              den Hoster technisch notwendige Speicherungen oder Log-Dateien
+              erfordert, geschieht dies auf Grundlage des berechtigten
+              Interesses an einer sicheren Bereitstellung der Website.
+            </p>
+          </div>
+
+          <div>
+            <h2 className="font-heading text-lg font-semibold text-primary">
+              5. Ihre Rechte
             </h2>
             <p className="mt-2">
               Sie haben das Recht auf Auskunft, Berichtigung, Löschung und
-              Einschränkung der Verarbeitung Ihrer personenbezogenen Daten. Bei
-              Fragen wenden Sie sich an: info@body-process.de
+              Einschränkung der Verarbeitung Ihrer personenbezogenen Daten sowie
+              auf Widerspruch gegen die Verarbeitung und auf Datenübertragbarkeit,
+              soweit die gesetzlichen Voraussetzungen vorliegen. Bei Fragen
+              wenden Sie sich an: {siteConfig.company.email}
             </p>
           </div>
 
           <div>
             <h2 className="font-heading text-lg font-semibold text-primary">
-              Hinweis
+              6. Beschwerderecht
             </h2>
             <p className="mt-2">
-              Diese Webseite befindet sich im Aufbau. Die vollständige
-              Datenschutzerklärung wird vor Veröffentlichung ergänzt.
+              Sie haben das Recht, sich bei einer Datenschutzaufsichtsbehörde zu
+              beschweren. Zuständig ist für Hessen insbesondere der Hessische
+              Beauftragte für Datenschutz und Informationsfreiheit,
+              Gustav-Stresemann-Ring 1, 65189 Wiesbaden.
+            </p>
+            <p className="mt-2">
+              Quelle für die Behördenangabe:{" "}
+              <a
+                href="https://hessen.de/Datenschutz"
+                target="_blank"
+                rel="noreferrer"
+                className="text-accent underline decoration-accent/30 transition-colors duration-200 hover:decoration-accent/60 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent/60"
+              >
+                Hessen.de
+              </a>
+            </p>
+          </div>
+
+          <div>
+            <h2 className="font-heading text-lg font-semibold text-primary">
+              7. Hinweis zum Launch
+            </h2>
+            <p className="mt-2">
+              Vor der Live-Schaltung sollten hosting- oder tool-spezifische
+              Ergänzungen noch einmal geprüft werden, falls weitere Dienste,
+              Einbindungen oder Tracking-Tools hinzukommen.
             </p>
           </div>
         </div>

@@ -1,4 +1,5 @@
 import Link from "next/link";
+import { siteConfig } from "@/config/site";
 
 export default function Impressum() {
   return (
@@ -6,7 +7,7 @@ export default function Impressum() {
       <div className="mx-auto max-w-3xl px-5 py-24 sm:px-6">
         <Link
           href="/"
-          className="text-sm text-accent hover:underline"
+          className="text-sm text-accent transition-colors duration-200 hover:underline focus-visible:rounded-sm focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent/60"
         >
           ← Zurück zur Startseite
         </Link>
@@ -17,15 +18,11 @@ export default function Impressum() {
 
         <div className="mt-8 space-y-6 text-muted-foreground">
           <div>
-            <h2 className="font-heading text-lg font-semibold text-primary">
-              Angaben gemäß § 5 TMG
-            </h2>
+            <h2 className="font-heading text-lg font-semibold text-primary">Angaben zum Anbieter</h2>
             <p className="mt-2">
-              Justin Doms — Body Process Personal Training
+              {siteConfig.company.responsiblePerson}
               <br />
-              Mainzer Landstraße 54
-              <br />
-              65589 Hadamar
+              {siteConfig.company.address}
             </p>
           </div>
 
@@ -34,30 +31,41 @@ export default function Impressum() {
               Kontakt
             </h2>
             <p className="mt-2">
-              Telefon: +49 176 XXXXXXXX
+              Telefon: {siteConfig.company.phone}
               <br />
-              E-Mail: info@body-process.de
+              E-Mail: {siteConfig.company.email}
             </p>
           </div>
 
           <div>
             <h2 className="font-heading text-lg font-semibold text-primary">
-              Haftung für Inhalte
+              Verantwortlich für den Inhalt
             </h2>
             <p className="mt-2">
-              Die Inhalte dieser Seiten wurden mit größter Sorgfalt erstellt.
-              Für die Richtigkeit, Vollständigkeit und Aktualität der Inhalte
-              kann jedoch keine Gewähr übernommen werden.
+              Verantwortlich für den Inhalt dieser Website ist {siteConfig.company.responsiblePerson},
+              Anschrift wie oben.
             </p>
           </div>
 
           <div>
             <h2 className="font-heading text-lg font-semibold text-primary">
-              Hinweis
+              Streitbeilegung
             </h2>
             <p className="mt-2">
-              Diese Webseite befindet sich im Aufbau. Angaben werden vor
-              Veröffentlichung vervollständigt.
+              Ich bin nicht verpflichtet und nicht bereit, an einem
+              Streitbeilegungsverfahren vor einer Verbraucherschlichtungsstelle
+              teilzunehmen.
+            </p>
+          </div>
+
+          <div>
+            <h2 className="font-heading text-lg font-semibold text-primary">
+              Urheberrecht
+            </h2>
+            <p className="mt-2">
+              Inhalte, Texte, Bilder und Gestaltung dieser Website unterliegen
+              dem Urheberrecht. Eine Verwendung außerhalb der gesetzlichen
+              Grenzen bedarf der vorherigen Zustimmung des Rechteinhabers.
             </p>
           </div>
         </div>

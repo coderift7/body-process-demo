@@ -17,11 +17,20 @@ const sourceSans = Source_Sans_3({
   display: "swap",
 });
 
-const siteUrl = "https://coderift7.github.io/body-process-demo";
+const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || "https://body-process.de";
+const shouldIndex =
+  !siteUrl.includes("github.io") && !siteUrl.includes("localhost");
 
 export const metadata: Metadata = {
   title: siteConfig.meta.title,
   description: siteConfig.meta.description,
+  keywords: [
+    "Personal Training Hadamar",
+    "Personal Trainer Limburg",
+    "Personal Training Diez",
+    "Ernährungscoaching Limburg",
+    "Fitness Coaching für Selbstständige",
+  ],
   metadataBase: new URL(siteUrl),
   alternates: {
     canonical: "/",
@@ -40,8 +49,8 @@ export const metadata: Metadata = {
     description: siteConfig.meta.description,
   },
   robots: {
-    index: false,
-    follow: false,
+    index: shouldIndex,
+    follow: shouldIndex,
   },
 };
 
@@ -54,6 +63,7 @@ export default function RootLayout({
     <html lang="de" className={`${lexend.variable} ${sourceSans.variable}`}>
       <head>
         <meta name="theme-color" content="#0F172A" />
+        <meta name="format-detection" content="telephone=yes" />
         {/* FAQ Schema */}
         <script
           type="application/ld+json"
@@ -81,7 +91,7 @@ export default function RootLayout({
               "@type": "HealthAndBeautyBusiness",
               name: siteConfig.company.legalName,
               description: siteConfig.meta.description,
-              url: "https://body-process.de",
+              url: siteUrl,
               telephone: siteConfig.company.phone,
               email: siteConfig.company.email,
               address: {
@@ -96,6 +106,31 @@ export default function RootLayout({
                 { "@type": "City", name: "Limburg an der Lahn" },
                 { "@type": "City", name: "Diez" },
               ],
+              founder: {
+                "@type": "Person",
+                name: "Justin Doms",
+              },
+              review: siteConfig.testimonials.map((testimonial) => ({
+                "@type": "Review",
+                reviewRating: {
+                  "@type": "Rating",
+                  ratingValue: testimonial.rating,
+                  bestRating: 5,
+                },
+                author: {
+                  "@type": "Person",
+                  name: testimonial.name,
+                },
+                reviewBody: testimonial.text,
+              })),
+              makesOffer: siteConfig.services.map((service) => ({
+                "@type": "Offer",
+                itemOffered: {
+                  "@type": "Service",
+                  name: service.title,
+                  description: service.description,
+                },
+              })),
               priceRange: "€€",
             }),
           }}

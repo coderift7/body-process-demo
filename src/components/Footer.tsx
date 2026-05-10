@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import { Phone, Mail, MapPin, Clock } from "lucide-react";
 import { motion } from "framer-motion";
 import Link from "next/link";
@@ -16,18 +17,21 @@ export default function Footer() {
           {/* Company */}
           <div>
             <div className="mb-5">
-              {/* eslint-disable-next-line @next/next/no-img-element */}
-              <img
-                src={`${process.env.__NEXT_ROUTER_BASEPATH || ""}/logo-real-dark.webp`}
-                alt="Body Process — Personal Training"
-                width={200}
-                height={70}
-                className="h-10 w-auto"
-              />
+              <Link
+                href="/"
+                className="inline-block focus-visible:rounded-sm focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent/60"
+              >
+                <Image
+                  src="/logo-real-dark.webp"
+                  alt="Body Process — Personal Training"
+                  width={200}
+                  height={70}
+                  className="h-10 w-auto"
+                />
+              </Link>
             </div>
             <p className="text-sm leading-relaxed text-white/70">
-              {siteConfig.company.tagline} Personal Training in Hadamar,
-              Limburg und Diez.
+              {siteConfig.company.tagline} In {siteConfig.company.serviceArea}.
             </p>
           </div>
 
@@ -41,7 +45,7 @@ export default function Footer() {
                 <li key={item.href}>
                   <a
                     href={item.href}
-                    className="text-sm text-white/70 transition-colors duration-200 hover:text-white"
+                    className="text-sm text-white/70 transition-colors duration-200 hover:text-white focus-visible:rounded-sm focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent/60"
                   >
                     {item.label}
                   </a>
@@ -50,7 +54,7 @@ export default function Footer() {
               <li>
                 <Link
                   href="/impressum"
-                  className="text-sm text-white/70 transition-colors duration-200 hover:text-white"
+                  className="text-sm text-white/70 transition-colors duration-200 hover:text-white focus-visible:rounded-sm focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent/60"
                 >
                   Impressum
                 </Link>
@@ -58,7 +62,7 @@ export default function Footer() {
               <li>
                 <Link
                   href="/datenschutz"
-                  className="text-sm text-white/70 transition-colors duration-200 hover:text-white"
+                  className="text-sm text-white/70 transition-colors duration-200 hover:text-white focus-visible:rounded-sm focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent/60"
                 >
                   Datenschutz
                 </Link>
@@ -73,25 +77,28 @@ export default function Footer() {
             </h3>
             <ul className="space-y-3">
               <li className="flex items-start gap-2.5">
-                <MapPin className="mt-0.5 h-4 w-4 shrink-0 text-accent/70" />
+                <MapPin
+                  className="mt-0.5 h-4 w-4 shrink-0 text-accent/70"
+                  aria-hidden="true"
+                />
                 <span className="text-sm text-white/70">
                   {siteConfig.company.address}
                 </span>
               </li>
               <li className="flex items-center gap-2.5">
-                <Phone className="h-4 w-4 shrink-0 text-accent/70" />
+                <Phone className="h-4 w-4 shrink-0 text-accent/70" aria-hidden="true" />
                 <a
                   href={`tel:${siteConfig.company.phone.replace(/\s/g, "")}`}
-                  className="text-sm text-white/70 transition-colors hover:text-white"
+                  className="text-sm text-white/70 transition-colors hover:text-white focus-visible:rounded-sm focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent/60"
                 >
                   {siteConfig.company.phone}
                 </a>
               </li>
               <li className="flex items-center gap-2.5">
-                <Mail className="h-4 w-4 shrink-0 text-accent/70" />
+                <Mail className="h-4 w-4 shrink-0 text-accent/70" aria-hidden="true" />
                 <a
                   href={`mailto:${siteConfig.company.email}`}
-                  className="text-sm text-white/70 transition-colors hover:text-white"
+                  className="text-sm text-white/70 transition-colors hover:text-white focus-visible:rounded-sm focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent/60"
                 >
                   {siteConfig.company.email}
                 </a>
@@ -105,7 +112,10 @@ export default function Footer() {
               Trainingszeiten
             </h3>
             <div className="flex items-start gap-2.5">
-              <Clock className="mt-0.5 h-4 w-4 shrink-0 text-accent/70" />
+              <Clock
+                className="mt-0.5 h-4 w-4 shrink-0 text-accent/70"
+                aria-hidden="true"
+              />
               <div className="whitespace-pre-line text-sm leading-relaxed text-white/70">
                 {siteConfig.company.hours}
               </div>

@@ -1,6 +1,11 @@
 "use client";
 
-import { motion, useInView, type Variants } from "framer-motion";
+import {
+  motion,
+  useInView,
+  useReducedMotion,
+  type Variants,
+} from "framer-motion";
 import { useRef } from "react";
 
 // Shared animation variants
@@ -43,18 +48,23 @@ export function Reveal({
 }) {
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true, margin: "-80px" });
+  const reduceMotion = useReducedMotion();
 
   return (
     <motion.div
       ref={ref}
-      initial="hidden"
-      animate={isInView ? "visible" : "hidden"}
-      variants={variants}
-      transition={{
-        duration: 0.6,
-        delay,
-        ease: [0.22, 1, 0.36, 1],
-      }}
+      initial={reduceMotion ? false : "hidden"}
+      animate={isInView ? "visible" : reduceMotion ? "visible" : "hidden"}
+      variants={reduceMotion ? undefined : variants}
+      transition={
+        reduceMotion
+          ? { duration: 0 }
+          : {
+              duration: 0.6,
+              delay,
+              ease: [0.22, 1, 0.36, 1],
+            }
+      }
       className={className}
     >
       {children}
@@ -74,19 +84,25 @@ export function StaggerContainer({
 }) {
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true, margin: "-60px" });
+  const reduceMotion = useReducedMotion();
 
   return (
     <motion.div
       ref={ref}
-      initial="hidden"
-      animate={isInView ? "visible" : "hidden"}
-      variants={{
-        visible: {
-          transition: {
-            staggerChildren: staggerDelay,
-          },
-        },
-      }}
+      initial={reduceMotion ? false : "hidden"}
+      animate={isInView ? "visible" : reduceMotion ? "visible" : "hidden"}
+      variants={
+        reduceMotion
+          ? undefined
+          : {
+              visible: {
+                transition: {
+                  staggerChildren: staggerDelay,
+                },
+              },
+              hidden: {},
+            }
+      }
       className={className}
     >
       {children}
@@ -102,10 +118,16 @@ export function StaggerItem({
   children: React.ReactNode;
   className?: string;
 }) {
+  const reduceMotion = useReducedMotion();
+
   return (
     <motion.div
-      variants={fadeUp}
-      transition={{ duration: 0.5, ease: [0.22, 1, 0.36, 1] }}
+      variants={reduceMotion ? undefined : fadeUp}
+      transition={
+        reduceMotion
+          ? { duration: 0 }
+          : { duration: 0.5, ease: [0.22, 1, 0.36, 1] }
+      }
       className={className}
     >
       {children}

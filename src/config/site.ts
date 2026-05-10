@@ -2,32 +2,42 @@ export const siteConfig = {
   company: {
     name: "Body Process",
     legalName: "Justin Doms — Body Process Personal Training",
-    tagline: "Just in form.",
-    phone: "+49 176 XXXXXXXX",
-    email: "info@body-process.de",
+    responsiblePerson: "Justin Doms",
+    tagline: "Personal Training mit Struktur, Klarheit und echter Betreuung.",
+    phone: "+49 174 3200767",
+    whatsapp: "+49 174 3200767",
+    email: "Justin@body-process.de",
     address: "Mainzer Landstraße 54, 65589 Hadamar",
     hours: "Mo–Fr: 07:00–21:00 Uhr\nSa: 09:00–15:00 Uhr",
+    serviceArea: "Hadamar, Limburg, Diez und Umgebung",
   },
 
   meta: {
     title:
-      "Body Process — Personal Training in Hadamar, Limburg & Diez | Justin Doms",
+      "Body Process — Personal Training & Online-Coaching für Berufstätige",
     description:
-      "Dein Personal Trainer in Hadamar, Limburg und Diez. Individuelles Training, Ernährungscoaching und ganzheitliche Betreuung. Kostenloses Erstgespräch buchen.",
+      "Personal Training in Hadamar, Limburg und Diez sowie 12-Wochen Online-Coaching für Berufstätige und Selbstständige. Individuelles Training, Ernährungsstruktur und klare Betreuung mit Justin Doms.",
   },
 
   hero: {
-    headline: "Dein Körper. Dein Prozess. Dein Ergebnis.",
+    eyebrow: "Personal Training & Online-Coaching für volle Kalender",
+    headline: "Mehr Energie, bessere Form und klare Routinen für einen Alltag mit Verantwortung.",
     subheadline:
-      "Individuelles Personal Training mit wissenschaftlichem Ansatz — für Menschen, die nicht nur fit werden wollen, sondern es bleiben.",
-    cta1: "Kostenloses Erstgespräch",
-    cta2: "Mein Angebot",
+      "Body Process verbindet Training, Ernährung und persönliche Betreuung zu einem Plan, der in deinen Arbeitsalltag passt — vor Ort oder als strukturierter 12-Wochen-Weg online.",
+    cta1: "Kostenloses Erstgespräch anfragen",
+    cta2: "Ablauf ansehen",
+    benefits: [
+      "Individuelle Betreuung statt Trainingsplan von der Stange",
+      "Termine, die sich an deinen Kalender anpassen",
+      "Klare Strategie für Training, Ernährung & Umsetzung",
+    ],
+    note: "Vor Ort in Hadamar, Limburg & Diez sowie digital begleitbar.",
   },
 
   trustStats: [
-    { value: "100+", label: "Zufriedene Kunden" },
-    { value: "4.9/5", label: "Google-Bewertung" },
-    { value: "10+", label: "Jahre Erfahrung" },
+    { value: "100+", label: "begleitete Kundinnen & Kunden" },
+    { value: "10+", label: "Jahre Trainingserfahrung" },
+    { value: "24h", label: "Rückmeldung auf Anfragen" },
   ],
 
   services: [
@@ -35,108 +45,151 @@ export const siteConfig = {
       icon: "Dumbbell",
       title: "Personal Training",
       description:
-        "Eins-zu-eins Training, perfekt auf deine Ziele abgestimmt. Ob Muskelaufbau, Fettreduktion oder Leistungssteigerung — dein Plan, dein Tempo.",
+        "Eins-zu-eins Coaching mit klarer Progression, sauberer Technik und einem Plan, der zu deinem Leistungsstand und Alltag passt.",
       image: "/images/service-training.webp",
     },
     {
       icon: "Apple",
       title: "Ernährungscoaching",
       description:
-        "Kein Diät-Wahnsinn, sondern ein Ernährungsplan, der zu deinem Alltag passt. Wissenschaftlich fundiert, alltagstauglich umgesetzt.",
-      image: "/images/service-ernaehrung.webp",
+        "Struktur statt Diätstress: alltagstaugliche Ernährung, die Performance, Regeneration und sichtbare Fortschritte unterstützt.",
+      image: "/images/ernaehrungsberatung-justin-premium.png",
     },
     {
       icon: "MapPin",
       title: "Outdoor-Training",
       description:
-        "Training an der frischen Luft — Parks, Sportplätze und Natur rund um Hadamar, Limburg und Diez.",
+        "Flexible Einheiten im Freien, wenn du Bewegung ohne Studioatmosphäre oder als Ergänzung zu deinen festen Sessions willst.",
       image: "/images/service-outdoor.webp",
     },
     {
       icon: "Activity",
       title: "Regeneration & Comeback",
       description:
-        "Nach Verletzung oder Pause wieder stark werden. Aus eigener Erfahrung als Ex-Leistungssportler weiß ich, wie man sicher zurückkommt.",
+        "Für Wiedereinsteiger nach Pause, Stressphase oder Verletzung: sicherer Aufbau statt Überforderung.",
       image: "/images/service-regeneration.webp",
     },
     {
       icon: "Target",
       title: "Leistungsdiagnostik",
       description:
-        "Keine Vermutungen, sondern Daten. Körperanalyse, Leistungstests und regelmäßige Fortschrittsmessung für optimale Ergebnisse.",
+        "Körperanalyse, Zieldefinition und Fortschrittskontrolle sorgen dafür, dass dein Training messbar und nachvollziehbar bleibt.",
       image: "/images/service-diagnostik.webp",
     },
     {
-      icon: "Brain",
-      title: "Mentales Coaching",
+      icon: "MessagesSquare",
+      title: "12-Wochen Online-Coaching",
       description:
-        "Fitness beginnt im Kopf. Motivation, Gewohnheiten und Mindset — die Grundlage für langfristigen Erfolg.",
-      image: "/images/service-mental.webp",
+        "Wenn dein Kalender voll ist, aber dein Plan nicht fehlen darf: Training, Ernährung und wöchentliche Check-ins in einem klaren digitalen Rahmen.",
+      image: "/images/justin-consulting-portrait-premium.png",
     },
   ],
 
   team: {
-    heading: "Über Justin",
+    heading: "Coaching, das sich an dein Leben anpasst",
     description:
-      "Fitness ist kein Hobby für mich — es ist meine Geschichte. Vom Leistungsfußballer zum Personal Trainer: Ich weiß aus eigener Erfahrung, was es braucht, um Ziele zu erreichen — und nach Rückschlägen wieder aufzustehen.",
+      "Wenn Beruf, Familie und Verpflichtungen viel Raum einnehmen, braucht Fitness keine zusätzliche Komplexität, sondern einen klaren Rahmen. Genau dafür ist Body Process gedacht.",
     members: [
       {
         name: "Justin Doms",
         role: "Personal Trainer & Ernährungscoach",
         description:
-          "Ex-Leistungssportler mit Hintergrund im Profifußball. Wissenschaftlich fundierter Trainingsansatz, der Körper, Ernährung und Mindset verbindet. Zertifizierter Personal Trainer mit über 10 Jahren Erfahrung.",
-        image: "/images/justin-profile.webp",
+          "Ich arbeite mit Menschen, die Ergebnisse wollen, aber keine Zeit für blindes Ausprobieren haben. Mein Ansatz verbindet fundiertes Training, alltagstaugliche Ernährung und ehrliche Betreuung, damit Fortschritt planbar wird.",
+        image: "/images/justin-consulting-portrait-premium.png",
       },
     ],
     stats: [
-      { value: "10+", label: "Jahre Erfahrung" },
-      { value: "100+", label: "Zufriedene Kunden" },
-      { value: "3", label: "Säulen: Körper, Ernährung, Mindset" },
+      { value: "1:1", label: "Betreuung mit klarer Verantwortung" },
+      { value: "100+", label: "Kunden auf ihrem Weg begleitet" },
+      { value: "3", label: "Hebel: Training, Ernährung, Umsetzung" },
     ],
+  },
+
+  audience: {
+    heading: "Personal Training in Hadamar, Limburg und Diez",
+    intro:
+      "Body Process richtet sich an Menschen, die beruflich viel leisten und ihre Gesundheit trotzdem nicht dem Zufall überlassen wollen.",
+    profiles: [
+      {
+        title: "Selbstständige mit wenig Zeit",
+        description:
+          "Du brauchst einen Plan, der sich in einen vollen Kalender einfügt und nicht nach zwei stressigen Wochen zusammenbricht.",
+      },
+      {
+        title: "Berufstätige mit hoher Verantwortung",
+        description:
+          "Wenn Energie, Belastbarkeit und Konzentration im Job zählen, muss Training unterstützen statt zusätzlich zu belasten.",
+      },
+      {
+        title: "Wiedereinsteiger nach Pause oder Stressphase",
+        description:
+          "Nach längerer Pause, Verletzung oder Erschöpfung geht es nicht um Härte, sondern um einen sauberen, sicheren Aufbau.",
+      },
+    ],
+    locations: [
+      "Personal Training in Hadamar",
+      "Personal Training in Limburg an der Lahn",
+      "Personal Training in Diez",
+    ],
+  },
+
+  process: {
+    heading: "So läuft dein Einstieg ab",
+    intro:
+      "Du bekommst keinen Standardplan, sondern einen klaren Ablauf mit Analyse, Strategie und Begleitung.",
+    steps: [
+      {
+        title: "1. Erstgespräch & Standortbestimmung",
+        description:
+          "Wir klären Ziel, Alltag, Trainingsstand, Beschwerden und Zeitfenster. So sehen wir sofort, was realistisch und sinnvoll ist.",
+      },
+      {
+        title: "2. Individuelle Strategie",
+        description:
+          "Du erhältst eine passende Kombination aus Training, Ernährung und Umsetzungsstruktur statt isolierter Einzeltipps.",
+      },
+      {
+        title: "3. Begleitung & Anpassung",
+        description:
+          "Fortschritte werden regelmäßig überprüft und der Plan angepasst, damit du dranbleibst und nicht wieder in alte Muster fällst.",
+      },
+    ],
+    highlight:
+      "Besonders geeignet für Menschen, die wenig Zeit haben, aber ihren Körper und ihre Leistungsfähigkeit nicht dem Zufall überlassen wollen.",
   },
 
   pricing: [
     {
-      name: "5er Karte",
-      price: "450",
-      unit: "5 Einheiten",
-      description: "Ideal zum Einstieg",
+      name: "Vor-Ort Personal Training",
+      price: 450,
+      pricePrefix: "ab",
+      unit: "begrenzte persönliche Trainingsslots",
+      description: "Premium-Betreuung in Hadamar, Limburg, Diez und Umgebung",
       features: [
-        "5 Personal Training Sessions à 60 Min",
-        "Anamnese und Vorbereitungsgespräch",
-        "Individueller Trainingsplan",
-        "3 Monate gültig",
+        "1:1 Training mit Justin",
+        "5er, 10er oder 24er Karten je nach Ziel",
+        "Analyse, Technik und klare Progression",
+        "Ernährungscoaching je nach Paket integrierbar",
+        "Persönliche Slots nach Verfügbarkeit",
       ],
       featured: false,
     },
     {
-      name: "24er Karte",
-      price: "1.600",
-      unit: "24 Einheiten",
-      description: "Das volle Programm",
+      name: "12-Wochen Online-Coaching",
+      price: 499,
+      pricePrefix: "ab",
+      unit: "12 Wochen",
+      description: "Flexibler Coaching-Weg für Berufstätige und Selbstständige",
       features: [
-        "24 Personal Training Sessions à 90 Min",
-        "Anamnese und Vorbereitungsgespräch",
-        "2x Trainingsplan-Anpassung",
-        "Ernährungscoaching inklusive",
-        "Ernährungsbegleitung im gesamten Zeitraum",
-        "12 Monate gültig",
+        "Zielanalyse und Startstruktur",
+        "Individueller Trainingsplan für Gym oder Zuhause",
+        "Ernährungsstruktur ohne Diätstress",
+        "Wöchentliche Check-ins",
+        "Plananpassungen nach Fortschritt und Alltag",
+        "Begleitung per WhatsApp oder E-Mail im vereinbarten Rahmen",
       ],
       featured: true,
-    },
-    {
-      name: "10er Karte",
-      price: "850",
-      unit: "10 Einheiten",
-      description: "Für nachhaltige Ergebnisse",
-      features: [
-        "10 Personal Training Sessions à 90 Min",
-        "Anamnese und Vorbereitungsgespräch",
-        "Individueller Trainingsplan",
-        "Ernährungscoaching inklusive",
-        "6 Monate gültig",
-      ],
-      featured: false,
+      badge: "12 Wochen · Training + Ernährung",
     },
   ],
 
@@ -162,14 +215,16 @@ export const siteConfig = {
   ],
 
   appointment: {
-    heading: "Kostenloses Erstgespräch buchen",
+    heading: "Kostenloses Erstgespräch anfragen",
     subheading:
-      "Lass uns unverbindlich sprechen — über deine Ziele, deinen Alltag und wie ich dich am besten unterstützen kann. 30 Minuten, die sich lohnen.",
+      "Schick mir kurz deine Infos. Die Anfrage ist so vorbereitet, dass Justin direkt erkennt, ob Vor-Ort Training, Online-Coaching oder ein hybrider Weg sinnvoll ist.",
     treatmentTypes: [
-      "Personal Training",
-      "Ernährungscoaching",
+      "Vor-Ort Training",
+      "Online-Coaching",
+      "Hybrid / unsicher",
       "Regeneration / Comeback",
       "Outdoor-Training",
+      "Firmenfitness / Gesundheitsangebot",
       "Allgemeine Beratung",
     ],
     timeSlots: [
@@ -179,21 +234,66 @@ export const siteConfig = {
       "Abends (18–21)",
       "Flexibel",
     ],
-    submitLabel: "Erstgespräch anfragen",
+    experienceLevels: [
+      "Einsteiger",
+      "Wiedereinstieg nach Pause",
+      "Regelmäßig aktiv",
+      "Fortgeschritten",
+      "Unsicher",
+    ],
+    equipmentOptions: [
+      "Fitnessstudio",
+      "Zuhause mit Equipment",
+      "Zuhause ohne Equipment",
+      "Outdoor möglich",
+      "Noch unklar",
+    ],
+    weeklyTimeOptions: [
+      "1-2 Stunden",
+      "3-4 Stunden",
+      "5+ Stunden",
+      "Unregelmäßig",
+      "Noch unklar",
+    ],
+    nutritionTopics: [
+      "Alltagsstruktur",
+      "Abnehmen",
+      "Muskelaufbau",
+      "Energie / Leistungsfähigkeit",
+      "Keine Ernährungsbegleitung gewünscht",
+      "Noch unklar",
+    ],
+    startWindows: [
+      "So schnell wie möglich",
+      "In 2-4 Wochen",
+      "In 1-2 Monaten",
+      "Später / erst orientieren",
+    ],
+    submitLabel: "Anfrage per E-Mail vorbereiten",
     successMessage:
-      "Danke für deine Anfrage! Ich melde mich innerhalb von 24 Stunden bei dir — per WhatsApp oder E-Mail.",
+      "Deine Anfrage wurde vorbereitet. Wenn sich kein E-Mail-Programm öffnet, nutze alternativ den WhatsApp- oder Telefon-Link direkt darunter.",
   },
 
   faq: [
     {
       question: "Für wen ist Personal Training geeignet?",
       answer:
-        "Für jeden — egal ob Anfänger, Wiedereinsteiger oder erfahrener Sportler. Ich passe jedes Training individuell an dein Level, deine Ziele und eventuelle Einschränkungen an. Du brauchst keine Vorkenntnisse.",
+        "Für Berufstätige, Selbstständige, Wiedereinsteiger und ambitionierte Trainierende, die gezielt und effizient arbeiten möchten. Ich passe Intensität, Umfang und Ablauf an dein Niveau und deinen Alltag an.",
     },
     {
       question: "Wo findet das Training statt?",
       answer:
-        "Ich trainiere mit dir im GYM100 in Limburg oder auf Wunsch auch outdoor. Für Ernährungscoaching und Beratungen sind auch Online-Termine möglich.",
+        "Je nach Ziel trainieren wir im Studio, outdoor oder ergänzend digital. Ernährungscoaching und Strategietermine können auch online stattfinden.",
+    },
+    {
+      question: "Für wen passt das Online-Coaching?",
+      answer:
+        "Das 12-Wochen Online-Coaching passt, wenn du eigenständig trainieren kannst, aber Struktur, Kontrolle und Anpassungen brauchst. Du bekommst keinen anonymen Standardplan, sondern Training, Ernährung und wöchentliche Check-ins in einem klaren Rahmen.",
+    },
+    {
+      question: "Kann ich auch vor Ort mit Justin trainieren?",
+      answer:
+        "Ja, wenn ein persönlicher Trainingsslot frei ist. Vor-Ort Personal Training bleibt bewusst begrenzt, damit die Betreuung zuverlässig und hochwertig bleibt.",
     },
     {
       question: "Was kostet ein Erstgespräch?",
@@ -203,14 +303,21 @@ export const siteConfig = {
     {
       question: "Was unterscheidet dich von anderen Trainern?",
       answer:
-        "Mein Ansatz verbindet drei Säulen: Körper, Ernährung und Mindset. Als ehemaliger Leistungsfußballer kenne ich beide Seiten — den Aufstieg und den Weg zurück nach Verletzungen. Ich arbeite wissenschaftlich fundiert, nicht nach Schema F.",
+        "Du bekommst bei mir nicht nur Trainingseinheiten, sondern eine klare Betreuung über Training, Ernährung und Umsetzung hinweg. Mein Ansatz ist strukturiert, alltagstauglich und nicht auf kurzfristige Motivation aufgebaut.",
+    },
+    {
+      question: "Gibt es auch Angebote für Unternehmen?",
+      answer:
+        "Ja. Wenn du als Unternehmen oder Team ein Gesundheits- oder Trainingsangebot aufbauen möchtest, können wir ein passendes Format individuell besprechen.",
     },
   ],
 
   nav: [
     { label: "Leistungen", href: "#leistungen" },
+    { label: "Für wen", href: "#fuer-wen" },
     { label: "Über mich", href: "#ueber-mich" },
-    { label: "Preise", href: "#preise" },
+    { label: "Ablauf", href: "#ablauf" },
+    { label: "Angebote", href: "#preise" },
     { label: "Bewertungen", href: "#bewertungen" },
     { label: "Kontakt", href: "#kontakt" },
   ],

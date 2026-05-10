@@ -9,8 +9,8 @@
   --accent: #F39200;
   --accent-foreground: #FFFFFF;
 
-  /* CTA - Darker Orange */
-  --cta: #D97B00;
+  /* CTA - Burnt Orange, WCAG-safe with white text */
+  --cta: #B45309;
   --cta-foreground: #FFFFFF;
 
   /* Secondary - Dark Slate */
@@ -72,6 +72,8 @@ body {
   font-family: var(--font-body), system-ui, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  overflow-x: hidden;
+  color-scheme: light;
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -87,6 +89,16 @@ h1, h2, h3, h4, h5, h6 {
 
 html {
   scroll-behavior: smooth;
+  overflow-x: hidden;
+  scroll-padding-top: 6rem;
+}
+
+a,
+button,
+input,
+textarea,
+select {
+  -webkit-tap-highlight-color: rgba(243, 146, 0, 0.18);
 }
 
 /* Noise overlay texture for sections */

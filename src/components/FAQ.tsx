@@ -11,7 +11,10 @@ export default function FAQ() {
   const [openIndex, setOpenIndex] = useState<number | null>(0);
 
   return (
-    <section className="bg-background py-24 lg:py-32">
+    <section
+      id="faq"
+      className="scroll-mt-24 bg-background py-24 lg:py-32"
+    >
       <div className="mx-auto max-w-3xl px-5 sm:px-6 lg:px-8">
         {/* Section Header */}
         <Reveal>
@@ -23,8 +26,8 @@ export default function FAQ() {
               Häufig gestellte Fragen
             </h2>
             <p className="mx-auto mt-4 max-w-xl text-lg text-muted-foreground">
-              Hier findest du Antworten auf die häufigsten Fragen rund um
-              Training und Coaching.
+              Hier findest du Antworten auf typische Fragen zu Ablauf,
+              Betreuung, Standorten und Zusammenarbeit.
             </p>
           </div>
         </Reveal>
@@ -44,10 +47,11 @@ export default function FAQ() {
                   )}
                 >
                   <button
+                    type="button"
                     onClick={() => setOpenIndex(isOpen ? null : i)}
                     aria-expanded={isOpen}
                     aria-controls={`faq-answer-${i}`}
-                    className="flex w-full cursor-pointer items-center justify-between px-6 py-5 text-left"
+                    className="flex w-full cursor-pointer items-center justify-between px-6 py-5 text-left focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent/60 focus-visible:ring-inset"
                   >
                     <span className="pr-4 font-heading text-[15px] font-semibold text-primary">
                       {item.question}

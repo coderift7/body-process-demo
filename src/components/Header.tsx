@@ -1,5 +1,7 @@
 "use client";
 
+import Image from "next/image";
+import Link from "next/link";
 import { useState, useEffect, useCallback } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { siteConfig } from "@/config/site";
@@ -40,7 +42,7 @@ export default function Header() {
         initial={{ y: -100 }}
         animate={{ y: 0 }}
         transition={{ duration: 0.6, ease }}
-        className={`fixed inset-x-0 top-0 z-50 transition-all duration-500 ${
+        className={`fixed inset-x-0 top-0 z-50 transition-[background-color,box-shadow,backdrop-filter] duration-500 ${
           isScrolled && !isOpen
             ? "bg-primary/85 shadow-[0_1px_2px_rgba(0,0,0,0.15)] backdrop-blur-xl"
             : "bg-transparent"
@@ -48,25 +50,25 @@ export default function Header() {
       >
         <div className="mx-auto flex h-16 max-w-7xl items-center justify-between px-6 sm:h-20 sm:px-8 lg:px-12">
           {/* Logo — always the same, dark header keeps it consistent */}
-          <a
-            href="#"
+          <Link
+            href="/"
             className="relative z-50 focus-visible:rounded-sm focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent/60"
             aria-label="Body Process — Startseite"
           >
-            {/* eslint-disable-next-line @next/next/no-img-element */}
-            <img
-              src={`${process.env.__NEXT_ROUTER_BASEPATH || ""}/logo-real-dark.webp`}
+            <Image
+              src="/logo-real-dark.webp"
               alt="Body Process"
               width={200}
               height={70}
               className="h-9 w-auto transition-opacity duration-300 sm:h-11"
             />
-          </a>
+          </Link>
 
           {/* Custom burger — two asymmetric lines, animated to X */}
           <button
+            type="button"
             onClick={toggle}
-            className="group fixed right-5 top-4 z-50 flex h-12 w-12 flex-col items-center justify-center gap-[6px] rounded-sm sm:right-8 sm:top-5 lg:right-12 lg:top-6 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent/60"
+            className="group fixed right-5 top-4 z-50 flex h-12 w-12 touch-manipulation flex-col items-center justify-center gap-[6px] rounded-sm sm:right-8 sm:top-5 lg:right-12 lg:top-6 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent/60"
             aria-label={isOpen ? "Menü schließen" : "Menü öffnen"}
             aria-expanded={isOpen}
           >
@@ -112,7 +114,7 @@ export default function Header() {
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
             transition={{ duration: 0.4, ease }}
-            className="fixed inset-0 z-40 flex flex-col items-center justify-center bg-primary/[0.97] backdrop-blur-md"
+            className="fixed inset-0 z-40 flex flex-col items-center justify-center overscroll-contain bg-primary/[0.97] backdrop-blur-md"
           >
             <nav className="flex flex-col items-center gap-1">
               {siteConfig.nav.map((item, i) => (
@@ -124,7 +126,7 @@ export default function Header() {
                   animate={{ opacity: 1, y: 0 }}
                   exit={{ opacity: 0, y: -10 }}
                   transition={{ delay: 0.1 + i * 0.06, duration: 0.5, ease }}
-                  className="group relative px-4 py-3 focus-visible:rounded-sm focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent/60"
+                  className="group relative px-4 py-3 touch-manipulation focus-visible:rounded-sm focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent/60"
                 >
                   <span className="font-heading text-2xl font-medium tracking-tight text-white/70 transition-colors duration-200 group-hover:text-white sm:text-3xl">
                     {item.label}
@@ -146,7 +148,7 @@ export default function Header() {
                   duration: 0.5,
                   ease,
                 }}
-                className="mt-8 inline-flex items-center gap-2 rounded-lg border border-accent/30 bg-accent/10 px-8 py-3.5 font-heading text-sm font-semibold uppercase tracking-widest text-accent transition-all duration-200 hover:border-accent/50 hover:bg-accent/20 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent/60"
+                className="mt-8 inline-flex touch-manipulation items-center gap-2 rounded-lg border border-accent/30 bg-accent/10 px-8 py-3.5 font-heading text-sm font-semibold uppercase tracking-widest text-accent transition-[transform,border-color,background-color] duration-200 hover:-translate-y-0.5 hover:border-accent/50 hover:bg-accent/20 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent/60"
               >
                 Erstgespräch buchen
               </motion.a>

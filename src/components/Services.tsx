@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import {
   Dumbbell,
   Apple,
@@ -8,6 +9,7 @@ import {
   Target,
   Brain,
   Sparkles,
+  MessagesSquare,
 } from "lucide-react";
 import { motion } from "framer-motion";
 import { siteConfig } from "@/config/site";
@@ -23,11 +25,15 @@ const iconMap: Record<string, React.ComponentType<{ className?: string }>> = {
   Target,
   Brain,
   Sparkles,
+  MessagesSquare,
 };
 
 export default function Services() {
   return (
-    <section id="leistungen" className="relative bg-background py-24 lg:py-32">
+    <section
+      id="leistungen"
+      className="relative scroll-mt-24 bg-background py-24 lg:py-32"
+    >
       <div className="mx-auto max-w-7xl px-5 sm:px-6 lg:px-8">
         {/* Section Header */}
         <Reveal>
@@ -36,11 +42,11 @@ export default function Services() {
               Mein Angebot
             </span>
             <h2 className="mt-3 font-heading text-3xl font-bold tracking-tight text-primary sm:text-4xl lg:text-5xl">
-              Training. Ernährung. Mindset.
+              Leistungen, die Fortschritt planbar machen.
             </h2>
             <p className="mt-4 text-lg leading-relaxed text-muted-foreground">
-              Drei Säulen für dein Ziel — individuell auf dich abgestimmt,
-              wissenschaftlich fundiert.
+              Kein Aktionismus, kein Überfrachten. Wir kombinieren genau die
+              Bausteine, die für dein Ziel und deinen Alltag sinnvoll sind.
             </p>
           </div>
         </Reveal>
@@ -61,7 +67,7 @@ export default function Services() {
                 >
                   {/* Photo */}
                   <div className="relative aspect-[3/2] overflow-hidden">
-                    <img
+                    <Image
                       src={`${basePath}${service.image}`}
                       alt={service.title}
                       width={600}

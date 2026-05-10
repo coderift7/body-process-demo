@@ -1,6 +1,7 @@
 import Header from "@/components/Header";
 import Hero from "@/components/Hero";
 import TrustSignals from "@/components/TrustSignals";
+import Audience from "@/components/Audience";
 import Services from "@/components/Services";
 import Team from "@/components/Team";
 import Transformation from "@/components/Transformation";
@@ -18,6 +19,7 @@ export default function Home() {
       <main id="main-content">
         <Hero />
         <TrustSignals />
+        <Audience />
         <Services />
         <Team />
         <Transformation />

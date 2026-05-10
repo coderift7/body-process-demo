@@ -14,7 +14,7 @@ export default function Testimonials() {
   return (
     <section
       id="bewertungen"
-      className="relative overflow-hidden bg-muted py-24 lg:py-32"
+      className="relative scroll-mt-24 overflow-hidden bg-muted py-24 lg:py-32"
     >
       {/* Subtle gradient accent */}
       <div className="absolute left-0 top-0 h-full w-1/3 bg-gradient-to-r from-accent/[0.03] to-transparent" />
@@ -27,11 +27,11 @@ export default function Testimonials() {
               Kundenstimmen
             </span>
             <h2 className="mt-3 font-heading text-3xl font-bold tracking-tight text-primary sm:text-4xl lg:text-5xl">
-              Das sagen meine Kunden
+              Vertrauen entsteht durch echte Ergebnisse
             </h2>
             <p className="mt-4 text-lg leading-relaxed text-muted-foreground">
-              Über 100 zufriedene Kunden vertrauen{" "}
-              {siteConfig.company.name}.
+              Die Stimmen hier zeigen, wie Betreuung, Struktur und klare
+              Kommunikation im Alltag wirklich ankommen.
             </p>
           </div>
         </Reveal>
@@ -47,7 +47,7 @@ export default function Testimonials() {
                 {/* Accent line */}
                 <div className="absolute left-7 top-0 h-1 w-12 rounded-b-full bg-gradient-to-r from-accent to-accent/50" />
 
-                <Quote className="mb-4 h-8 w-8 text-accent/10" />
+                <Quote className="mb-4 h-8 w-8 text-accent/10" aria-hidden="true" />
 
                 {/* Stars */}
                 <div className="mb-4 flex gap-0.5">
@@ -55,6 +55,7 @@ export default function Testimonials() {
                     <Star
                       key={j}
                       className="h-4 w-4 fill-amber-400 text-amber-400"
+                      aria-hidden="true"
                     />
                   ))}
                 </div>

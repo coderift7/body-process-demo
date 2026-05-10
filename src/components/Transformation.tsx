@@ -1,21 +1,16 @@
 "use client";
 
 import Image from "next/image";
+import { ArrowRight } from "lucide-react";
+import { siteConfig } from "@/config/site";
 import { Reveal, slideFromLeft, slideFromRight } from "./Motion";
 
-// TODO(justin-review): Transformation placeholder section.
-// Pending inputs from Justin:
-//   - Customer consent (written, ideally via DocuSeal)
-//   - Name/initials, age, profession (CEO/selbstständig preferred)
-//   - Timeframe, starting weight/situation, outcome
-//   - Auslöser + Wendepunkt
-//   - Short quote in customer's own words
-// Once delivered, replace [...] blocks and remove this comment.
-
 export default function Transformation() {
+  const { process } = siteConfig;
+
   return (
     <section
-      id="transformation"
+      id="ablauf"
       className="relative scroll-mt-24 overflow-hidden bg-white py-24 lg:py-32"
     >
       <div className="absolute left-0 top-0 h-full w-1/3 bg-gradient-to-r from-accent/[0.03] to-transparent" />
@@ -24,75 +19,79 @@ export default function Transformation() {
         <Reveal>
           <div className="max-w-2xl">
             <span className="text-sm font-semibold uppercase tracking-widest text-accent">
-              Transformation
+              Ablauf
             </span>
             <h2 className="mt-3 font-heading text-3xl font-bold tracking-tight text-primary sm:text-4xl lg:text-5xl">
-              [Überschrift — Headline der Story]
+              {process.heading}
             </h2>
             <p className="mt-4 text-lg leading-relaxed text-muted-foreground">
-              [Kurze Einleitung — 1 bis 2 Sätze. Wer war der Kunde, was war der
-              Auslöser?]
+              {process.intro}
             </p>
           </div>
         </Reveal>
 
-        <div className="mt-16 grid items-stretch gap-8 lg:mt-20 lg:grid-cols-2 lg:gap-12">
+        <div className="mt-16 grid items-stretch gap-8 lg:mt-20 lg:grid-cols-[0.9fr_1.1fr] lg:gap-12">
           <Reveal variants={slideFromLeft}>
-            <figure className="relative">
-              <div className="relative aspect-[3/4] overflow-hidden rounded-3xl bg-muted shadow-xl">
-                <Image
-                  src="/images/kunde-vorher.webp"
-                  alt="[Name] vor Trainingsbeginn bei Body Process"
-                  fill
-                  className="object-cover object-top"
-                  sizes="(max-width: 1024px) 100vw, 50vw"
-                />
+            <div className="relative overflow-hidden rounded-3xl bg-primary p-7 text-white shadow-2xl">
+              <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_left,rgba(243,146,0,0.22),transparent_32%)]" />
+              <div className="relative">
+                <p className="text-xs font-semibold uppercase tracking-[0.24em] text-accent">
+                  Für deinen Alltag gemacht
+                </p>
+                <h3 className="mt-4 font-heading text-3xl font-bold leading-tight">
+                  Weniger Reibung. Mehr Verbindlichkeit. Bessere Ergebnisse.
+                </h3>
+                <p className="mt-5 text-base leading-relaxed text-white/72">
+                  {process.highlight}
+                </p>
+
+                <div className="mt-8 overflow-hidden rounded-2xl border border-white/10">
+                  <Image
+                    src="/images/ernaehrungsberatung-justin-premium.png"
+                    alt="Justin Doms im Beratungsgespräch mit Kundin"
+                    width={2048}
+                    height={1536}
+                    loading="lazy"
+                    className="aspect-[4/3] w-full object-cover object-center"
+                  />
+                </div>
+
+                <a
+                  href="#kontakt"
+                  className="mt-8 inline-flex items-center gap-2 rounded-xl border border-white/12 bg-white/[0.06] px-5 py-3 text-sm font-semibold text-white transition-[transform,border-color,background-color] duration-200 hover:-translate-y-0.5 hover:border-white/24 hover:bg-white/[0.1] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent/70"
+                >
+                  Kostenloses Erstgespräch sichern
+                  <ArrowRight className="h-4 w-4" aria-hidden="true" />
+                </a>
               </div>
-              <figcaption className="mt-5 flex items-baseline gap-3">
-                <span className="text-xs font-semibold uppercase tracking-[0.25em] text-muted-foreground">
-                  Vorher
-                </span>
-                <span className="h-px flex-1 bg-border" />
-                <span className="text-sm text-muted-foreground">[Monat/Jahr]</span>
-              </figcaption>
-            </figure>
+            </div>
           </Reveal>
 
           <Reveal variants={slideFromRight}>
-            <figure className="relative">
-              <div className="absolute -bottom-4 -right-4 hidden h-full w-full rounded-3xl bg-gradient-to-br from-accent/20 to-cta/10 lg:block" />
-              <div className="relative aspect-[3/4] overflow-hidden rounded-3xl bg-muted shadow-2xl">
-                <Image
-                  src="/images/kunde-nachher.webp"
-                  alt="[Name] nach der Transformation mit Body Process"
-                  fill
-                  className="object-cover object-center"
-                  sizes="(max-width: 1024px) 100vw, 50vw"
-                />
-              </div>
-              <figcaption className="mt-5 flex items-baseline gap-3">
-                <span className="text-xs font-semibold uppercase tracking-[0.25em] text-accent">
-                  Nachher
-                </span>
-                <span className="h-px flex-1 bg-border" />
-                <span className="text-sm text-muted-foreground">[Monat/Jahr]</span>
-              </figcaption>
-            </figure>
+            <div className="space-y-4">
+              {process.steps.map((step, index) => (
+                <article
+                  key={step.title}
+                  className="rounded-3xl border border-border bg-card p-7 shadow-sm"
+                >
+                  <div className="flex items-start gap-4">
+                    <div className="flex h-11 w-11 shrink-0 items-center justify-center rounded-2xl bg-accent/10 font-heading text-lg font-bold text-accent">
+                      0{index + 1}
+                    </div>
+                    <div>
+                      <h3 className="font-heading text-xl font-semibold tracking-tight text-primary">
+                        {step.title}
+                      </h3>
+                      <p className="mt-3 text-base leading-relaxed text-muted-foreground">
+                        {step.description}
+                      </p>
+                    </div>
+                  </div>
+                </article>
+              ))}
+            </div>
           </Reveal>
         </div>
-
-        <Reveal>
-          <div className="mx-auto mt-20 max-w-3xl text-center">
-            <blockquote className="font-heading text-2xl leading-relaxed text-primary sm:text-3xl lg:text-4xl">
-              <span aria-hidden="true" className="text-accent">&ldquo;</span>
-              [Originalzitat des Kunden — 1 bis 2 Sätze in seinen Worten]
-              <span aria-hidden="true" className="text-accent">&rdquo;</span>
-            </blockquote>
-            <p className="mt-6 text-sm font-medium uppercase tracking-widest text-muted-foreground">
-              [Name oder Initialen] &middot; [Beruf] &middot; [Ort]
-            </p>
-          </div>
-        </Reveal>
       </div>
     </section>
   );

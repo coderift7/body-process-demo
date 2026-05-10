@@ -20,7 +20,7 @@ export default function Team() {
   return (
     <section
       id="ueber-mich"
-      className="noise-overlay relative bg-white py-24 lg:py-32"
+      className="noise-overlay relative scroll-mt-24 bg-white py-24 lg:py-32"
     >
       <div className="relative z-10 mx-auto max-w-7xl px-5 sm:px-6 lg:px-8">
         <div className="grid items-center gap-12 lg:grid-cols-2 lg:gap-20">
@@ -31,10 +31,10 @@ export default function Team() {
               <div className="absolute -bottom-4 -right-4 h-full w-full rounded-3xl bg-gradient-to-br from-accent/20 to-cta/10" />
               <div className="relative aspect-[3/4] overflow-hidden rounded-3xl shadow-2xl">
                 <Image
-                  src="/images/justin-profile.webp"
+                  src={member.image}
                   alt={member.name}
                   fill
-                  className="object-cover object-top"
+                  className="object-cover object-center"
                   sizes="(max-width: 768px) 100vw, 50vw"
                   priority
                 />

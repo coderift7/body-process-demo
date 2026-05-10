@@ -14,8 +14,7 @@ import {
 import { motion } from "framer-motion";
 import { siteConfig } from "@/config/site";
 import { Reveal, StaggerContainer, StaggerItem } from "./Motion";
-
-const basePath = process.env.__NEXT_ROUTER_BASEPATH || "";
+import { assetPath } from "@/lib/paths";
 
 const iconMap: Record<string, React.ComponentType<{ className?: string }>> = {
   Dumbbell,
@@ -68,7 +67,7 @@ export default function Services() {
                   {/* Photo */}
                   <div className="relative aspect-[3/2] overflow-hidden">
                     <Image
-                      src={`${basePath}${service.image}`}
+                      src={assetPath(service.image)}
                       alt={service.title}
                       width={600}
                       height={400}

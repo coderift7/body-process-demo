@@ -3,6 +3,7 @@
 import Image from "next/image";
 import { ArrowRight } from "lucide-react";
 import { siteConfig } from "@/config/site";
+import { assetPath } from "@/lib/paths";
 import { Reveal, slideFromLeft, slideFromRight } from "./Motion";
 
 export default function Transformation() {
@@ -47,7 +48,7 @@ export default function Transformation() {
 
                 <div className="mt-8 overflow-hidden rounded-2xl border border-white/10">
                   <Image
-                    src="/images/ernaehrungsberatung-justin-premium.png"
+                    src={assetPath("/images/ernaehrungsberatung-justin-premium.png")}
                     alt="Justin Doms im Beratungsgespräch mit Kundin"
                     width={2048}
                     height={1536}

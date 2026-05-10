@@ -5,6 +5,7 @@ import Link from "next/link";
 import { useState, useEffect, useCallback } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { siteConfig } from "@/config/site";
+import { assetPath, routePath } from "@/lib/paths";
 
 const ease = [0.16, 1, 0.3, 1] as const;
 
@@ -56,7 +57,7 @@ export default function Header() {
             aria-label="Body Process — Startseite"
           >
             <Image
-              src="/logo-real-dark.webp"
+              src={assetPath("/logo-real-dark.webp")}
               alt="Body Process"
               width={200}
               height={70}
@@ -120,7 +121,7 @@ export default function Header() {
               {siteConfig.nav.map((item, i) => (
                 <motion.a
                   key={item.href}
-                  href={item.href}
+                  href={routePath(item.href)}
                   onClick={() => setIsOpen(false)}
                   initial={{ opacity: 0, y: 20 }}
                   animate={{ opacity: 1, y: 0 }}
@@ -138,7 +139,7 @@ export default function Header() {
 
               {/* CTA */}
               <motion.a
-                href="#kontakt"
+                href={routePath("/#kontakt")}
                 onClick={() => setIsOpen(false)}
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}

@@ -13,6 +13,10 @@ concurrency:
   group: pages
   cancel-in-progress: false
 
+env:
+  NEXT_PUBLIC_BASE_PATH: /body-process-demo
+  NEXT_PUBLIC_SITE_URL: https://coderift7.github.io/body-process-demo
+
 jobs:
   build:
     runs-on: ubuntu-latest

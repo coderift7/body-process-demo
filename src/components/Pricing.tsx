@@ -5,132 +5,250 @@ import { motion } from "framer-motion";
 import { siteConfig } from "@/config/site";
 import { Reveal, StaggerContainer, StaggerItem } from "./Motion";
 import { cn } from "@/lib/utils";
-
-const numberFormatter = new Intl.NumberFormat("de-DE");
+import { routePath } from "@/lib/paths";
 
 export default function Pricing() {
+  const pricing = siteConfig.pricing;
+
   return (
     <section
       id="preise"
       className="relative scroll-mt-24 bg-background py-24 lg:py-32"
     >
       <div className="mx-auto max-w-7xl px-5 sm:px-6 lg:px-8">
-        {/* Section Header */}
         <Reveal>
-          <div className="mx-auto max-w-xl text-center">
+          <div className="mx-auto max-w-3xl text-center">
             <span className="text-sm font-semibold uppercase tracking-widest text-accent">
               Angebote
             </span>
             <h2 className="mt-3 font-heading text-3xl font-bold tracking-tight text-primary sm:text-4xl lg:text-5xl">
-              Zwei Wege, ein klarer Plan
+              {pricing.heading}
             </h2>
             <p className="mt-4 text-lg leading-relaxed text-muted-foreground">
-              Vor-Ort Personal Training bleibt persönlich und begrenzt.
-              Online-Coaching gibt dir 12 Wochen Struktur, wenn dein Kalender
-              voll ist, aber dein Plan nicht fehlen darf.
+              {pricing.intro}
             </p>
           </div>
         </Reveal>
 
-        {/* Pricing Cards */}
-        <StaggerContainer
-          className="mx-auto mt-14 grid max-w-5xl gap-6 md:grid-cols-2"
-          staggerDelay={0.1}
-        >
-          {siteConfig.pricing.map((plan, i) => (
-            <StaggerItem key={i}>
-              <motion.div
-                whileHover={{ y: -6 }}
-                transition={{ duration: 0.25, ease: [0.22, 1, 0.36, 1] }}
-                className={cn(
-                  "relative flex h-full flex-col overflow-hidden rounded-2xl border transition-[transform,box-shadow,border-color] duration-300",
-                  plan.featured
-                    ? "border-accent/30 bg-card shadow-xl shadow-accent/8 ring-1 ring-accent/10"
-                    : "border-border bg-card hover:shadow-lg"
-                )}
-              >
-                {/* Featured top accent */}
-                {plan.featured && (
-                  <>
-                    <div className="absolute inset-x-0 top-0 h-1 bg-gradient-to-r from-accent via-cta to-accent" />
-                    <div className="flex items-center justify-center gap-1.5 bg-accent/5 py-2.5">
-                      <Star
-                        className="h-3.5 w-3.5 fill-accent text-accent"
-                        aria-hidden="true"
-                      />
-                      <span className="text-xs font-bold uppercase tracking-wider text-accent">
-                        {plan.badge || "Empfohlener Einstieg"}
-                      </span>
-                    </div>
-                  </>
-                )}
-
-                <div className={cn("flex flex-1 flex-col p-7", plan.featured && "pt-5")}>
-                  <div className="mb-6">
-                    <h3 className="font-heading text-lg font-semibold text-primary">
-                      {plan.name}
-                    </h3>
-                    <p className="mt-1 text-sm text-muted-foreground">
-                      {plan.description}
-                    </p>
-                  </div>
-
-                  {/* Price block */}
-                  <div className="mb-8">
-                    <div className="flex items-baseline gap-2 font-heading tracking-tight text-primary">
-                      {"pricePrefix" in plan && plan.pricePrefix && (
-                        <span className="text-lg font-semibold text-muted-foreground">
-                          {plan.pricePrefix}
-                        </span>
-                      )}
-                      <span className="text-5xl font-bold tabular-nums">
-                        {numberFormatter.format(plan.price)} €
-                      </span>
-                    </div>
-                    <p className="mt-1 text-xs font-medium uppercase tracking-wide text-muted-foreground">
-                      {plan.unit}
-                    </p>
-                  </div>
-
-                  {/* Divider */}
-                  <div className="mb-6 h-px bg-border" />
-
-                  <ul className="mb-8 flex-1 space-y-3.5">
-                    {plan.features.map((feature, j) => (
-                      <li key={j} className="flex items-start gap-2.5">
-                        <div className="mt-0.5 flex h-5 w-5 shrink-0 items-center justify-center rounded-full bg-accent/10">
-                          <Check className="h-3 w-3 text-accent" aria-hidden="true" />
-                        </div>
-                        <span className="text-sm leading-snug text-card-foreground">
-                          {feature}
-                        </span>
-                      </li>
-                    ))}
-                  </ul>
-
+        <div className="mt-14 space-y-14 lg:mt-16 lg:space-y-16">
+          <Reveal>
+            <article className="overflow-hidden rounded-3xl bg-primary text-white shadow-2xl shadow-primary/15">
+              <div className="grid gap-8 p-6 sm:p-8 lg:grid-cols-[0.78fr_1.22fr] lg:p-10">
+                <div>
+                  <span className="text-xs font-semibold uppercase tracking-[0.24em] text-accent">
+                    {pricing.personalTraining.eyebrow}
+                  </span>
+                  <h3 className="mt-3 font-heading text-3xl font-bold tracking-tight sm:text-4xl">
+                    {pricing.personalTraining.title}
+                  </h3>
+                  <p className="mt-4 max-w-md text-base leading-relaxed text-white/68">
+                    {pricing.personalTraining.description}
+                  </p>
                   <a
                     href="#kontakt"
-                    className={cn(
-                      "block cursor-pointer rounded-xl px-6 py-3.5 text-center text-sm font-semibold transition-[transform,background-color,border-color,box-shadow,color] duration-200 hover:-translate-y-0.5 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent/60",
-                      plan.featured
-                        ? "bg-cta text-white shadow-[0_4px_16px_rgba(180,83,9,0.3)] hover:bg-cta/90 hover:shadow-[0_6px_24px_rgba(180,83,9,0.4)]"
-                        : "border border-border bg-card text-primary hover:border-accent/30 hover:shadow-md"
-                    )}
+                    className="mt-7 inline-flex touch-manipulation items-center justify-center rounded-xl border border-white/12 bg-white/[0.06] px-5 py-3 text-sm font-semibold text-white transition-[transform,border-color,background-color] duration-200 hover:-translate-y-0.5 hover:border-white/24 hover:bg-white/[0.1] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent/70"
                   >
-                    Erstgespräch buchen
+                    PT-Erstgespräch anfragen
                   </a>
                 </div>
-              </motion.div>
-            </StaggerItem>
-          ))}
-        </StaggerContainer>
 
-        {/* Bottom note */}
+                <div className="grid gap-5 md:grid-cols-2">
+                  {pricing.personalTraining.durations.map((duration) => (
+                    <div
+                      key={duration.label}
+                      className="rounded-2xl border border-white/10 bg-white/[0.045] p-5"
+                    >
+                      <h4 className="font-heading text-xl font-semibold text-white">
+                        {duration.label}
+                      </h4>
+                      <div className="mt-5 divide-y divide-white/10">
+                        {duration.rows.map((row) => (
+                          <div
+                            key={`${duration.label}-${row.label}`}
+                            className="grid grid-cols-[1fr_auto] gap-4 py-3 first:pt-0 last:pb-0"
+                          >
+                            <div>
+                              <p className="text-sm font-medium text-white">
+                                {row.label}
+                              </p>
+                              {row.note && (
+                                <p className="mt-1 text-xs leading-snug text-white/48">
+                                  {row.note}
+                                </p>
+                              )}
+                            </div>
+                            <p className="whitespace-nowrap font-heading text-base font-bold tabular-nums text-accent">
+                              {row.price}
+                            </p>
+                          </div>
+                        ))}
+                      </div>
+                      <p className="mt-4 text-xs font-medium uppercase tracking-wide text-white/46">
+                        inkl. gesetzl. MwSt.
+                      </p>
+                    </div>
+                  ))}
+                </div>
+              </div>
+            </article>
+          </Reveal>
+
+          <div className="grid gap-8 lg:grid-cols-[0.9fr_1.1fr]">
+            <Reveal>
+              <section aria-labelledby="nutrition-pricing-heading">
+                <span className="text-sm font-semibold uppercase tracking-widest text-accent">
+                  {pricing.nutrition.eyebrow}
+                </span>
+                <h3
+                  id="nutrition-pricing-heading"
+                  className="mt-3 font-heading text-3xl font-bold tracking-tight text-primary"
+                >
+                  {pricing.nutrition.title}
+                </h3>
+                <p className="mt-3 text-base leading-relaxed text-muted-foreground">
+                  {pricing.nutrition.description}
+                </p>
+
+                <div className="mt-6 grid gap-4">
+                  {pricing.nutrition.packages.map((item) => (
+                    <motion.article
+                      key={item.name}
+                      whileHover={{ y: -4 }}
+                      transition={{ duration: 0.25, ease: [0.22, 1, 0.36, 1] }}
+                      className="rounded-2xl border border-border bg-card p-6 shadow-sm"
+                    >
+                      <div className="flex flex-wrap items-start justify-between gap-4">
+                        <div>
+                          <h4 className="font-heading text-xl font-semibold text-primary">
+                            {item.name}
+                          </h4>
+                          <p className="mt-2 max-w-lg text-sm leading-relaxed text-muted-foreground">
+                            {item.description}
+                          </p>
+                        </div>
+                        <div className="text-right">
+                          <p className="font-heading text-3xl font-bold tabular-nums text-primary">
+                            {item.price}
+                          </p>
+                          <p className="mt-1 text-xs font-medium uppercase tracking-wide text-muted-foreground">
+                            inkl. MwSt.
+                          </p>
+                        </div>
+                      </div>
+
+                      <ul className="mt-5 grid gap-2 sm:grid-cols-2">
+                        {item.features.map((feature) => (
+                          <li
+                            key={feature}
+                            className="flex items-start gap-2 text-sm leading-snug text-card-foreground"
+                          >
+                            <Check
+                              className="mt-0.5 h-4 w-4 shrink-0 text-accent"
+                              aria-hidden="true"
+                            />
+                            {feature}
+                          </li>
+                        ))}
+                      </ul>
+                    </motion.article>
+                  ))}
+                </div>
+              </section>
+            </Reveal>
+
+            <Reveal>
+              <section
+                aria-labelledby="online-pricing-heading"
+                className="rounded-3xl border border-accent/20 bg-card p-6 shadow-xl shadow-accent/8 sm:p-8"
+              >
+                <div className="flex items-center gap-2">
+                  <Star
+                    className="h-4 w-4 fill-accent text-accent"
+                    aria-hidden="true"
+                  />
+                  <span className="text-sm font-semibold uppercase tracking-widest text-accent">
+                    {pricing.onlineCoaching.eyebrow}
+                  </span>
+                </div>
+                <h3
+                  id="online-pricing-heading"
+                  className="mt-3 font-heading text-3xl font-bold tracking-tight text-primary"
+                >
+                  {pricing.onlineCoaching.title}
+                </h3>
+                <p className="mt-3 text-base leading-relaxed text-muted-foreground">
+                  {pricing.onlineCoaching.description}
+                </p>
+
+                <StaggerContainer
+                  className="mt-7 grid gap-3 sm:grid-cols-2"
+                  staggerDelay={0.06}
+                >
+                  {pricing.onlineCoaching.plans.map((plan) => (
+                    <StaggerItem key={plan.name}>
+                      <div
+                        className={cn(
+                          "relative h-full rounded-2xl border p-5",
+                          plan.badge
+                            ? "border-accent/35 bg-accent/[0.08]"
+                            : "border-border bg-background"
+                        )}
+                      >
+                        {plan.badge && (
+                          <p className="mb-3 inline-flex rounded-full bg-accent px-3 py-1 text-xs font-bold uppercase tracking-wide text-white">
+                            {plan.badge}
+                          </p>
+                        )}
+                        <h4 className="font-heading text-lg font-semibold text-primary">
+                          {plan.name}
+                        </h4>
+                        <div className="mt-3">
+                          <span className="font-heading text-3xl font-bold tabular-nums text-primary">
+                            {plan.price}
+                          </span>
+                          <span className="ml-2 text-sm text-muted-foreground">
+                            {plan.unit}
+                          </span>
+                        </div>
+                        <p className="mt-2 text-xs font-medium uppercase tracking-wide text-muted-foreground">
+                          inkl. gesetzl. MwSt.
+                        </p>
+                      </div>
+                    </StaggerItem>
+                  ))}
+                </StaggerContainer>
+
+                <ul className="mt-7 grid gap-3">
+                  {pricing.onlineCoaching.features.map((feature) => (
+                    <li
+                      key={feature}
+                      className="flex items-start gap-2.5 text-sm leading-snug text-card-foreground"
+                    >
+                      <span className="mt-0.5 flex h-5 w-5 shrink-0 items-center justify-center rounded-full bg-accent/10">
+                        <Check
+                          className="h-3 w-3 text-accent"
+                          aria-hidden="true"
+                        />
+                      </span>
+                      {feature}
+                    </li>
+                  ))}
+                </ul>
+
+                <a
+                  href={routePath("/online-coaching")}
+                  className="mt-8 inline-flex w-full touch-manipulation items-center justify-center rounded-xl bg-cta px-6 py-3.5 text-sm font-semibold text-white shadow-[0_4px_16px_rgba(180,83,9,0.24)] transition-[transform,background-color,box-shadow] duration-200 hover:-translate-y-0.5 hover:bg-cta/90 hover:shadow-[0_8px_24px_rgba(180,83,9,0.3)] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent/60"
+                >
+                  Online-Coaching ansehen
+                </a>
+              </section>
+            </Reveal>
+          </div>
+        </div>
+
         <Reveal>
-          <p className="mx-auto mt-10 max-w-2xl text-center text-sm leading-relaxed text-muted-foreground">
-            Alle Preise inkl. gesetzl. MwSt. Das Erstgespräch ist kostenlos und
-            unverbindlich. Die genaue Empfehlung richtet sich nach Ziel,
-            Trainingsstand, Alltag und verfügbarer Betreuungskapazität.
+          <p className="mx-auto mt-10 max-w-3xl text-center text-sm leading-relaxed text-muted-foreground">
+            {pricing.note}
           </p>
         </Reveal>
       </div>

@@ -5,6 +5,7 @@ import { Phone, Mail, MapPin, Clock } from "lucide-react";
 import { motion } from "framer-motion";
 import Link from "next/link";
 import { siteConfig } from "@/config/site";
+import { assetPath, routePath } from "@/lib/paths";
 
 export default function Footer() {
   return (
@@ -22,7 +23,7 @@ export default function Footer() {
                 className="inline-block focus-visible:rounded-sm focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent/60"
               >
                 <Image
-                  src="/logo-real-dark.webp"
+                  src={assetPath("/logo-real-dark.webp")}
                   alt="Body Process — Personal Training"
                   width={200}
                   height={70}
@@ -44,7 +45,7 @@ export default function Footer() {
               {siteConfig.nav.map((item) => (
                 <li key={item.href}>
                   <a
-                    href={item.href}
+                    href={routePath(item.href)}
                     className="text-sm text-white/70 transition-colors duration-200 hover:text-white focus-visible:rounded-sm focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent/60"
                   >
                     {item.label}

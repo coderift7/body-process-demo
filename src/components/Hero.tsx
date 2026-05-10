@@ -5,6 +5,7 @@ import Link from "next/link";
 import { motion, useReducedMotion } from "framer-motion";
 import { ArrowRight, CheckCircle2, Phone } from "lucide-react";
 import { siteConfig } from "@/config/site";
+import { assetPath, routePath } from "@/lib/paths";
 
 const ease = [0.16, 1, 0.3, 1] as const;
 
@@ -81,7 +82,7 @@ export default function Hero() {
                 <ArrowRight className="h-4 w-4" aria-hidden="true" />
               </a>
               <a
-                href="#ablauf"
+                href={routePath("/online-coaching")}
                 className="inline-flex touch-manipulation items-center justify-center gap-2 rounded-xl border border-white/14 bg-white/[0.03] px-6 py-3.5 text-sm font-semibold text-white transition-[transform,border-color,background-color] duration-200 hover:-translate-y-0.5 hover:border-white/30 hover:bg-white/[0.07] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent/70"
               >
                 {siteConfig.hero.cta2}
@@ -118,7 +119,7 @@ export default function Hero() {
             <div className="relative overflow-hidden rounded-[2rem] border border-white/12 bg-white/[0.04] p-3 shadow-[0_30px_80px_rgba(2,6,23,0.34)] backdrop-blur-md">
               <div className="relative overflow-hidden rounded-[1.4rem]">
                 <Image
-                  src="/images/justin-consulting-portrait-premium.png"
+                  src={assetPath("/images/justin-consulting-portrait-premium.png")}
                   alt="Justin Doms im Beratungsgespräch"
                   width={1536}
                   height={2048}

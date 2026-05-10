@@ -3,6 +3,7 @@
 import Image from "next/image";
 import { BriefcaseBusiness, MapPin, RefreshCcw } from "lucide-react";
 import { siteConfig } from "@/config/site";
+import { assetPath } from "@/lib/paths";
 import { Reveal, slideFromLeft, slideFromRight } from "./Motion";
 
 const icons = [BriefcaseBusiness, MapPin, RefreshCcw];
@@ -23,7 +24,7 @@ export default function Audience() {
             <div className="relative overflow-hidden rounded-[2rem] border border-border bg-card p-3 shadow-xl">
               <div className="overflow-hidden rounded-[1.5rem]">
                 <Image
-                  src="/images/justin-business-outdoor.jpeg"
+                  src={assetPath("/images/justin-business-outdoor.jpeg")}
                   alt="Justin Doms in professionellem Umfeld im Freien"
                   width={1536}
                   height={2048}

@@ -14,24 +14,24 @@ export const siteConfig = {
 
   meta: {
     title:
-      "Body Process — Personal Training & Online-Coaching für Berufstätige",
+      "Body Process — Personal Training & Online-Coaching in Hadamar",
     description:
-      "Personal Training in Hadamar, Limburg und Diez sowie 12-Wochen Online-Coaching für Berufstätige und Selbstständige. Individuelles Training, Ernährungsstruktur und klare Betreuung mit Justin Doms.",
+      "Personal Training in Hadamar, Limburg und Diez sowie Online-Coaching für Training, Ernährung und Fortschritt mit Justin Doms. Klarer Plan, ehrliche Betreuung und Endpreise inkl. MwSt.",
   },
 
   hero: {
-    eyebrow: "Personal Training & Online-Coaching für volle Kalender",
-    headline: "Mehr Energie, bessere Form und klare Routinen für einen Alltag mit Verantwortung.",
+    eyebrow: "Personal Training vor Ort · Online-Coaching digital",
+    headline: "Ein klarer Trainingsweg, der zu deinem Alltag passt.",
     subheadline:
-      "Body Process verbindet Training, Ernährung und persönliche Betreuung zu einem Plan, der in deinen Arbeitsalltag passt — vor Ort oder als strukturierter 12-Wochen-Weg online.",
+      "Body Process verbindet Personal Training, Ernährungsstruktur und digitale Begleitung. Vor Ort in Hadamar, Limburg und Diez oder online, wenn du eigenständig trainierst und trotzdem persönliche Kontrolle willst.",
     cta1: "Kostenloses Erstgespräch anfragen",
-    cta2: "Ablauf ansehen",
+    cta2: "Online-Coaching ansehen",
     benefits: [
-      "Individuelle Betreuung statt Trainingsplan von der Stange",
-      "Termine, die sich an deinen Kalender anpassen",
-      "Klare Strategie für Training, Ernährung & Umsetzung",
+      "1:1 Training für Technik, Aufbau und Verbindlichkeit",
+      "Online-Coaching für Plan, Formchecks und Ernährung",
+      "Ehrliche Betreuung im vereinbarten Rahmen statt leere 24/7-Versprechen",
     ],
-    note: "Vor Ort in Hadamar, Limburg & Diez sowie digital begleitbar.",
+    note: "Vor Ort in Hadamar, Limburg & Diez. Digital begleitbar für Training und Ernährung.",
   },
 
   trustStats: [
@@ -78,9 +78,9 @@ export const siteConfig = {
     },
     {
       icon: "MessagesSquare",
-      title: "12-Wochen Online-Coaching",
+      title: "Online-Coaching",
       description:
-        "Wenn dein Kalender voll ist, aber dein Plan nicht fehlen darf: Training, Ernährung und wöchentliche Check-ins in einem klaren digitalen Rahmen.",
+        "Für Menschen, die selbst trainieren können, aber einen sauberen Plan, Video-Feedback, Ernährungsstruktur und verlässliche Anpassungen brauchen.",
       image: "/images/justin-consulting-portrait-premium.png",
     },
   ],
@@ -108,7 +108,7 @@ export const siteConfig = {
   audience: {
     heading: "Personal Training in Hadamar, Limburg und Diez",
     intro:
-      "Body Process richtet sich an Menschen, die beruflich viel leisten und ihre Gesundheit trotzdem nicht dem Zufall überlassen wollen.",
+      "Body Process richtet sich an Menschen, die Fortschritt wollen und dafür einen klaren Rahmen brauchen: persönlich vor Ort oder digital begleitet.",
     profiles: [
       {
         title: "Selbstständige mit wenig Zeit",
@@ -121,9 +121,9 @@ export const siteConfig = {
           "Wenn Energie, Belastbarkeit und Konzentration im Job zählen, muss Training unterstützen statt zusätzlich zu belasten.",
       },
       {
-        title: "Wiedereinsteiger nach Pause oder Stressphase",
+        title: "Digital-affine Selbsttrainer",
         description:
-          "Nach längerer Pause, Verletzung oder Erschöpfung geht es nicht um Härte, sondern um einen sauberen, sicheren Aufbau.",
+          "Du trainierst im Studio oder zuhause, willst aber nicht raten: Online-Coaching gibt dir Struktur, Kontrolle und direkte Korrektur.",
       },
     ],
     locations: [
@@ -158,40 +158,144 @@ export const siteConfig = {
       "Besonders geeignet für Menschen, die wenig Zeit haben, aber ihren Körper und ihre Leistungsfähigkeit nicht dem Zufall überlassen wollen.",
   },
 
-  pricing: [
-    {
-      name: "Vor-Ort Personal Training",
-      price: 450,
-      pricePrefix: "ab",
-      unit: "begrenzte persönliche Trainingsslots",
-      description: "Premium-Betreuung in Hadamar, Limburg, Diez und Umgebung",
-      features: [
-        "1:1 Training mit Justin",
-        "5er, 10er oder 24er Karten je nach Ziel",
-        "Analyse, Technik und klare Progression",
-        "Ernährungscoaching je nach Paket integrierbar",
-        "Persönliche Slots nach Verfügbarkeit",
+  pricing: {
+    heading: "Klare Pakete, echte Endpreise",
+    intro:
+      "Du siehst direkt, welche Betreuung zu deinem Alltag passt. Alle Preise sind Endpreise inkl. gesetzlicher MwSt.; keine Netto-Optik, kein Kleingedrucktes.",
+    note:
+      "Das Erstgespräch ist kostenlos und unverbindlich. Die genaue Empfehlung richtet sich nach Ziel, Trainingsstand, Alltag und freien Betreuungskapazitäten.",
+    personalTraining: {
+      eyebrow: "Personal Training",
+      title: "1:1 Training mit Justin",
+      description:
+        "Für Technik, Verbindlichkeit und messbaren Aufbau vor Ort. Jede Karte beinhaltet Trainingsplanerstellung.",
+      durations: [
+        {
+          label: "60 Minuten",
+          rows: [
+            { label: "Einzeltraining", price: "83,30 €" },
+            { label: "5er Karte", price: "386,75 €", note: "3 Monate gültig" },
+            { label: "10er Karte", price: "743,75 €" },
+            { label: "24er Karte", price: "1.713,60 €", note: "bester Preis pro Stunde" },
+          ],
+        },
+        {
+          label: "90 Minuten",
+          rows: [
+            { label: "Einzeltraining", price: "107,10 €" },
+            { label: "5er Karte", price: "505,75 €", note: "3 Monate gültig" },
+            { label: "10er Karte", price: "981,75 €" },
+            { label: "24er Karte", price: "2.284,80 €", note: "bester Preis pro Stunde" },
+          ],
+        },
       ],
-      featured: false,
     },
-    {
-      name: "12-Wochen Online-Coaching",
-      price: 499,
-      pricePrefix: "ab",
-      unit: "12 Wochen",
-      description: "Flexibler Coaching-Weg für Berufstätige und Selbstständige",
-      features: [
-        "Zielanalyse und Startstruktur",
-        "Individueller Trainingsplan für Gym oder Zuhause",
-        "Ernährungsstruktur ohne Diätstress",
-        "Wöchentliche Check-ins",
-        "Plananpassungen nach Fortschritt und Alltag",
-        "Begleitung per WhatsApp oder E-Mail im vereinbarten Rahmen",
+    nutrition: {
+      eyebrow: "Ernährung",
+      title: "Ernährungscoaching als Paket",
+      description:
+        "Für mehr Klarheit bei Kalorien, Makros, Routinen und Supplementen.",
+      packages: [
+        {
+          name: "Kleines Paket",
+          price: "154,70 €",
+          description:
+            "Für Einsteiger, die endlich verstehen wollen, wie Ernährung funktioniert.",
+          features: [
+            "Kalorien- und Makro-Grundlagen",
+            "Tracken mit Apps oder Portionen",
+            "Beispiel-Ernährungspläne",
+            "Basis Supplement-Beratung",
+          ],
+        },
+        {
+          name: "Großes Paket",
+          price: "238,00 €",
+          description:
+            "Für ambitionierte Sportler, die Training und Ernährung gezielter steuern wollen.",
+          features: [
+            "Individuelle Kalorien und Makros",
+            "Anpassung auf Trainingsziel",
+            "Mikronährstoff-Optimierung",
+            "Pre-, Intra- und Post-Workout-Strategie",
+          ],
+        },
       ],
-      featured: true,
-      badge: "12 Wochen · Training + Ernährung",
     },
-  ],
+    onlineCoaching: {
+      eyebrow: "Online-Coaching",
+      title: "Digitale Betreuung mit klarem Rahmen",
+      description:
+        "Für Menschen, die eigenständig trainieren können, aber Plan, Kontrolle und Anpassung brauchen.",
+      plans: [
+        { name: "Monatlich kündbar", price: "178,50 €", unit: "pro Monat" },
+        { name: "3 Monate", price: "154,70 €", unit: "pro Monat" },
+        { name: "6 Monate", price: "142,80 €", unit: "pro Monat" },
+        { name: "12 Monate", price: "119,00 €", unit: "pro Monat", badge: "bester Monatswert" },
+      ],
+      features: [
+        "Maßgeschneiderter Trainingsplan",
+        "Technik- und Formcheck per Videoanalyse",
+        "Individuelle Ernährungsstrategie",
+        "Kalorien- und Makroanpassung",
+        "Supplement-Empfehlung",
+        "Direkter WhatsApp-Support im vereinbarten Rahmen",
+        "Laufende Optimierung nach Fortschritt und Alltag",
+      ],
+    },
+  },
+
+  onlineCoaching: {
+    meta: {
+      title: "Online-Coaching — Body Process",
+      description:
+        "Online-Coaching mit Justin Doms: Trainingsplan, Video-Formcheck, Ernährungsstrategie und WhatsApp-Support im klaren Rahmen.",
+    },
+    hero: {
+      eyebrow: "Online-Coaching",
+      headline: "Dein Plan bleibt persönlich, auch wenn du selbst trainierst.",
+      subheadline:
+        "Für alle, die im Studio oder zuhause eigenständig trainieren und trotzdem Struktur, Technik-Feedback und Ernährungsanpassung von Justin wollen.",
+      cta1: "Kostenloses Erstgespräch anfragen",
+      cta2: "Preise ansehen",
+    },
+    fit: [
+      {
+        title: "Du trainierst selbstständig",
+        description:
+          "Du brauchst keinen Trainer neben jeder Übung, aber einen Plan, der Sinn ergibt und regelmäßig angepasst wird.",
+      },
+      {
+        title: "Du willst ehrliches Feedback",
+        description:
+          "Video-Formchecks helfen dir, Technik sauberer zu machen, ohne jedes Mal vor Ort sein zu müssen.",
+      },
+      {
+        title: "Du brauchst Struktur für Ernährung",
+        description:
+          "Kalorien, Makros und Alltag werden so übersetzt, dass du nicht täglich rätseln musst.",
+      },
+    ],
+    steps: [
+      {
+        title: "Startanalyse",
+        description:
+          "Ziel, Trainingsstand, Alltag, Equipment und Ernährung werden geklärt, bevor der Plan entsteht.",
+      },
+      {
+        title: "Plan & Umsetzung",
+        description:
+          "Du bekommst Training, Ernährungsstrategie und konkrete Aufgaben für deine Woche.",
+      },
+      {
+        title: "Feedback & Anpassung",
+        description:
+          "Formchecks, Rückfragen und Fortschritt fließen in die nächste Anpassung ein.",
+      },
+    ],
+    boundaries:
+      "Online-Coaching ist keine 24/7-Begleitung und kein Ersatz für medizinische Betreuung. Es ist ein klarer Coaching-Rahmen für Menschen, die eigenständig umsetzen können.",
+  },
 
   testimonials: [
     {
@@ -288,7 +392,7 @@ export const siteConfig = {
     {
       question: "Für wen passt das Online-Coaching?",
       answer:
-        "Das 12-Wochen Online-Coaching passt, wenn du eigenständig trainieren kannst, aber Struktur, Kontrolle und Anpassungen brauchst. Du bekommst keinen anonymen Standardplan, sondern Training, Ernährung und wöchentliche Check-ins in einem klaren Rahmen.",
+        "Online-Coaching passt, wenn du eigenständig trainieren kannst, aber Struktur, Kontrolle und Anpassungen brauchst. Du bekommst keinen anonymen Standardplan, sondern Training, Ernährung, Video-Feedback und Support im vereinbarten Rahmen.",
     },
     {
       question: "Kann ich auch vor Ort mit Justin trainieren?",
@@ -313,12 +417,13 @@ export const siteConfig = {
   ],
 
   nav: [
-    { label: "Leistungen", href: "#leistungen" },
-    { label: "Für wen", href: "#fuer-wen" },
-    { label: "Über mich", href: "#ueber-mich" },
-    { label: "Ablauf", href: "#ablauf" },
-    { label: "Angebote", href: "#preise" },
-    { label: "Bewertungen", href: "#bewertungen" },
-    { label: "Kontakt", href: "#kontakt" },
+    { label: "Leistungen", href: "/#leistungen" },
+    { label: "Für wen", href: "/#fuer-wen" },
+    { label: "Über mich", href: "/#ueber-mich" },
+    { label: "Ablauf", href: "/#ablauf" },
+    { label: "Angebote", href: "/#preise" },
+    { label: "Online-Coaching", href: "/online-coaching" },
+    { label: "Bewertungen", href: "/#bewertungen" },
+    { label: "Kontakt", href: "/#kontakt" },
   ],
 };

@@ -4,6 +4,7 @@ import Image from "next/image";
 import { Award, Users, BookOpen } from "lucide-react";
 import { motion } from "framer-motion";
 import { siteConfig } from "@/config/site";
+import { assetPath } from "@/lib/paths";
 import { Reveal, slideFromLeft, slideFromRight } from "./Motion";
 
 const statIcons = [Users, Award, BookOpen];
@@ -31,7 +32,7 @@ export default function Team() {
               <div className="absolute -bottom-4 -right-4 h-full w-full rounded-3xl bg-gradient-to-br from-accent/20 to-cta/10" />
               <div className="relative aspect-[3/4] overflow-hidden rounded-3xl shadow-2xl">
                 <Image
-                  src={member.image}
+                  src={assetPath(member.image)}
                   alt={member.name}
                   fill
                   className="object-cover object-center"

@@ -1,6 +1,6 @@
 "use client";
 
-import { ArrowRight, Check, Star } from "lucide-react";
+import { ArrowRight, Check, Sparkles, Star } from "lucide-react";
 import { motion } from "framer-motion";
 import { siteConfig } from "@/config/site";
 import { Reveal, StaggerContainer, StaggerItem } from "./Motion";
@@ -119,6 +119,28 @@ export default function Pricing() {
                     className="mt-7 inline-flex touch-manipulation items-center justify-center rounded-xl border border-white/12 bg-white/[0.06] px-5 py-3 text-sm font-semibold text-white transition-[transform,border-color,background-color] duration-200 hover:-translate-y-0.5 hover:border-white/24 hover:bg-white/[0.1] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent/70"
                   >
                     PT-Erstgespräch anfragen
+                  </a>
+                  <a
+                    href={routePath("/online-coaching")}
+                    className="mt-4 inline-flex w-full touch-manipulation items-start gap-3 rounded-2xl border border-accent/30 bg-accent/[0.08] p-4 text-left text-sm leading-snug text-white/88 transition-[transform,border-color,background-color] duration-200 hover:-translate-y-0.5 hover:border-accent/50 hover:bg-accent/[0.14] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent/60 sm:max-w-md"
+                  >
+                    <Sparkles
+                      className="mt-0.5 h-4 w-4 shrink-0 text-accent"
+                      aria-hidden="true"
+                    />
+                    <span>
+                      <span className="block font-semibold text-white">
+                        Personal Training zu teuer?
+                      </span>
+                      <span className="mt-1 block text-white/68">
+                        Online-Coaching ab 119 €/Monat — gleicher Plan, gleiche
+                        Betreuung im vereinbarten Rahmen.
+                      </span>
+                    </span>
+                    <ArrowRight
+                      className="ml-auto mt-1 h-4 w-4 shrink-0 text-accent"
+                      aria-hidden="true"
+                    />
                   </a>
                 </div>
 

@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Lexend, Source_Sans_3 } from "next/font/google";
 import "./globals.css";
 import { siteConfig } from "@/config/site";
+import WhatsAppFloat from "@/components/WhatsAppFloat";
 
 const lexend = Lexend({
   subsets: ["latin"],
@@ -141,6 +142,7 @@ export default function RootLayout({
           Zum Inhalt springen
         </a>
         {children}
+        <WhatsAppFloat />
       </body>
     </html>
   );

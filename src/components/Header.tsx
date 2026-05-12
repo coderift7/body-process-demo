@@ -59,9 +59,9 @@ export default function Header() {
             <Image
               src={assetPath("/logo-real-dark.webp")}
               alt="Body Process"
-              width={200}
-              height={70}
-              className="h-9 w-auto transition-opacity duration-300 sm:h-11"
+              width={260}
+              height={91}
+              className="h-12 w-auto transition-opacity duration-300 sm:h-14"
             />
           </Link>
 

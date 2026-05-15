@@ -1,100 +1,116 @@
 "use client";
 
 import Image from "next/image";
-import {
-  Dumbbell,
-  Apple,
-  MapPin,
-  Activity,
-  Target,
-  Brain,
-  Sparkles,
-  MessagesSquare,
-} from "lucide-react";
 import { motion } from "framer-motion";
-import { siteConfig } from "@/config/site";
 import { Reveal, StaggerContainer, StaggerItem } from "./Motion";
 import { assetPath } from "@/lib/paths";
 
-const iconMap: Record<string, React.ComponentType<{ className?: string }>> = {
-  Dumbbell,
-  Apple,
-  MapPin,
-  Activity,
-  Target,
-  Brain,
-  Sparkles,
-  MessagesSquare,
-};
+const paths = [
+  {
+    label: "Vor Ort",
+    title: "1:1 Training mit direkter Korrektur.",
+    description:
+      "Für Menschen, die Technik, Belastung und Verbindlichkeit nicht dem Zufall überlassen wollen.",
+    image: "/images/service-training.webp",
+    href: "#kontakt",
+    cta: "Termin anfragen",
+  },
+  {
+    label: "Online",
+    title: "Plan, Formcheck und Ernährung im klaren Rahmen.",
+    description:
+      "Für Selbsttrainer, die eigenständig umsetzen und trotzdem präzise Anpassung von Justin brauchen.",
+    image: "/images/justin-consulting-portrait.jpeg",
+    href: "/online-coaching",
+    cta: "Online-Coaching ansehen",
+  },
+  {
+    label: "Hybrid",
+    title: "Persönlicher Start, digitale Führung im Alltag.",
+    description:
+      "Für volle Kalender: punktuelle Sessions vor Ort, laufende Struktur für Training und Ernährung.",
+    image: "/images/ernaehrungsberatung-justin-premium.png",
+    href: "#kontakt",
+    cta: "Termin anfragen",
+  },
+];
 
 export default function Services() {
   return (
     <section
       id="leistungen"
-      className="relative scroll-mt-24 bg-background py-24 lg:py-32"
+      className="relative scroll-mt-24 bg-editorial py-24 text-graphite lg:py-32"
     >
       <div className="mx-auto max-w-7xl px-5 sm:px-6 lg:px-8">
-        {/* Section Header */}
         <Reveal>
-          <div className="max-w-xl">
-            <span className="text-sm font-semibold uppercase tracking-widest text-accent">
-              Mein Angebot
-            </span>
-            <h2 className="mt-3 font-heading text-3xl font-bold tracking-tight text-primary sm:text-4xl lg:text-5xl">
-              Leistungen, die Fortschritt planbar machen.
-            </h2>
-            <p className="mt-4 text-lg leading-relaxed text-muted-foreground">
-              Kein Aktionismus, kein Überfrachten. Wir kombinieren genau die
-              Bausteine, die für dein Ziel und deinen Alltag sinnvoll sind.
+          <div className="grid gap-8 lg:grid-cols-[0.78fr_1fr] lg:items-end">
+            <div>
+              <span className="text-sm font-semibold uppercase tracking-[0.28em] text-copper">
+                Drei Wege
+              </span>
+              <h2 className="mt-4 max-w-3xl font-heading text-4xl font-bold leading-[0.95] tracking-[-0.035em] text-graphite sm:text-5xl lg:text-6xl">
+                Wähle den Rahmen, der zu deinem Alltag passt.
+              </h2>
+            </div>
+            <p className="max-w-2xl text-base leading-8 text-graphite/68 sm:text-lg">
+              Body Process ist kein Baukasten aus Einzelleistungen. Es ist eine
+              Entscheidung für den richtigen Betreuungsmodus: nah, digital oder
+              kombiniert.
             </p>
           </div>
         </Reveal>
 
-        {/* Service Grid */}
-        <StaggerContainer
-          className="mt-14 grid gap-5 sm:grid-cols-2 lg:grid-cols-3"
-          staggerDelay={0.08}
-        >
-          {siteConfig.services.map((service, i) => {
-            const Icon = iconMap[service.icon] || Sparkles;
-            return (
-              <StaggerItem key={i} className="h-full">
-                <motion.div
-                  whileHover={{ y: -5 }}
-                  transition={{ duration: 0.25, ease: [0.22, 1, 0.36, 1] }}
-                  className="group flex h-full flex-col overflow-hidden rounded-2xl border border-border bg-card shadow-sm transition-shadow duration-300 hover:shadow-xl"
+        <StaggerContainer className="mt-16 space-y-8" staggerDelay={0.12}>
+          {paths.map((path, index) => (
+            <StaggerItem key={path.label}>
+              <motion.a
+                href={path.href}
+                whileHover={{ y: -4 }}
+                transition={{ duration: 0.25, ease: [0.22, 1, 0.36, 1] }}
+                className="group grid min-h-[31rem] overflow-hidden border border-graphite/12 bg-graphite text-editorial focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-copper/70 lg:grid-cols-[1.18fr_0.82fr]"
+              >
+                <div
+                  className={`relative min-h-[21rem] overflow-hidden ${
+                    index % 2 === 1 ? "lg:order-2" : ""
+                  }`}
                 >
-                  {/* Photo */}
-                  <div className="relative aspect-[3/2] overflow-hidden">
-                    <Image
-                      src={assetPath(service.image)}
-                      alt={service.title}
-                      width={600}
-                      height={400}
-                      loading="lazy"
-                      className="h-full w-full object-cover transition-transform duration-500 ease-out group-hover:scale-105"
-                    />
-                    {/* Gradient blend into card */}
-                    <div className="absolute inset-x-0 bottom-0 h-16 bg-gradient-to-t from-card to-transparent" />
-                    {/* Icon badge — floats at bottom-left of photo */}
-                    <div className="absolute bottom-3 left-4 flex h-10 w-10 items-center justify-center rounded-xl bg-primary/90 shadow-lg backdrop-blur-sm">
-                      <Icon className="h-4.5 w-4.5 text-accent" />
-                    </div>
-                  </div>
+                  <Image
+                    src={assetPath(path.image)}
+                    alt={path.title}
+                    fill
+                    sizes="(max-width: 1024px) 100vw, 58vw"
+                    loading="lazy"
+                    className="object-cover transition duration-700 ease-out group-hover:scale-[1.025]"
+                  />
+                  <div className="absolute inset-0 bg-graphite/18 transition-colors duration-300 group-hover:bg-graphite/6" />
+                </div>
 
-                  {/* Content */}
-                  <div className="flex flex-1 flex-col p-5 pt-4">
-                    <h3 className="font-heading text-lg font-semibold tracking-tight text-primary">
-                      {service.title}
+                <div className="relative flex flex-col justify-between p-7 sm:p-9 lg:p-12">
+                  <div>
+                    <p className="text-xs font-semibold uppercase tracking-[0.32em] text-copper">
+                      {path.label}
+                    </p>
+                    <h3 className="mt-8 max-w-xl font-heading text-3xl font-bold leading-[1.02] tracking-[-0.03em] sm:text-4xl lg:text-5xl">
+                      {path.title}
                     </h3>
-                    <p className="mt-2 flex-1 text-sm leading-relaxed text-muted-foreground">
-                      {service.description}
+                    <p className="mt-6 max-w-md text-base leading-8 text-editorial/68">
+                      {path.description}
                     </p>
                   </div>
-                </motion.div>
-              </StaggerItem>
-            );
-          })}
+
+                  <div className="mt-10 flex items-center justify-between border-t border-editorial/14 pt-6">
+                    <span className="text-sm font-semibold">
+                      {path.cta}
+                    </span>
+                    <span
+                      aria-hidden="true"
+                      className="h-px w-16 bg-copper transition-all duration-300 group-hover:w-24"
+                    />
+                  </div>
+                </div>
+              </motion.a>
+            </StaggerItem>
+          ))}
         </StaggerContainer>
       </div>
     </section>

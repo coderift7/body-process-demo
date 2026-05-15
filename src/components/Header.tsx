@@ -34,8 +34,7 @@ export default function Header() {
 
   const toggle = useCallback(() => setIsOpen((o) => !o), []);
 
-  // Color logic: open → always white, scrolled → dark, default → white
-  const lineColor = "bg-white";
+  const lineColor = isOpen || isScrolled ? "bg-white" : "bg-graphite";
 
   return (
     <>

@@ -30,6 +30,40 @@ export const metadata: Metadata = {
 const fitIcons = [ClipboardList, PlayCircle, Utensils];
 const stepIcons = [ClipboardList, CheckCircle2, MessageSquareText];
 
+function OnlineHeroPortrait({ className = "" }: { className?: string }) {
+  return (
+    <div
+      className={`relative mx-auto w-full max-w-[26rem] sm:max-w-[30rem] lg:mx-0 lg:max-w-none ${className}`}
+    >
+      <div className="relative overflow-hidden rounded-[2rem] border border-white/12 bg-white/[0.04] p-3 shadow-[0_30px_80px_rgba(2,6,23,0.34)] backdrop-blur-md">
+        <div className="relative overflow-hidden rounded-[1.4rem]">
+          <Image
+            src={assetPath("/images/justin-consulting-portrait-premium.png")}
+            alt="Justin Doms im Beratungsgespräch"
+            width={1536}
+            height={2048}
+            priority
+            className="aspect-[5/6] w-full object-cover object-[50%_18%] sm:aspect-[4/5] lg:object-center"
+          />
+          <div className="absolute inset-0 bg-gradient-to-t from-primary/82 via-primary/18 to-transparent" />
+        </div>
+        <div className="absolute bottom-4 left-4 right-4 rounded-[1.3rem] border border-white/12 bg-primary/84 p-4 backdrop-blur-md sm:bottom-8 sm:left-8 sm:right-8 sm:p-5">
+          <p className="text-xs font-semibold uppercase tracking-[0.24em] text-accent">
+            Kein Standardplan
+          </p>
+          <p className="mt-2 font-heading text-xl font-semibold text-white sm:text-2xl">
+            Training, Ernährung, Feedback.
+          </p>
+          <p className="mt-2 text-sm leading-relaxed text-white/72 sm:mt-3">
+            Persönliche Betreuung für Menschen, die selbst umsetzen und
+            trotzdem nicht allein planen wollen.
+          </p>
+        </div>
+      </div>
+    </div>
+  );
+}
+
 export default function OnlineCoachingPage() {
   return (
     <>
@@ -42,30 +76,14 @@ export default function OnlineCoachingPage() {
               <p className="text-xs font-semibold uppercase tracking-[0.28em] text-accent sm:text-sm">
                 {coaching.hero.eyebrow}
               </p>
-              <div className="mt-5 inline-flex max-w-full items-center gap-3 rounded-2xl border border-white/10 bg-white/[0.05] px-3 py-2.5 backdrop-blur-sm">
-                <Image
-                  src={assetPath("/images/justin-consulting-portrait-premium.png")}
-                  alt="Justin Doms"
-                  width={48}
-                  height={48}
-                  className="h-11 w-11 rounded-xl object-cover object-top"
-                  priority
-                />
-                <div>
-                  <p className="font-heading text-sm font-semibold text-white">
-                    Justin Doms
-                  </p>
-                  <p className="text-xs leading-snug text-white/58">
-                    Plan, Formcheck und Ernährungsfeedback
-                  </p>
-                </div>
-              </div>
               <h1 className="mt-5 max-w-4xl font-heading text-3xl font-bold leading-[0.98] tracking-[-0.03em] text-white sm:text-5xl lg:text-7xl">
                 {coaching.hero.headline}
               </h1>
               <p className="mt-6 max-w-2xl text-lg leading-relaxed text-white/72 sm:text-xl">
                 {coaching.hero.subheadline}
               </p>
+
+              <OnlineHeroPortrait className="mt-8 lg:hidden" />
 
               <div className="mt-8 flex flex-col gap-3 sm:flex-row">
                 <Link
@@ -84,33 +102,7 @@ export default function OnlineCoachingPage() {
               </div>
             </div>
 
-            <div className="relative">
-              <div className="relative overflow-hidden rounded-[2rem] border border-white/12 bg-white/[0.04] p-3 shadow-[0_30px_80px_rgba(2,6,23,0.34)] backdrop-blur-md">
-                <div className="relative overflow-hidden rounded-[1.4rem]">
-                  <Image
-                    src={assetPath("/images/justin-consulting-portrait-premium.png")}
-                    alt="Justin Doms im Beratungsgespräch"
-                    width={1536}
-                    height={2048}
-                    priority
-                    className="aspect-[4/5] w-full object-cover object-center"
-                  />
-                  <div className="absolute inset-0 bg-gradient-to-t from-primary/82 via-primary/18 to-transparent" />
-                </div>
-                <div className="absolute bottom-8 left-8 right-8 rounded-[1.3rem] border border-white/12 bg-primary/84 p-5 backdrop-blur-md">
-                  <p className="text-xs font-semibold uppercase tracking-[0.24em] text-accent">
-                    Kein Standardplan
-                  </p>
-                  <p className="mt-2 font-heading text-2xl font-semibold text-white">
-                    Training, Ernährung, Feedback.
-                  </p>
-                  <p className="mt-3 text-sm leading-relaxed text-white/72">
-                    Persönliche Betreuung für Menschen, die selbst umsetzen und
-                    trotzdem nicht allein planen wollen.
-                  </p>
-                </div>
-              </div>
-            </div>
+            <OnlineHeroPortrait className="hidden lg:block" />
           </div>
         </section>
 

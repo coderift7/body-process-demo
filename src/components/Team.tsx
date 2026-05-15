@@ -37,7 +37,6 @@ export default function Team() {
                   fill
                   className="object-cover object-center"
                   sizes="(max-width: 768px) 100vw, 50vw"
-                  priority
                 />
                 {/* Gradient overlay at bottom */}
                 <div className="absolute inset-x-0 bottom-0 h-1/3 bg-gradient-to-t from-primary/80 to-transparent" />

@@ -9,6 +9,13 @@
   --accent: #F39200;
   --accent-foreground: #FFFFFF;
 
+  /* Premium CEO pivot - parallel tokens for Iteration 1 */
+  --editorial: #F5F1EA;
+  --graphite: #1C1A18;
+  --copper: #B85A2C;
+  --system-error: #C13525;
+  --system-success: #3D7755;
+
   /* CTA - Burnt Orange, WCAG-safe with white text */
   --cta: #B45309;
   --cta-foreground: #FFFFFF;
@@ -48,6 +55,11 @@
   --color-primary-foreground: var(--primary-foreground);
   --color-accent: var(--accent);
   --color-accent-foreground: var(--accent-foreground);
+  --color-editorial: var(--editorial);
+  --color-graphite: var(--graphite);
+  --color-copper: var(--copper);
+  --color-system-error: var(--system-error);
+  --color-system-success: var(--system-success);
   --color-cta: var(--cta);
   --color-cta-foreground: var(--cta-foreground);
   --color-secondary: var(--secondary);

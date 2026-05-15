@@ -1,12 +1,15 @@
 "use client";
 
 import Image from "next/image";
-import { BriefcaseBusiness, MapPin, RefreshCcw } from "lucide-react";
 import { siteConfig } from "@/config/site";
 import { assetPath } from "@/lib/paths";
 import { Reveal, slideFromLeft, slideFromRight } from "./Motion";
 
-const icons = [BriefcaseBusiness, MapPin, RefreshCcw];
+const notFor = [
+  "Du suchst ein 4-Wochen-Versprechen oder einen anonymen Standardplan.",
+  "Du willst maximale Lautstärke, tägliche Push-Nachrichten und Fitness-Hype.",
+  "Du möchtest Verantwortung komplett abgeben, statt Routinen verbindlich umzusetzen.",
+];
 
 export default function Audience() {
   const { audience } = siteConfig;
@@ -14,90 +17,76 @@ export default function Audience() {
   return (
     <section
       id="fuer-wen"
-      className="relative scroll-mt-24 overflow-hidden bg-muted py-24 lg:py-32"
+      className="relative scroll-mt-24 overflow-hidden bg-editorial py-24 text-graphite lg:py-32"
     >
-      <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_right,rgba(243,146,0,0.08),transparent_28%)]" />
-
-      <div className="relative mx-auto max-w-7xl px-5 sm:px-6 lg:px-8">
-        <div className="grid items-center gap-12 lg:grid-cols-[0.95fr_1.05fr] lg:gap-16">
+      <div className="mx-auto max-w-7xl px-5 sm:px-6 lg:px-8">
+        <div className="grid items-start gap-14 lg:grid-cols-[0.86fr_1.14fr] lg:gap-20">
           <Reveal variants={slideFromLeft}>
-            <div className="relative overflow-hidden rounded-[2rem] border border-border bg-card p-3 shadow-xl">
-              <div className="overflow-hidden rounded-[1.5rem]">
+            <figure className="lg:sticky lg:top-28">
+              <div className="relative aspect-[4/5] overflow-hidden">
                 <Image
                   src={assetPath("/images/justin-business-outdoor.jpeg")}
                   alt="Justin Doms in professionellem Umfeld im Freien"
-                  width={1536}
-                  height={2048}
-                  className="aspect-[4/5] w-full object-cover object-center"
+                  fill
+                  className="object-cover object-center"
+                  sizes="(max-width: 1024px) 100vw, 42vw"
                 />
               </div>
-              <div className="absolute bottom-7 left-7 right-7 rounded-[1.25rem] border border-white/10 bg-primary/86 p-5 text-white backdrop-blur-md">
-                <p className="text-xs font-semibold uppercase tracking-[0.24em] text-accent">
-                  Für wen Body Process passt
-                </p>
-                <p className="mt-3 text-sm leading-relaxed text-white/74">
-                  Für Menschen, die Leistung im Alltag brauchen und einen klaren,
-                  realistischen Weg zu mehr Fitness, Energie und Stabilität
-                  suchen.
-                </p>
-              </div>
-            </div>
+              <figcaption className="mt-5 border-l-2 border-copper pl-5 text-sm leading-7 text-graphite/68">
+                Für Menschen, die Leistung im Alltag brauchen und einen klaren,
+                realistischen Weg zu mehr Fitness, Energie und Stabilität suchen.
+              </figcaption>
+            </figure>
           </Reveal>
 
-          <Reveal variants={slideFromRight}>
+          <Reveal variants={slideFromRight} delay={0.12}>
             <div>
-              <span className="text-sm font-semibold uppercase tracking-widest text-accent">
-                Zielgruppe
+              <span className="text-sm font-semibold uppercase tracking-[0.28em] text-copper">
+                Qualifizierung
               </span>
-              <h2 className="mt-3 font-heading text-3xl font-bold tracking-tight text-primary sm:text-4xl lg:text-5xl">
-                {audience.heading}
+              <h2 className="mt-4 max-w-3xl font-heading text-4xl font-bold leading-[0.95] tracking-[-0.035em] text-graphite sm:text-5xl lg:text-6xl">
+                Für wen Body Process passt. Und für wen nicht.
               </h2>
-              <p className="mt-4 max-w-2xl text-lg leading-relaxed text-muted-foreground">
+              <p className="mt-6 max-w-2xl text-base leading-8 text-graphite/68 sm:text-lg">
                 {audience.intro}
               </p>
 
-              <div className="mt-8 space-y-4">
-                {audience.profiles.map((profile, index) => {
-                  const Icon = icons[index];
+              <div className="mt-12 grid gap-10 lg:grid-cols-2">
+                <div>
+                  <h3 className="font-heading text-2xl font-semibold tracking-[-0.02em]">
+                    Passt, wenn...
+                  </h3>
+                  <ul className="mt-7 divide-y divide-graphite/12 border-y border-graphite/12">
+                    {audience.profiles.map((profile) => (
+                      <li key={profile.title} className="py-6">
+                        <p className="font-heading text-xl font-semibold">
+                          {profile.title}
+                        </p>
+                        <p className="mt-3 text-sm leading-7 text-graphite/66">
+                          {profile.description}
+                        </p>
+                      </li>
+                    ))}
+                  </ul>
+                </div>
 
-                  return (
-                    <article
-                      key={profile.title}
-                      className="rounded-3xl border border-border bg-card p-6 shadow-sm"
-                    >
-                      <div className="flex items-start gap-4">
-                        <div className="flex h-11 w-11 shrink-0 items-center justify-center rounded-2xl bg-accent/10 text-accent">
-                          <Icon className="h-5 w-5" aria-hidden="true" />
-                        </div>
-                        <div>
-                          <h3 className="font-heading text-xl font-semibold text-primary">
-                            {profile.title}
-                          </h3>
-                          <p className="mt-2 text-base leading-relaxed text-muted-foreground">
-                            {profile.description}
-                          </p>
-                        </div>
-                      </div>
-                    </article>
-                  );
-                })}
+                <div>
+                  <h3 className="font-heading text-2xl font-semibold tracking-[-0.02em]">
+                    Nicht passend, wenn...
+                  </h3>
+                  <ul className="mt-7 divide-y divide-graphite/12 border-y border-graphite/12">
+                    {notFor.map((item) => (
+                      <li key={item} className="py-6 text-sm leading-7 text-graphite/66">
+                        {item}
+                      </li>
+                    ))}
+                  </ul>
+                </div>
               </div>
 
-              <div className="mt-8 rounded-3xl border border-accent/15 bg-accent/[0.06] p-6">
-                <p className="text-sm font-semibold uppercase tracking-[0.18em] text-accent">
-                  Region
-                </p>
-                <ul className="mt-4 grid gap-3 sm:grid-cols-3">
-                  {audience.locations.map((location) => (
-                    <li
-                      key={location}
-                      className="rounded-2xl border border-accent/10 bg-white/70 px-4 py-3 text-sm font-medium text-primary"
-                    >
-                      {location}
-                    </li>
-                  ))}
-                </ul>
-              </div>
+              <p className="mt-10 max-w-2xl text-xs font-semibold uppercase leading-6 tracking-[0.24em] text-copper">
+                {audience.locations.join(" · ")}
+              </p>
             </div>
           </Reveal>
         </div>

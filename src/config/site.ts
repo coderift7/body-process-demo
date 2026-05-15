@@ -87,7 +87,7 @@ export const siteConfig = {
       title: "Online-Coaching",
       description:
         "Für Menschen, die selbst trainieren können, aber einen sauberen Plan, Video-Feedback, Ernährungsstruktur und verlässliche Anpassungen brauchen.",
-      image: "/images/justin-consulting-portrait-premium.png",
+      image: "/images/justin-consulting-portrait.jpeg",
     },
   ],
 
@@ -101,7 +101,7 @@ export const siteConfig = {
         role: "Personal Trainer & Ernährungscoach",
         description:
           "Ich arbeite mit Menschen, die Ergebnisse wollen, aber keine Zeit für blindes Ausprobieren haben. Mein Ansatz verbindet fundiertes Training, alltagstaugliche Ernährung und ehrliche Betreuung, damit Fortschritt planbar wird.",
-        image: "/images/justin-consulting-portrait-premium.png",
+        image: "/images/justin-consulting-portrait.jpeg",
       },
     ],
     stats: [

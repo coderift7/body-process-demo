@@ -4,6 +4,7 @@ import Image from "next/image";
 import { motion } from "framer-motion";
 import { Reveal, StaggerContainer, StaggerItem } from "./Motion";
 import { assetPath } from "@/lib/paths";
+import Container from "./Container";
 
 const paths = [
   {
@@ -19,8 +20,8 @@ const paths = [
     label: "Online",
     title: "Plan, Formcheck und Ernährung im klaren Rahmen.",
     description:
-      "Für Selbsttrainer, die eigenständig umsetzen und trotzdem präzise Anpassung von Justin brauchen.",
-    image: "/images/justin-consulting-portrait.jpeg",
+      "Für Selbsttrainer, die eigenständig umsetzen und trotzdem präzise Anpassung von mir brauchen.",
+    image: "/images/justin-coaching.webp",
     href: "/online-coaching",
     cta: "Online-Coaching ansehen",
   },
@@ -29,7 +30,7 @@ const paths = [
     title: "Persönlicher Start, digitale Führung im Alltag.",
     description:
       "Für volle Kalender: punktuelle Sessions vor Ort, laufende Struktur für Training und Ernährung.",
-    image: "/images/ernaehrungsberatung-justin-premium.png",
+    image: "/images/justin-gym-smile.jpeg",
     href: "#kontakt",
     cta: "Termin anfragen",
   },
@@ -41,7 +42,7 @@ export default function Services() {
       id="leistungen"
       className="relative scroll-mt-24 bg-editorial py-24 text-graphite lg:py-32"
     >
-      <div className="mx-auto max-w-7xl px-5 sm:px-6 lg:px-8">
+      <Container>
         <Reveal>
           <div className="grid gap-8 lg:grid-cols-[0.78fr_1fr] lg:items-end">
             <div>
@@ -112,7 +113,7 @@ export default function Services() {
             </StaggerItem>
           ))}
         </StaggerContainer>
-      </div>
+      </Container>
     </section>
   );
 }

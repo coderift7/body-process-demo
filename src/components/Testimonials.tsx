@@ -3,6 +3,7 @@
 import { Star, Quote } from "lucide-react";
 import { siteConfig } from "@/config/site";
 import { Reveal, StaggerContainer, StaggerItem } from "./Motion";
+import Container from "./Container";
 
 const avatarColors = [
   "bg-accent/10 text-accent",
@@ -19,7 +20,7 @@ export default function Testimonials() {
       {/* Subtle gradient accent */}
       <div className="absolute left-0 top-0 h-full w-1/3 bg-gradient-to-r from-accent/[0.03] to-transparent" />
 
-      <div className="relative mx-auto max-w-7xl px-5 sm:px-6 lg:px-8">
+      <Container className="relative">
         {/* Section Header */}
         <Reveal>
           <div className="max-w-xl">
@@ -87,7 +88,7 @@ export default function Testimonials() {
             </StaggerItem>
           ))}
         </StaggerContainer>
-      </div>
+      </Container>
     </section>
   );
 }

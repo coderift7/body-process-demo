@@ -15,7 +15,7 @@ export default function WhatsAppFloat() {
   }, []);
 
   const whatsappHref = `https://wa.me/${siteConfig.company.whatsapp.replace(/\D/g, "")}?text=${encodeURIComponent(
-    "Hi Justin, ich habe eine Frage zu Body Process."
+    "Hi, ich habe eine Frage zu Body Process."
   )}`;
 
   return (

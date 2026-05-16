@@ -3,7 +3,7 @@ export const siteConfig = {
     name: "Body Process",
     legalName: "Justin Doms — Body Process Personal Training",
     responsiblePerson: "Justin Doms",
-    tagline: "Personal Training mit Struktur, Klarheit und echter Betreuung.",
+    tagline: "Personal Training mit Struktur, Progress und echter Betreuung.",
     phone: "+49 174 3200767",
     whatsapp: "+49 174 3200767",
     email: "Justin@body-process.de",
@@ -21,7 +21,7 @@ export const siteConfig = {
 
   hero: {
     eyebrow: "Personal Training vor Ort · Online-Coaching digital",
-    headline: "Training, Ernährung und Kontrolle — mit Justin an deiner Seite.",
+    headline: "Training, Ernährung und Kontrolle — mit mir an deiner Seite.",
     subheadline:
       "Personal Training in Hadamar, Limburg und Diez oder Online-Coaching, wenn du selbst trainierst und trotzdem einen klaren Plan, Technik-Feedback und echte Anpassung willst.",
     cta1: "Kostenloses Erstgespräch anfragen",
@@ -87,7 +87,7 @@ export const siteConfig = {
       title: "Online-Coaching",
       description:
         "Für Menschen, die selbst trainieren können, aber einen sauberen Plan, Video-Feedback, Ernährungsstruktur und verlässliche Anpassungen brauchen.",
-      image: "/images/justin-consulting-portrait.jpeg",
+      image: "/images/justin-coaching.webp",
     },
   ],
 
@@ -199,7 +199,7 @@ export const siteConfig = {
     ],
     personalTraining: {
       eyebrow: "Personal Training",
-      title: "1:1 Training mit Justin",
+      title: "1:1 Training mit mir",
       description:
         "Für Technik, Verbindlichkeit und messbaren Aufbau vor Ort. Jede Karte beinhaltet Trainingsplanerstellung.",
       durations: [
@@ -288,7 +288,7 @@ export const siteConfig = {
       eyebrow: "Online-Coaching",
       headline: "Dein Plan bleibt persönlich, auch wenn du selbst trainierst.",
       subheadline:
-        "Für alle, die im Studio oder zuhause eigenständig trainieren und trotzdem Struktur, Technik-Feedback und Ernährungsanpassung von Justin wollen.",
+        "Für alle, die im Studio oder zuhause eigenständig trainieren und trotzdem Struktur, Technik-Feedback und Ernährungsanpassung von mir wollen.",
       cta1: "Kostenloses Erstgespräch anfragen",
       cta2: "Preise ansehen",
     },
@@ -329,7 +329,7 @@ export const siteConfig = {
     weeklyRhythm: [
       "Du trainierst mit deinem Plan im Studio oder zuhause.",
       "Du schickst Formcheck-Videos und relevante Fragen gebündelt.",
-      "Justin prüft Technik, Fortschritt, Ernährung und Alltag.",
+      "Ich prüfe Technik, Fortschritt, Ernährung und Alltag.",
       "Der Plan wird angepasst, bevor du wieder wochenlang falsch weitermachst.",
     ],
     expectations: [
@@ -353,7 +353,7 @@ export const siteConfig = {
       {
         question: "Muss ich mich bei jedem Training filmen?",
         answer:
-          "Nein. Du filmst nur ausgewählte Übungen, bei denen Justin Technik, Bewegungsweg oder Belastung prüfen soll.",
+          "Nein. Du filmst nur ausgewählte Übungen, bei denen ich Technik, Bewegungsweg oder Belastung prüfen soll.",
       },
       {
         question: "Wie oft bekomme ich Feedback?",
@@ -368,7 +368,7 @@ export const siteConfig = {
       {
         question: "Kann ich Online-Coaching nutzen, obwohl ich aus der Region komme?",
         answer:
-          "Ja. Es ist nicht nur für Kunden weit weg gedacht, sondern auch für Menschen aus Hadamar, Limburg und Diez, die selbst trainieren und Justins Struktur digital nutzen wollen.",
+          "Ja. Es ist nicht nur für Kunden weit weg gedacht, sondern auch für Menschen aus Hadamar, Limburg und Diez, die selbst trainieren und meine Struktur digital nutzen wollen.",
       },
     ],
     boundaries:
@@ -399,7 +399,7 @@ export const siteConfig = {
   appointment: {
     heading: "Kostenloses Erstgespräch anfragen",
     subheading:
-      "Schick mir kurz deine Infos. Die Anfrage ist so vorbereitet, dass Justin direkt erkennt, ob Vor-Ort Training, Online-Coaching oder ein hybrider Weg sinnvoll ist.",
+      "Schick mir kurz deine Infos. Die Anfrage ist so vorbereitet, dass ich direkt erkenne, ob Vor-Ort Training, Online-Coaching oder ein hybrider Weg sinnvoll ist.",
     treatmentTypes: [
       "Vor-Ort Training",
       "Online-Coaching",
@@ -485,10 +485,10 @@ export const siteConfig = {
     {
       question: "Kann ich Online-Coaching auch nutzen, wenn ich aus Hadamar oder Limburg komme?",
       answer:
-        "Ja. Online-Coaching ist nicht nur für weit entfernte Kunden gedacht, sondern auch für Menschen aus der Region, die selbst trainieren und Justins Struktur digital nutzen möchten.",
+        "Ja. Online-Coaching ist nicht nur für weit entfernte Kunden gedacht, sondern auch für Menschen aus der Region, die selbst trainieren und meine Struktur digital nutzen möchten.",
     },
     {
-      question: "Kann ich auch vor Ort mit Justin trainieren?",
+      question: "Kann ich auch vor Ort mit dir trainieren?",
       answer:
         "Ja, wenn ein persönlicher Trainingsslot frei ist. Vor-Ort Personal Training bleibt bewusst begrenzt, damit die Betreuung zuverlässig und hochwertig bleibt.",
     },

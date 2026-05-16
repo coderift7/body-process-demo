@@ -6,6 +6,7 @@ import { motion } from "framer-motion";
 import Link from "next/link";
 import { siteConfig } from "@/config/site";
 import { assetPath, routePath } from "@/lib/paths";
+import Container from "./Container";
 
 export default function Footer() {
   return (
@@ -13,7 +14,7 @@ export default function Footer() {
       {/* Top accent line */}
       <div className="h-px bg-gradient-to-r from-transparent via-accent/30 to-transparent" />
 
-      <div className="mx-auto max-w-7xl px-5 py-14 sm:px-6 lg:px-8 lg:py-16">
+      <Container className="py-14 lg:py-16">
         <div className="grid gap-10 sm:grid-cols-2 lg:grid-cols-4">
           {/* Company */}
           <div>
@@ -23,11 +24,11 @@ export default function Footer() {
                 className="inline-block focus-visible:rounded-sm focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent/60"
               >
                 <Image
-                  src={assetPath("/logo-real-dark.webp")}
+                  src={assetPath("/logo-bp-dark-nav.png")}
                   alt="Body Process — Personal Training"
-                  width={200}
-                  height={70}
-                  className="h-10 w-auto"
+                  width={1202}
+                  height={150}
+                  className="h-8 w-auto"
                 />
               </Link>
             </div>
@@ -136,7 +137,7 @@ export default function Footer() {
             Rechte vorbehalten.
           </motion.p>
         </div>
-      </div>
+      </Container>
     </footer>
   );
 }

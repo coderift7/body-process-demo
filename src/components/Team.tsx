@@ -6,6 +6,7 @@ import { motion } from "framer-motion";
 import { siteConfig } from "@/config/site";
 import { assetPath } from "@/lib/paths";
 import { Reveal, slideFromLeft, slideFromRight } from "./Motion";
+import Container from "./Container";
 
 const statIcons = [Users, Award, BookOpen];
 const statColors = [
@@ -23,7 +24,7 @@ export default function Team() {
       id="ueber-mich"
       className="noise-overlay relative scroll-mt-24 bg-white py-24 lg:py-32"
     >
-      <div className="relative z-10 mx-auto max-w-7xl px-5 sm:px-6 lg:px-8">
+      <Container className="relative z-10">
         <div className="grid items-center gap-12 lg:grid-cols-2 lg:gap-20">
           {/* Left: Large Justin Photo */}
           <Reveal variants={slideFromLeft}>
@@ -106,7 +107,7 @@ export default function Team() {
             </div>
           </Reveal>
         </div>
-      </div>
+      </Container>
     </section>
   );
 }

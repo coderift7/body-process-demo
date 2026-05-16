@@ -211,7 +211,7 @@ export default function OnlineCoachingPage() {
                 </h2>
                 <p className="mt-4 max-w-xl text-lg leading-relaxed text-white/68">
                   Online-Coaching wird greifbarer, wenn klar ist, was du
-                  wirklich machst und was Justin prüft.
+                  wirklich machst und was ich prüfe.
                 </p>
               </div>
 

@@ -74,8 +74,9 @@
   --color-ring: var(--ring);
   --color-destructive: var(--destructive);
   --color-destructive-foreground: var(--destructive-foreground);
-  --font-heading: var(--font-lexend);
-  --font-body: var(--font-source-sans);
+  --font-heading: var(--font-fraunces);
+  --font-body: var(--font-geist);
+  --font-mono: var(--font-jetbrains-mono);
 }
 
 body {

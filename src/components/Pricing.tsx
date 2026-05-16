@@ -6,6 +6,7 @@ import { siteConfig } from "@/config/site";
 import { Reveal, StaggerContainer, StaggerItem } from "./Motion";
 import { cn } from "@/lib/utils";
 import { routePath } from "@/lib/paths";
+import Container from "./Container";
 
 export default function Pricing() {
   const pricing = siteConfig.pricing;
@@ -15,7 +16,7 @@ export default function Pricing() {
       id="preise"
       className="relative scroll-mt-24 bg-background py-24 lg:py-32"
     >
-      <div className="mx-auto max-w-7xl px-5 sm:px-6 lg:px-8">
+      <Container>
         <Reveal>
           <div className="mx-auto max-w-3xl text-center">
             <span className="text-sm font-semibold uppercase tracking-widest text-accent">
@@ -343,7 +344,7 @@ export default function Pricing() {
             {pricing.note}
           </p>
         </Reveal>
-      </div>
+      </Container>
     </section>
   );
 }

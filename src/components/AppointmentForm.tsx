@@ -5,6 +5,7 @@ import { CalendarDays, CheckCircle2, ArrowRight, MessageCircle, Phone } from "lu
 import { motion, AnimatePresence } from "framer-motion";
 import { siteConfig } from "@/config/site";
 import { Reveal, slideFromLeft, slideFromRight } from "./Motion";
+import Container from "./Container";
 
 const inputClasses =
   "w-full rounded-xl border border-white/10 bg-white/[0.06] px-4 py-3 text-sm text-white placeholder:text-white/30 backdrop-blur-sm transition-[border-color,background-color,box-shadow] duration-200 focus-visible:border-accent/50 focus-visible:bg-white/[0.08] focus-visible:ring-2 focus-visible:ring-accent/20";
@@ -79,7 +80,7 @@ export default function AppointmentForm() {
       <div className="absolute inset-0 bg-[radial-gradient(ellipse_60%_40%_at_20%_50%,rgba(249,115,22,0.15),transparent)]" />
       <div className="absolute inset-0 bg-[radial-gradient(ellipse_40%_30%_at_80%_80%,rgba(13,148,136,0.1),transparent)]" />
 
-      <div className="relative z-10 mx-auto max-w-7xl px-5 sm:px-6 lg:px-8">
+      <Container className="relative z-10">
         <div className="grid items-start gap-12 lg:grid-cols-2 lg:gap-16">
           {/* Left: Text */}
           <Reveal variants={slideFromLeft}>
@@ -281,7 +282,7 @@ export default function AppointmentForm() {
                             Online-Coaching Vorqualifikation
                           </p>
                           <p className="mt-1 text-xs leading-relaxed text-white/45">
-                            Diese Angaben helfen Justin, direkt einzuschätzen,
+                            Diese Angaben helfen mir, direkt einzuschätzen,
                             ob das 12-Wochen-Coaching zu deinem Alltag passt.
                           </p>
                         </div>
@@ -473,7 +474,7 @@ export default function AppointmentForm() {
             </div>
           </Reveal>
         </div>
-      </div>
+      </Container>
     </section>
   );
 }

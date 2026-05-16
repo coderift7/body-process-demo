@@ -1,20 +1,28 @@
 import type { Metadata } from "next";
-import { Lexend, Source_Sans_3 } from "next/font/google";
+import { Fraunces, Geist, JetBrains_Mono } from "next/font/google";
 import "./globals.css";
 import { siteConfig } from "@/config/site";
 import WhatsAppFloat from "@/components/WhatsAppFloat";
 
-const lexend = Lexend({
+const fraunces = Fraunces({
   subsets: ["latin"],
   weight: ["400", "500", "600", "700"],
-  variable: "--font-lexend",
+  style: ["normal", "italic"],
+  variable: "--font-fraunces",
   display: "swap",
 });
 
-const sourceSans = Source_Sans_3({
+const geist = Geist({
   subsets: ["latin"],
-  weight: ["300", "400", "500", "600", "700"],
-  variable: "--font-source-sans",
+  weight: ["400", "500", "600"],
+  variable: "--font-geist",
+  display: "swap",
+});
+
+const jetbrainsMono = JetBrains_Mono({
+  subsets: ["latin"],
+  weight: ["400", "500"],
+  variable: "--font-jetbrains-mono",
   display: "swap",
 });
 
@@ -61,7 +69,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="de" className={`${lexend.variable} ${sourceSans.variable}`}>
+    <html lang="de" className={`${fraunces.variable} ${geist.variable} ${jetbrainsMono.variable}`}>
       <head>
         <meta name="theme-color" content="#0F172A" />
         <meta name="format-detection" content="telephone=yes" />

@@ -5,6 +5,7 @@ import { ArrowRight } from "lucide-react";
 import { siteConfig } from "@/config/site";
 import { assetPath } from "@/lib/paths";
 import { Reveal, slideFromLeft, slideFromRight } from "./Motion";
+import Container from "./Container";
 
 export default function Transformation() {
   const { process } = siteConfig;
@@ -16,7 +17,7 @@ export default function Transformation() {
     >
       <div className="absolute left-0 top-0 h-full w-1/3 bg-gradient-to-r from-accent/[0.03] to-transparent" />
 
-      <div className="relative mx-auto max-w-7xl px-5 sm:px-6 lg:px-8">
+      <Container className="relative">
         <Reveal>
           <div className="max-w-2xl">
             <span className="text-sm font-semibold uppercase tracking-widest text-accent">
@@ -48,8 +49,8 @@ export default function Transformation() {
 
                 <div className="mt-8 overflow-hidden rounded-2xl border border-white/10">
                   <Image
-                    src={assetPath("/images/ernaehrungsberatung-justin-premium.png")}
-                    alt="Justin Doms im Beratungsgespräch mit Kundin"
+                    src={assetPath("/images/ernaehrung-flatlay.webp")}
+                    alt="Vorbereitete Obst- und Ernährungszutaten"
                     width={2048}
                     height={1536}
                     loading="lazy"
@@ -93,7 +94,7 @@ export default function Transformation() {
             </div>
           </Reveal>
         </div>
-      </div>
+      </Container>
     </section>
   );
 }

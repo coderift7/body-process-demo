@@ -6,6 +6,7 @@ import { useState, useEffect, useCallback } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { siteConfig } from "@/config/site";
 import { assetPath, routePath } from "@/lib/paths";
+import Container from "./Container";
 
 const ease = [0.16, 1, 0.3, 1] as const;
 
@@ -48,7 +49,7 @@ export default function Header() {
             : "bg-transparent"
         }`}
       >
-        <div className="mx-auto flex h-16 max-w-7xl items-center justify-between px-6 sm:h-20 sm:px-8 lg:px-12">
+        <Container className="flex h-16 items-center justify-between sm:h-20">
           {/* Logo — always the same, dark header keeps it consistent */}
           <Link
             href="/"
@@ -56,11 +57,15 @@ export default function Header() {
             aria-label="Body Process — Startseite"
           >
             <Image
-              src={assetPath("/logo-real-dark.webp")}
+              src={assetPath(
+                isOpen || isScrolled
+                  ? "/logo-bp-dark-nav.png"
+                  : "/logo-bp-light-nav.png"
+              )}
               alt="Body Process"
-              width={260}
-              height={91}
-              className="h-12 w-auto transition-opacity duration-300 sm:h-14"
+              width={1202}
+              height={150}
+              className="h-8 w-auto max-w-[calc(100vw-7rem)] object-contain transition-opacity duration-300 sm:h-10 sm:max-w-none"
             />
           </Link>
 
@@ -68,7 +73,7 @@ export default function Header() {
           <button
             type="button"
             onClick={toggle}
-            className="group fixed right-5 top-4 z-50 flex h-12 w-12 touch-manipulation flex-col items-center justify-center gap-[6px] rounded-sm sm:right-8 sm:top-5 lg:right-12 lg:top-6 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent/60"
+            className="group fixed right-5 top-2 z-50 flex h-12 w-12 touch-manipulation flex-col items-center justify-center gap-[6px] rounded-sm sm:right-8 sm:top-4 lg:right-12 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent/60"
             aria-label={isOpen ? "Menü schließen" : "Menü öffnen"}
             aria-expanded={isOpen}
           >
@@ -103,7 +108,7 @@ export default function Header() {
               transition={{ duration: 0.4, ease }}
             />
           </button>
-        </div>
+        </Container>
       </motion.header>
 
       {/* Fullscreen overlay menu */}

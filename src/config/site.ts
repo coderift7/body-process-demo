@@ -167,7 +167,7 @@ export const siteConfig = {
   pricing: {
     heading: "Klare Pakete, echte Endpreise",
     intro:
-      "Starte mit einem passenden Einstieg oder vergleiche darunter alle Karten und Laufzeiten. Alle Preise sind Endpreise inkl. gesetzlicher MwSt.; keine Netto-Optik, kein Kleingedrucktes.",
+      "Starte mit einem passenden Einstieg oder vergleiche darunter alle Karten und Laufzeiten. Alle Preise sind Endpreise inkl. gesetzlicher MwSt.",
     note:
       "Das Erstgespräch ist kostenlos und unverbindlich. Die genaue Empfehlung richtet sich nach Ziel, Trainingsstand, Alltag und freien Betreuungskapazitäten.",
     recommended: [

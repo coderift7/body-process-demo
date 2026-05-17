@@ -38,12 +38,12 @@ function OnlineHeroPortrait({ className = "" }: { className?: string }) {
       <div className="relative overflow-hidden rounded-[2rem] border border-white/12 bg-white/[0.04] p-3 shadow-[0_30px_80px_rgba(2,6,23,0.34)] backdrop-blur-md">
         <div className="relative overflow-hidden rounded-[1.4rem]">
           <Image
-            src={assetPath("/images/justin-consulting-portrait-premium.png")}
-            alt="Justin Doms im Beratungsgespräch für Online-Coaching in Limburg"
-            width={1536}
-            height={2048}
+            src={assetPath("/images/online-coaching-hero-gym-demo.png")}
+            alt="Justin Doms analysiert Training per Tablet im Gym für Online-Coaching in Limburg"
+            width={1122}
+            height={1402}
             priority
-            className="aspect-[5/6] w-full object-cover object-[50%_18%] sm:aspect-[4/5] lg:object-center"
+            className="aspect-[5/6] w-full object-cover object-[50%_24%] sm:aspect-[4/5] lg:object-center"
           />
           <div className="absolute inset-0 bg-gradient-to-t from-primary/82 via-primary/18 to-transparent" />
         </div>

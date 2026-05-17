@@ -20,10 +20,10 @@ export default function Audience() {
             <figure className="lg:sticky lg:top-28">
               <div className="relative aspect-[4/5] overflow-hidden">
                 <Image
-                  src={assetPath("/images/justin-business-outdoor.jpeg")}
-                  alt="Justin Doms in professionellem Umfeld im Freien"
+                  src={assetPath("/images/audience-coaching-demo.png")}
+                  alt="Justin Doms im Beratungsgespräch im Gym"
                   fill
-                  className="object-cover object-center"
+                  className="object-cover object-[46%_42%]"
                   sizes="(max-width: 1024px) 100vw, 42vw"
                 />
               </div>

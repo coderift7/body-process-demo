@@ -12,7 +12,7 @@ const paths = [
     title: "1:1 Training mit direkter Korrektur.",
     description:
       "Für Menschen, die Technik, Belastung und Verbindlichkeit nicht dem Zufall überlassen wollen.",
-    image: "/images/service-training.webp",
+    image: "/images/service-personal-training-demo.png",
     href: "#kontakt",
     cta: "Termin anfragen",
   },
@@ -21,7 +21,7 @@ const paths = [
     title: "Plan, Formcheck und Ernährung im klaren Rahmen.",
     description:
       "Für Selbsttrainer, die eigenständig umsetzen und trotzdem präzise Anpassung von mir brauchen.",
-    image: "/images/justin-coaching.webp",
+    image: "/images/service-online-coaching-demo.png",
     href: "/online-coaching",
     cta: "Online-Coaching ansehen",
   },
@@ -30,7 +30,7 @@ const paths = [
     title: "Persönlicher Start, digitale Führung im Alltag.",
     description:
       "Für volle Kalender: punktuelle Sessions vor Ort, laufende Struktur für Training und Ernährung.",
-    image: "/images/justin-gym-smile.jpeg",
+    image: "/images/service-hybrid-coaching-demo.png",
     href: "#kontakt",
     cta: "Termin anfragen",
   },

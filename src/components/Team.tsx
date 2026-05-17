@@ -36,7 +36,7 @@ export default function Team() {
                   src={assetPath(member.image)}
                   alt={member.name}
                   fill
-                  className="object-cover object-center"
+                  className="object-cover object-[50%_36%]"
                   sizes="(max-width: 768px) 100vw, 50vw"
                 />
                 {/* Gradient overlay at bottom */}

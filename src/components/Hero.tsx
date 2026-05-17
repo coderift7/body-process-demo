@@ -71,14 +71,14 @@ export default function Hero() {
             className="relative z-10 mt-12 aspect-[4/5] w-full overflow-hidden sm:mx-0 sm:max-h-[44rem] lg:mt-0 lg:h-[min(66vh,43rem)] lg:min-h-[34rem] lg:max-w-[34rem] lg:justify-self-end xl:max-w-[36rem]"
           >
             <Image
-              src={assetPath("/images/justin-consulting-portrait-hero.jpeg")}
-              alt="Justin Doms im Beratungsgespräch"
+              src={assetPath("/images/hero-justin-gym-demo.png")}
+              alt="Justin Doms im Beratungsgespräch im Gym"
               fill
               priority
               sizes="(max-width: 1024px) 100vw, 42vw"
-              className="object-cover object-[54%_18%] saturate-[1.08] contrast-[1.04]"
+              className="object-cover object-[46%_50%] saturate-[1.06] contrast-[1.03]"
             />
-            <figcaption className="absolute bottom-0 left-0 right-0 grid gap-3 bg-graphite px-6 py-5 text-editorial sm:grid-cols-[1fr_auto] sm:items-end sm:px-8">
+            <figcaption className="absolute bottom-0 left-0 right-0 hidden gap-3 bg-graphite px-6 py-5 text-editorial sm:grid sm:grid-cols-[1fr_auto] sm:items-end sm:px-8">
               <div>
                 <p className="font-heading text-2xl font-semibold tracking-[-0.02em]">
                   Justin Doms
@@ -92,6 +92,14 @@ export default function Hero() {
               </p>
             </figcaption>
           </motion.figure>
+          <div className="bg-graphite px-6 py-5 text-editorial sm:hidden">
+            <p className="font-heading text-2xl font-semibold tracking-[-0.02em]">
+              Justin Doms
+            </p>
+            <p className="mt-1 text-sm leading-relaxed text-editorial/68">
+              Personal Trainer & Ernährungscoach in Hadamar
+            </p>
+          </div>
         </div>
       </Container>
     </section>

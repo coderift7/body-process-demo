@@ -2,6 +2,7 @@
 
 import Image from "next/image";
 import Link from "next/link";
+import { usePathname } from "next/navigation";
 import { useState, useEffect, useCallback } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { siteConfig } from "@/config/site";
@@ -11,6 +12,7 @@ import Container from "./Container";
 const ease = [0.16, 1, 0.3, 1] as const;
 
 export default function Header() {
+  const pathname = usePathname();
   const [isScrolled, setIsScrolled] = useState(false);
   const [isOpen, setIsOpen] = useState(false);
 
@@ -35,7 +37,9 @@ export default function Header() {
 
   const toggle = useCallback(() => setIsOpen((o) => !o), []);
 
-  const lineColor = isOpen || isScrolled ? "bg-white" : "bg-graphite";
+  const startsOnDarkHero = pathname.endsWith("/online-coaching");
+  const needsLightLogo = isOpen || isScrolled || startsOnDarkHero;
+  const lineColor = needsLightLogo ? "bg-white" : "bg-graphite";
 
   return (
     <>
@@ -58,7 +62,7 @@ export default function Header() {
           >
             <Image
               src={assetPath(
-                isOpen || isScrolled
+                needsLightLogo
                   ? "/logo-bp-dark-nav.png"
                   : "/logo-bp-light-nav.png"
               )}

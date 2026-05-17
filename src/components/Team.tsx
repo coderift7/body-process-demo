@@ -9,12 +9,6 @@ import { Reveal, slideFromLeft, slideFromRight } from "./Motion";
 import Container from "./Container";
 
 const statIcons = [Users, Award, BookOpen];
-const statColors = [
-  "bg-accent/8 text-accent",
-  "bg-emerald-500/10 text-emerald-600",
-  "bg-amber-500/10 text-amber-600",
-];
-
 export default function Team() {
   const { team } = siteConfig;
   const member = team.members[0];
@@ -22,56 +16,64 @@ export default function Team() {
   return (
     <section
       id="ueber-mich"
-      className="noise-overlay relative scroll-mt-24 bg-white py-24 lg:py-32"
+      className="relative scroll-mt-24 bg-white py-20 lg:py-28"
     >
       <Container className="relative z-10">
-        <div className="grid items-center gap-12 lg:grid-cols-2 lg:gap-20">
-          {/* Left: Large Justin Photo */}
+        <div className="grid items-stretch gap-0 overflow-hidden border border-border bg-white lg:grid-cols-[0.92fr_1.08fr]">
           <Reveal variants={slideFromLeft}>
-            <div className="relative">
-              {/* Decorative accent frame */}
-              <div className="absolute -bottom-4 -right-4 h-full w-full rounded-3xl bg-gradient-to-br from-accent/20 to-cta/10" />
-              <div className="relative aspect-[3/4] overflow-hidden rounded-3xl shadow-2xl">
-                <Image
-                  src={assetPath(member.image)}
-                  alt={member.name}
-                  fill
-                  className="object-cover object-[50%_36%]"
-                  sizes="(max-width: 768px) 100vw, 50vw"
-                />
-                {/* Gradient overlay at bottom */}
-                <div className="absolute inset-x-0 bottom-0 h-1/3 bg-gradient-to-t from-primary/80 to-transparent" />
-                {/* Name badge on photo */}
-                <div className="absolute bottom-6 left-6 right-6">
-                  <h3 className="font-heading text-xl font-bold text-white">
-                    {member.name}
-                  </h3>
-                  <p className="mt-1 text-sm font-medium text-accent">
-                    {member.role}
-                  </p>
-                </div>
+            <div className="flex h-full flex-col justify-center p-7 sm:p-10 lg:p-14">
+              <span className="text-sm font-semibold uppercase tracking-[0.28em] text-accent">
+                Über mich
+              </span>
+              <h2 className="display-heading mt-4 text-5xl text-primary sm:text-6xl">
+                {team.heading}
+              </h2>
+              <p className="mt-7 text-base leading-8 text-muted-foreground">
+                {team.description}
+              </p>
+              <p className="mt-5 text-base leading-8 text-muted-foreground">
+                {member.description}
+              </p>
+
+              <div className="mt-10">
+                <p className="font-heading text-4xl italic tracking-normal text-primary">
+                  Justin Doms
+                </p>
+                <p className="mt-2 text-sm font-medium text-muted-foreground">
+                  {member.role}
+                </p>
               </div>
             </div>
           </Reveal>
 
-          {/* Right: About text + Stats */}
           <Reveal variants={slideFromRight} delay={0.15}>
-            <div>
-              <span className="text-sm font-semibold uppercase tracking-widest text-accent">
-                Dein Trainer
-              </span>
-              <h2 className="mt-3 font-heading text-3xl font-bold tracking-tight text-primary sm:text-4xl lg:text-5xl">
-                {team.heading}
-              </h2>
-              <p className="mt-5 text-lg leading-relaxed text-muted-foreground">
-                {team.description}
-              </p>
-              <p className="mt-4 text-base leading-relaxed text-muted-foreground">
-                {member.description}
-              </p>
+            <div className="relative min-h-[34rem] bg-primary">
+              <Image
+                src={assetPath(member.image)}
+                alt={`${member.name} Personal Trainer in Limburg und Hadamar`}
+                fill
+                className="object-cover object-[50%_30%]"
+                sizes="(max-width: 1024px) 100vw, 54vw"
+              />
+              <div className="absolute inset-0 bg-gradient-to-r from-white via-white/0 to-primary/14 lg:from-white/35" />
+            </div>
+          </Reveal>
+        </div>
 
-              {/* Stats row */}
-              <div className="mt-10 space-y-4">
+        <Reveal>
+          <div className="mt-10 bg-primary p-7 text-white sm:p-9">
+            <div className="grid gap-5 md:grid-cols-[1fr_auto] md:items-center">
+              <div>
+                <span className="text-sm font-semibold uppercase tracking-[0.28em] text-accent">
+                  Coaching, das in deinen Alltag passt
+                </span>
+                <h3 className="mt-4 max-w-3xl font-heading text-3xl font-bold leading-tight tracking-normal sm:text-4xl">
+                  Ich arbeite mit Menschen, die Verantwortung tragen, wenig Zeit
+                  haben und trotzdem leistungsfähig bleiben wollen.
+                </h3>
+              </div>
+
+              <div className="grid gap-3 sm:grid-cols-3 md:min-w-[30rem]">
                 {team.stats.map((stat, i) => {
                   const Icon = statIcons[i];
                   return (
@@ -85,18 +87,18 @@ export default function Team() {
                         duration: 0.5,
                         ease: [0.22, 1, 0.36, 1],
                       }}
-                      className="flex items-center gap-5 rounded-2xl border border-border bg-card p-5 shadow-sm transition-shadow duration-200 hover:shadow-md"
+                      className="border border-white/14 bg-white/[0.04] p-5 text-center"
                     >
                       <div
-                        className={`flex h-14 w-14 shrink-0 items-center justify-center rounded-xl ${statColors[i]}`}
+                        className="mx-auto flex h-11 w-11 shrink-0 items-center justify-center text-accent"
                       >
                         <Icon className="h-6 w-6" />
                       </div>
-                      <div>
-                        <div className="font-heading text-2xl font-bold tracking-tight text-primary">
+                      <div className="mt-3">
+                        <div className="font-heading text-2xl font-bold tracking-normal text-white">
                           {stat.value}
                         </div>
-                        <div className="text-sm text-muted-foreground">
+                        <div className="mt-1 text-xs leading-5 text-white/60">
                           {stat.label}
                         </div>
                       </div>
@@ -105,8 +107,8 @@ export default function Team() {
                 })}
               </div>
             </div>
-          </Reveal>
-        </div>
+          </div>
+        </Reveal>
       </Container>
     </section>
   );

@@ -18,10 +18,10 @@ export default function Home() {
       <Header />
       <main id="main-content">
         <Hero />
-        <Team />
-        <Audience />
         <Services />
+        <Audience />
         <Transformation />
+        <Team />
         <Pricing />
         <Testimonials />
         <TrustSignals />

@@ -1,6 +1,7 @@
 "use client";
 
 import Image from "next/image";
+import { MapPin, ShieldCheck, Users } from "lucide-react";
 import { motion, useReducedMotion } from "framer-motion";
 import { siteConfig } from "@/config/site";
 import { assetPath } from "@/lib/paths";
@@ -9,36 +10,42 @@ import Container from "./Container";
 const ease = [0.16, 1, 0.3, 1] as const;
 
 const principles = [
-  { label: "Progress.", className: "text-[clamp(3.2rem,7.1vw,7.5rem)]" },
-  {
-    label: "Struktur.",
-    className:
-      "mt-3 text-[clamp(1.6rem,2.7vw,3rem)] italic font-normal text-graphite/68",
-  },
-  { label: "Ergebnis.", className: "mt-1 text-[clamp(2.85rem,6vw,6.25rem)] text-copper" },
+  { label: "FORTSCHRITT.", className: "text-white" },
+  { label: "STRUKTUR.", className: "text-accent" },
+  { label: "ERGEBNIS.", className: "text-white" },
+];
+
+const heroStats = [
+  { icon: Users, value: "100+", label: "betreute Kunden" },
+  { icon: MapPin, value: "Limburg", label: "und Umgebung" },
+  { icon: ShieldCheck, value: "1:1", label: "individuelle Betreuung" },
 ];
 
 export default function Hero() {
   const reduceMotion = useReducedMotion();
 
   return (
-    <section className="relative isolate overflow-hidden bg-editorial text-graphite">
-      <Container className="min-h-[100svh] pb-16 pt-28 sm:pt-32 lg:pb-20 lg:pt-34">
-        <div className="relative min-h-[calc(100svh-9rem)] lg:grid lg:grid-cols-[minmax(0,1fr)_minmax(21rem,34rem)] lg:items-center lg:gap-12 xl:grid-cols-[minmax(0,1fr)_minmax(24rem,36rem)] xl:gap-16">
+    <section className="grain relative isolate overflow-hidden bg-primary text-white">
+      <div className="absolute inset-0 bg-[radial-gradient(circle_at_12%_8%,rgba(243,146,0,0.18),transparent_28%),linear-gradient(115deg,rgba(3,7,18,0.9),rgba(15,23,42,0.94)_48%,rgba(3,7,18,0.84))]" />
+      <div className="absolute inset-y-0 right-0 hidden w-1/2 bg-[radial-gradient(circle_at_70%_42%,rgba(243,146,0,0.14),transparent_34%)] lg:block" />
+      <Container className="relative z-10 min-h-[100svh] pb-12 pt-28 sm:pt-32 lg:pb-16 lg:pt-34">
+        <div className="relative min-h-[calc(100svh-9rem)] lg:grid lg:grid-cols-[minmax(0,0.88fr)_minmax(28rem,1fr)] lg:items-center lg:gap-10 xl:gap-14">
           <motion.div
             initial={reduceMotion ? false : { opacity: 0, y: 18 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, ease }}
-            className="relative z-20 max-w-4xl md:pt-10 lg:flex lg:max-w-none lg:flex-col lg:justify-center lg:pt-0"
+            className="relative z-20 max-w-4xl md:pt-8 lg:flex lg:max-w-none lg:flex-col lg:justify-center lg:pt-0"
           >
             <div className="max-w-xl sm:flex sm:items-center sm:gap-5">
-              <p className="max-w-sm text-xs font-semibold uppercase tracking-[0.34em] text-copper sm:shrink-0 sm:text-sm">
+              <p className="max-w-sm text-xs font-semibold uppercase tracking-[0.34em] text-accent sm:shrink-0 sm:text-sm">
                 {siteConfig.hero.eyebrow}
               </p>
-              <span aria-hidden="true" className="hidden h-px flex-1 bg-graphite/18 sm:block" />
+              <span aria-hidden="true" className="hidden h-px flex-1 bg-white/18 sm:block" />
             </div>
 
-            <h1 className="mt-10 font-heading font-bold leading-[0.82] tracking-[-0.04em] text-graphite">
+            <h1
+              className="display-heading mt-8 max-w-[44rem] text-[clamp(3.1rem,8.2vw,8rem)] sm:mt-10"
+            >
               {principles.map((principle, index) => (
                 <motion.span
                   key={principle.label}
@@ -56,11 +63,9 @@ export default function Hero() {
               initial={reduceMotion ? false : { opacity: 0, y: 18 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.75, delay: 0.42, ease }}
-              className="mt-9 max-w-xl text-base leading-8 text-graphite/72 sm:text-lg md:max-w-[28rem] lg:max-w-[34rem]"
+              className="mt-8 max-w-xl text-base leading-8 text-white/78 sm:text-lg lg:max-w-[31rem]"
             >
-              Training, Ernährung und Kontrolle mit mir an deiner Seite:
-              strukturiert geplant, sauber angepasst und so übersetzt, dass es
-              in deinem Alltag funktioniert.
+              {siteConfig.hero.subheadline}
             </motion.p>
 
             <motion.div
@@ -71,16 +76,40 @@ export default function Hero() {
             >
               <a
                 href="#kontakt"
-                className="inline-flex touch-manipulation items-center justify-center bg-graphite px-6 py-4 text-sm font-semibold text-editorial transition-[transform,background-color] duration-200 hover:-translate-y-0.5 hover:bg-graphite/90 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-copper/70"
+                className="inline-flex touch-manipulation items-center justify-center bg-cta px-6 py-4 text-sm font-semibold text-white shadow-[0_18px_44px_rgba(180,83,9,0.32)] transition-[transform,background-color] duration-200 hover:-translate-y-0.5 hover:bg-accent focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent/70"
               >
-                Kostenloses Erstgespräch anfragen
+                {siteConfig.hero.cta1}
               </a>
               <a
-                href="#fuer-wen"
-                className="inline-flex touch-manipulation items-center justify-center border border-graphite/18 px-6 py-4 text-sm font-semibold text-graphite transition-[transform,border-color,background-color] duration-200 hover:-translate-y-0.5 hover:border-graphite/34 hover:bg-graphite/[0.03] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-copper/70"
+                href="#leistungen"
+                className="inline-flex touch-manipulation items-center justify-center border border-white/18 bg-white/[0.03] px-6 py-4 text-sm font-semibold text-white transition-[transform,border-color,background-color] duration-200 hover:-translate-y-0.5 hover:border-white/34 hover:bg-white/[0.07] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent/70"
               >
-                Passt das zu mir?
+                {siteConfig.hero.cta2}
               </a>
+            </motion.div>
+
+            <motion.div
+              initial={reduceMotion ? false : { opacity: 0, y: 18 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.75, delay: 0.66, ease }}
+              className="mt-10 grid gap-4 sm:grid-cols-3 lg:max-w-2xl"
+            >
+              {heroStats.map((stat) => {
+                const Icon = stat.icon;
+                return (
+                  <div key={stat.label} className="flex items-center gap-3">
+                    <Icon className="h-5 w-5 shrink-0 text-accent" aria-hidden="true" />
+                    <div>
+                      <p className="font-heading text-lg font-semibold text-white">
+                        {stat.value}
+                      </p>
+                      <p className="text-xs leading-snug text-white/58">
+                        {stat.label}
+                      </p>
+                    </div>
+                  </div>
+                );
+              })}
             </motion.div>
           </motion.div>
 
@@ -88,7 +117,7 @@ export default function Hero() {
             initial={reduceMotion ? false : { opacity: 0, y: 28 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.9, delay: 0.16, ease }}
-            className="relative z-10 mt-12 aspect-[4/5] w-full overflow-hidden sm:mx-0 sm:max-h-[44rem] lg:mt-0 lg:h-[min(66vh,43rem)] lg:min-h-[34rem] lg:max-w-[34rem] lg:justify-self-end xl:max-w-[36rem]"
+            className="relative z-10 mt-12 aspect-[4/5] w-full overflow-hidden rounded-sm border border-white/10 bg-white/[0.03] shadow-[0_38px_100px_rgba(0,0,0,0.38)] sm:mx-0 sm:max-h-[44rem] lg:mt-0 lg:h-[min(66vh,43rem)] lg:min-h-[34rem] lg:max-w-[34rem] lg:justify-self-end xl:max-w-[36rem]"
           >
             <Image
               src={assetPath("/images/hero-justin-gym-demo.png")}
@@ -96,27 +125,28 @@ export default function Hero() {
               fill
               priority
               sizes="(max-width: 1024px) 100vw, 42vw"
-              className="object-cover object-[46%_50%] saturate-[1.06] contrast-[1.03]"
+              className="object-cover object-[46%_50%] saturate-[1.08] contrast-[1.05]"
             />
-            <figcaption className="absolute bottom-0 left-0 right-0 hidden gap-3 bg-graphite px-6 py-5 text-editorial sm:grid sm:grid-cols-[1fr_auto] sm:items-end sm:px-8">
+            <div className="absolute inset-0 bg-gradient-to-t from-primary/42 via-transparent to-transparent" />
+            <figcaption className="absolute bottom-0 left-0 right-0 hidden gap-3 bg-primary/88 px-6 py-5 text-white backdrop-blur-sm sm:grid sm:grid-cols-[1fr_auto] sm:items-end sm:px-8">
               <div>
                 <p className="font-heading text-2xl font-semibold tracking-[-0.02em]">
                   Justin Doms
                 </p>
-                <p className="mt-1 text-sm leading-relaxed text-editorial/68">
+                <p className="mt-1 text-sm leading-relaxed text-white/68">
                   Personal Trainer & Ernährungscoach in Hadamar
                 </p>
               </div>
-              <p className="text-[0.68rem] font-semibold uppercase tracking-[0.2em] text-copper sm:justify-self-end">
+              <p className="text-[0.68rem] font-semibold uppercase tracking-[0.2em] text-accent sm:justify-self-end">
                 Body Process
               </p>
             </figcaption>
           </motion.figure>
-          <div className="bg-graphite px-6 py-5 text-editorial sm:hidden">
+          <div className="bg-primary/90 px-6 py-5 text-white sm:hidden">
             <p className="font-heading text-2xl font-semibold tracking-[-0.02em]">
               Justin Doms
             </p>
-            <p className="mt-1 text-sm leading-relaxed text-editorial/68">
+            <p className="mt-1 text-sm leading-relaxed text-white/68">
               Personal Trainer & Ernährungscoach in Hadamar
             </p>
           </div>

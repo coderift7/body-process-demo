@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Fraunces, Geist, JetBrains_Mono } from "next/font/google";
+import { Bebas_Neue, Fraunces, Geist, JetBrains_Mono } from "next/font/google";
 import "./globals.css";
 import { siteConfig } from "@/config/site";
 import WhatsAppFloat from "@/components/WhatsAppFloat";
@@ -23,6 +23,13 @@ const jetbrainsMono = JetBrains_Mono({
   subsets: ["latin"],
   weight: ["400", "500"],
   variable: "--font-jetbrains-mono",
+  display: "swap",
+});
+
+const bebasNeue = Bebas_Neue({
+  subsets: ["latin"],
+  weight: "400",
+  variable: "--font-bebas",
   display: "swap",
 });
 
@@ -69,7 +76,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="de" className={`${fraunces.variable} ${geist.variable} ${jetbrainsMono.variable}`}>
+    <html lang="de" className={`${fraunces.variable} ${geist.variable} ${jetbrainsMono.variable} ${bebasNeue.variable}`}>
       <head>
         <meta name="theme-color" content="#0F172A" />
         <meta name="format-detection" content="telephone=yes" />

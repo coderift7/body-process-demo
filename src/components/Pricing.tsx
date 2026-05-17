@@ -19,10 +19,10 @@ export default function Pricing() {
       <Container>
         <Reveal>
           <div className="mx-auto max-w-3xl text-center">
-            <span className="text-sm font-semibold uppercase tracking-widest text-accent">
+            <span className="text-sm font-semibold uppercase tracking-[0.28em] text-accent">
               Angebote
             </span>
-            <h2 className="mt-3 font-heading text-3xl font-bold tracking-tight text-primary sm:text-4xl lg:text-5xl">
+            <h2 className="display-heading mt-4 text-5xl text-primary sm:text-6xl">
               {pricing.heading}
             </h2>
             <p className="mt-4 text-lg leading-relaxed text-muted-foreground">
@@ -32,7 +32,7 @@ export default function Pricing() {
         </Reveal>
 
         <StaggerContainer
-          className="mt-12 grid gap-4 md:grid-cols-3"
+          className="mt-12 grid gap-5 md:grid-cols-3"
           staggerDelay={0.08}
         >
           {pricing.recommended.map((item) => (
@@ -41,28 +41,28 @@ export default function Pricing() {
                 whileHover={{ y: -5 }}
                 transition={{ duration: 0.25, ease: [0.22, 1, 0.36, 1] }}
                 className={cn(
-                  "flex h-full flex-col rounded-2xl border p-6 shadow-sm",
+                  "flex h-full flex-col border p-7 shadow-sm",
                   item.featured
-                    ? "border-accent/35 bg-primary text-white shadow-xl shadow-primary/10"
+                    ? "border-primary bg-primary text-white shadow-xl shadow-primary/10"
                     : "border-border bg-card text-primary"
                 )}
               >
                 <p
                   className={cn(
-                    "mb-5 inline-flex w-fit rounded-full px-3 py-1 text-xs font-bold uppercase tracking-wide",
+                    "mb-5 text-sm font-semibold",
                     item.featured
-                      ? "bg-accent text-white"
-                      : "bg-accent/10 text-accent"
+                      ? "text-white/70"
+                      : "text-muted-foreground"
                   )}
                 >
                   {item.tag}
                 </p>
-                <h3 className="font-heading text-xl font-semibold">
+                <h3 className="font-heading text-2xl font-semibold tracking-normal">
                   {item.name}
                 </h3>
                 <p
                   className={cn(
-                    "mt-4 font-heading text-4xl font-bold tabular-nums",
+                    "mt-5 font-heading text-5xl font-bold tabular-nums tracking-normal",
                     item.featured ? "text-white" : "text-primary"
                   )}
                 >
@@ -78,7 +78,7 @@ export default function Pricing() {
                 </p>
                 <p
                   className={cn(
-                    "mt-5 flex-1 text-sm leading-relaxed",
+                    "mt-6 flex-1 text-sm leading-7",
                     item.featured ? "text-white/72" : "text-muted-foreground"
                   )}
                 >
@@ -87,13 +87,13 @@ export default function Pricing() {
                 <a
                   href="#kontakt"
                   className={cn(
-                    "mt-6 inline-flex items-center justify-center gap-2 rounded-xl px-5 py-3 text-sm font-semibold transition-[transform,border-color,background-color] duration-200 hover:-translate-y-0.5 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent/60",
+                    "mt-7 inline-flex items-center justify-center gap-2 border px-5 py-3 text-sm font-semibold transition-[transform,border-color,background-color] duration-200 hover:-translate-y-0.5 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent/60",
                     item.featured
-                      ? "border border-white/12 bg-white/[0.06] text-white hover:border-white/24 hover:bg-white/[0.1]"
-                      : "border border-border bg-card text-primary hover:border-accent/30"
+                      ? "border-accent bg-cta text-white hover:bg-accent"
+                      : "border-border bg-card text-primary hover:border-accent/30"
                   )}
                 >
-                  Einstieg besprechen
+                  Erstgespräch sichern
                   <ArrowRight className="h-4 w-4" aria-hidden="true" />
                 </a>
               </motion.article>

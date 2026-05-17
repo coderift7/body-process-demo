@@ -75,6 +75,7 @@
   --color-destructive: var(--destructive);
   --color-destructive-foreground: var(--destructive-foreground);
   --font-heading: var(--font-fraunces);
+  --font-display: var(--font-bebas);
   --font-body: var(--font-geist);
   --font-mono: var(--font-jetbrains-mono);
 }
@@ -93,6 +94,13 @@ h1, h2, h3, h4, h5, h6 {
   font-family: var(--font-heading), system-ui, sans-serif;
   letter-spacing: -0.025em;
   text-wrap: balance;
+}
+
+.display-heading {
+  font-family: var(--font-bebas), system-ui, sans-serif;
+  letter-spacing: 0;
+  line-height: 0.92;
+  text-transform: uppercase;
 }
 
 /* Tabular nums for pricing/stats */

@@ -37,7 +37,10 @@ export default function Header() {
 
   const toggle = useCallback(() => setIsOpen((o) => !o), []);
 
-  const startsOnDarkHero = pathname.endsWith("/online-coaching");
+  const startsOnDarkHero =
+    pathname === "/" ||
+    pathname.endsWith("/body-process-demo") ||
+    pathname.endsWith("/online-coaching");
   const needsLightLogo = isOpen || isScrolled || startsOnDarkHero;
   const lineColor = needsLightLogo ? "bg-white" : "bg-graphite";
 

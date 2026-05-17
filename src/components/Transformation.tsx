@@ -1,11 +1,15 @@
 "use client";
 
-import Image from "next/image";
-import { ArrowRight } from "lucide-react";
+import { ArrowRight, BadgeCheck, ShieldCheck, Wrench } from "lucide-react";
 import { siteConfig } from "@/config/site";
-import { assetPath } from "@/lib/paths";
-import { Reveal, slideFromLeft, slideFromRight } from "./Motion";
+import { Reveal, StaggerContainer, StaggerItem } from "./Motion";
 import Container from "./Container";
+
+const featureItems = [
+  { icon: BadgeCheck, title: "Individuell", text: "Keine Standardpläne" },
+  { icon: ShieldCheck, title: "Nachhaltig", text: "Langfristige Ergebnisse" },
+  { icon: Wrench, title: "Praxisnah", text: "Umsetzung im Alltag" },
+];
 
 export default function Transformation() {
   const { process } = siteConfig;
@@ -13,87 +17,70 @@ export default function Transformation() {
   return (
     <section
       id="ablauf"
-      className="relative scroll-mt-24 overflow-hidden bg-white py-24 lg:py-32"
+      className="relative scroll-mt-24 overflow-hidden bg-white py-20 lg:py-28"
     >
-      <div className="absolute left-0 top-0 h-full w-1/3 bg-gradient-to-r from-accent/[0.03] to-transparent" />
-
       <Container className="relative">
         <Reveal>
-          <div className="max-w-2xl">
-            <span className="text-sm font-semibold uppercase tracking-widest text-accent">
-              Ablauf
+          <div className="mx-auto max-w-3xl text-center">
+            <span className="text-sm font-semibold uppercase tracking-[0.28em] text-copper">
+              So läuft dein Einstieg ab
             </span>
-            <h2 className="mt-3 font-heading text-3xl font-bold tracking-tight text-primary sm:text-4xl lg:text-5xl">
+            <h2 className="display-heading mt-4 text-5xl text-primary sm:text-6xl">
               {process.heading}
             </h2>
-            <p className="mt-4 text-lg leading-relaxed text-muted-foreground">
+            <p className="mt-5 text-lg leading-relaxed text-muted-foreground">
               {process.intro}
             </p>
           </div>
         </Reveal>
 
-        <div className="mt-16 grid items-stretch gap-8 lg:mt-20 lg:grid-cols-[0.9fr_1.1fr] lg:gap-12">
-          <Reveal variants={slideFromLeft}>
-            <div className="relative overflow-hidden rounded-3xl bg-primary p-7 text-white shadow-2xl">
-              <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_left,rgba(243,146,0,0.22),transparent_32%)]" />
-              <div className="relative">
-                <p className="text-xs font-semibold uppercase tracking-[0.24em] text-accent">
-                  Für deinen Alltag gemacht
-                </p>
-                <h3 className="mt-4 font-heading text-3xl font-bold leading-tight">
-                  Weniger Reibung. Mehr Verbindlichkeit. Bessere Ergebnisse.
-                </h3>
-                <p className="mt-5 text-base leading-relaxed text-white/72">
-                  {process.highlight}
-                </p>
-
-                <div className="mt-8 overflow-hidden rounded-2xl border border-white/10">
-                  <Image
-                    src={assetPath("/images/process-planning-demo.png")}
-                    alt="Trainingsanalyse und Ernährungsplanung im Gym"
-                    width={2048}
-                    height={1536}
-                    loading="lazy"
-                    className="aspect-[4/3] w-full object-cover object-center"
-                  />
+        <StaggerContainer
+          className="mt-14 grid gap-5 md:grid-cols-3"
+          staggerDelay={0.1}
+        >
+          {process.steps.map((step, index) => (
+            <StaggerItem key={step.title}>
+              <article
+                className="relative h-full border border-border bg-card p-7 text-center shadow-sm"
+              >
+                <div className="mx-auto flex h-12 w-12 items-center justify-center rounded-full bg-accent font-heading text-lg font-bold text-white">
+                  0{index + 1}
                 </div>
+                <h3 className="mt-5 font-heading text-2xl font-semibold tracking-normal text-primary">
+                  {step.title}
+                </h3>
+                <p className="mt-4 text-sm leading-7 text-muted-foreground">
+                  {step.description}
+                </p>
+                {index < process.steps.length - 1 && (
+                  <ArrowRight
+                    className="absolute -right-4 top-1/2 z-10 hidden h-5 w-5 text-graphite/42 md:block"
+                    aria-hidden="true"
+                  />
+                )}
+              </article>
+            </StaggerItem>
+          ))}
+        </StaggerContainer>
 
-                <a
-                  href="#kontakt"
-                  className="mt-8 inline-flex items-center gap-2 rounded-xl border border-white/12 bg-white/[0.06] px-5 py-3 text-sm font-semibold text-white transition-[transform,border-color,background-color] duration-200 hover:-translate-y-0.5 hover:border-white/24 hover:bg-white/[0.1] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent/70"
-                >
-                  Kostenloses Erstgespräch sichern
-                  <ArrowRight className="h-4 w-4" aria-hidden="true" />
-                </a>
-              </div>
-            </div>
-          </Reveal>
-
-          <Reveal variants={slideFromRight}>
-            <div className="space-y-4">
-              {process.steps.map((step, index) => (
-                <article
-                  key={step.title}
-                  className="rounded-3xl border border-border bg-card p-7 shadow-sm"
-                >
-                  <div className="flex items-start gap-4">
-                    <div className="flex h-11 w-11 shrink-0 items-center justify-center rounded-2xl bg-accent/10 font-heading text-lg font-bold text-accent">
-                      0{index + 1}
-                    </div>
-                    <div>
-                      <h3 className="font-heading text-xl font-semibold tracking-tight text-primary">
-                        {step.title}
-                      </h3>
-                      <p className="mt-3 text-base leading-relaxed text-muted-foreground">
-                        {step.description}
-                      </p>
-                    </div>
+        <Reveal>
+          <div className="mt-10 grid gap-4 border border-border bg-white p-5 sm:grid-cols-3">
+            {featureItems.map((item) => {
+              const Icon = item.icon;
+              return (
+                <div key={item.title} className="flex items-center gap-4 p-3">
+                  <Icon className="h-8 w-8 shrink-0 text-accent" aria-hidden="true" />
+                  <div>
+                    <p className="font-heading text-xl font-semibold tracking-normal text-primary">
+                      {item.title}
+                    </p>
+                    <p className="text-sm text-muted-foreground">{item.text}</p>
                   </div>
-                </article>
-              ))}
-            </div>
-          </Reveal>
-        </div>
+                </div>
+              );
+            })}
+          </div>
+        </Reveal>
       </Container>
     </section>
   );

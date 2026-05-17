@@ -21,11 +21,11 @@ export const siteConfig = {
 
   hero: {
     eyebrow: "Personal Training vor Ort · Online-Coaching digital",
-    headline: "Training, Ernährung und Kontrolle — mit mir an deiner Seite.",
+    headline: "Fortschritt. Struktur. Ergebnis.",
     subheadline:
-      "Personal Training in Hadamar, Limburg und Diez oder Online-Coaching, wenn du selbst trainierst und trotzdem einen klaren Plan, Technik-Feedback und echte Anpassung willst.",
-    cta1: "Kostenloses Erstgespräch anfragen",
-    cta2: "Online-Coaching ansehen",
+      "Personal Training und Coaching für Menschen mit vollem Alltag, die fit werden wollen, ohne Fitness zum Vollzeitjob zu machen.",
+    cta1: "Kostenloses Erstgespräch sichern",
+    cta2: "Coaching ansehen",
     benefits: [
       "1:1 Training für Technik, Aufbau und Verbindlichkeit",
       "Online-Coaching für Plan, Formchecks und Ernährung",
@@ -35,9 +35,9 @@ export const siteConfig = {
   },
 
   trustStats: [
-    { value: "100+", label: "begleitete Kundinnen & Kunden" },
-    { value: "10+", label: "Jahre Trainingserfahrung" },
-    { value: "24h", label: "Rückmeldung auf Anfragen" },
+    { value: "100+", label: "betreute Kunden" },
+    { value: "10+", label: "Jahre Erfahrung" },
+    { value: "24h", label: "Antwortzeit auf Anfragen" },
   ],
 
   proof: {
@@ -92,15 +92,15 @@ export const siteConfig = {
   ],
 
   team: {
-    heading: "Coaching, das sich an dein Leben anpasst",
+    heading: "Struktur. Erfahrung. Ehrliche Betreuung.",
     description:
-      "Wenn Beruf, Familie und Verpflichtungen viel Raum einnehmen, braucht Fitness keine zusätzliche Komplexität. Du brauchst eine Struktur, die auch dann trägt, wenn dein Alltag voll wird.",
+      "Ich bin Personal Trainer und Ernährungscoach aus Leidenschaft. Seit über 10 Jahren helfe ich Menschen dabei, fitter, leistungsfähiger und gesünder zu werden - ohne leere Versprechen, ohne komplizierte Regeln.",
     members: [
       {
         name: "Justin Doms",
         role: "Personal Trainer & Ernährungscoach",
         description:
-          "Ich will zuerst verstehen, was in deinem Alltag wirklich funktioniert. Erst dann bauen wir Training, Ernährung und Kontrolle so auf, dass Fortschritt planbar wird.",
+          "Mein Ansatz: klare Strukturen, realistische Pläne und Betreuung, die wirklich weiterbringt.",
         image: "/images/team-justin-portrait-demo.png",
       },
     ],
@@ -112,24 +112,24 @@ export const siteConfig = {
   },
 
   audience: {
-    heading: "Personal Training in Hadamar, Limburg und Diez",
+    heading: "Fitness scheitert selten an Motivation.",
     intro:
-      "Body Process richtet sich an Menschen, die Fortschritt wollen, aber keine Lust auf Rätselraten haben: persönlich vor Ort oder digital begleitet.",
+      "Genau dort setzt Body Process an: mit einem klaren System aus Training, Ernährung und laufender Anpassung.",
     profiles: [
       {
-        title: "Selbstständige mit wenig Zeit",
+        title: "Viele starten motiviert",
         description:
-          "Du brauchst eine Struktur, die auch dann trägt, wenn dein Alltag voll wird.",
+          "verlieren dann Struktur und fangen wieder von vorne an.",
       },
       {
-        title: "Berufstätige mit hoher Verantwortung",
+        title: "Du brauchst keinen Idealplan",
         description:
-          "Wenn Energie, Belastbarkeit und Konzentration im Job zählen, muss Training unterstützen statt zusätzlich Druck zu machen.",
+          "sondern einen Rahmen, der auch bei Arbeit, Familie und Stress realistisch bleibt.",
       },
       {
-        title: "Digital-affine Selbsttrainer",
+        title: "Training muss in deinen Alltag passen",
         description:
-          "Du trainierst im Studio oder zuhause, willst aber wissen, ob Plan, Technik und Ernährung wirklich zusammenpassen.",
+          "damit Fortschritt nicht von Motivation, sondern von Struktur abhängt.",
       },
     ],
     locations: [
@@ -142,22 +142,22 @@ export const siteConfig = {
   process: {
     heading: "So läuft dein Einstieg ab",
     intro:
-      "Ich schaue zuerst auf Ziel, Alltag und Trainingsstand. Daraus entsteht ein Plan, der nicht nur gut klingt, sondern umsetzbar bleibt.",
+      "Wir starten nicht mit einem Standardplan, sondern mit deinem Alltag. Daraus entsteht eine klare Strategie, die regelmäßig angepasst wird.",
     steps: [
       {
-        title: "1. Erstgespräch & Standortbestimmung",
+        title: "Analyse",
         description:
-          "Wir klären Ziel, Alltag, Trainingsstand, Beschwerden und Zeitfenster. So sehen wir, was realistisch ist und wo der größte Hebel liegt.",
+          "Wir schauen auf Alltag, Ziel, Trainingsstand und Zeitfenster.",
       },
       {
-        title: "2. Individuelle Strategie",
+        title: "Strategie",
         description:
-          "Du bekommst eine passende Kombination aus Training, Ernährung und Umsetzungsstruktur statt isolierter Einzeltipps.",
+          "Du bekommst einen klaren Plan statt isolierter Einzeltipps.",
       },
       {
-        title: "3. Begleitung & Anpassung",
+        title: "Umsetzung & Anpassung",
         description:
-          "Fortschritt, Technik und Alltag werden regelmäßig überprüft. Der Plan wird angepasst, bevor du wochenlang in die falsche Richtung arbeitest.",
+          "Training und Ernährung werden laufend angepasst, damit Fortschritt stabil bleibt.",
       },
     ],
     highlight:
@@ -165,36 +165,36 @@ export const siteConfig = {
   },
 
   pricing: {
-    heading: "Klare Pakete, echte Endpreise",
+    heading: "Betreuungsmöglichkeiten",
     intro:
-      "Starte mit einem passenden Einstieg oder vergleiche darunter alle Karten und Laufzeiten. Alle Preise sind Endpreise inkl. gesetzlicher MwSt.",
+      "Wähle den Rahmen, der zu deinem Alltag passt. Alle Preise sind Endpreise inkl. gesetzlicher MwSt.",
     note:
       "Das Erstgespräch ist kostenlos und unverbindlich. Die genaue Empfehlung richtet sich nach Ziel, Trainingsstand, Alltag und freien Betreuungskapazitäten.",
     recommended: [
       {
-        name: "5er Karte Personal Training",
-        price: "386,75 €",
-        unit: "60 Minuten",
+        name: "Personal Training",
+        price: "ab 83 €",
+        unit: "pro Einheit",
         description:
-          "Guter Einstieg, wenn du Technik, Ablauf und Verbindlichkeit testen willst.",
-        tag: "vor Ort",
-      },
-      {
-        name: "24er Karte Personal Training",
-        price: "ab 71,40 €",
-        unit: "pro 60-Min.-Einheit",
-        description:
-          "Sinnvoll, wenn du über mehrere Monate planbar Fortschritt aufbauen willst.",
-        tag: "bester PT-Wert",
+          "1:1 Betreuung vor Ort mit direkter Korrektur, individueller Trainingsplanung und festen Terminen.",
+        tag: "1:1 Betreuung vor Ort",
         featured: true,
       },
       {
         name: "Online-Coaching",
-        price: "ab 119,00 €",
+        price: "ab 119 €",
         unit: "pro Monat",
         description:
-          "Für eigenständiges Training mit Plan, Formcheck, Ernährung und Feedback. Laufzeiten im Vergleich unten.",
-        tag: "digital",
+          "Digitale Betreuung mit Trainingsplan, Formcheck, Ernährung & Anpassung und WhatsApp-Support.",
+        tag: "digitale Betreuung",
+      },
+      {
+        name: "Hybrid Coaching",
+        price: "individuell",
+        unit: "vor Ort + digital",
+        description:
+          "Persönlicher Start, digitale Betreuung im Alltag und maximale Flexibilität.",
+        tag: "vor Ort + digital",
       },
     ],
     personalTraining: {

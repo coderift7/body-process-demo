@@ -131,11 +131,11 @@ export default function Pricing() {
                     />
                     <span>
                       <span className="block font-semibold text-white">
-                        Personal Training zu teuer?
+                        Du trainierst selbstständig?
                       </span>
                       <span className="mt-1 block text-white/68">
-                        Online-Coaching ab 119 €/Monat — gleicher Plan, gleiche
-                        Betreuung im vereinbarten Rahmen.
+                        Online-Coaching ab 119 €/Monat: Plan, Formchecks und
+                        Ernährung im klaren Rahmen.
                       </span>
                     </span>
                     <ArrowRight

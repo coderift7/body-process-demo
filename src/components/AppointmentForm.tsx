@@ -97,8 +97,8 @@ export default function AppointmentForm() {
 
               <div className="mt-10 space-y-5">
                 {[
-                  "Unverbindliche Anfrage mit klaren nächsten Schritten",
-                  "Online-Coaching-Leads mit Ziel, Erfahrung und Startfenster",
+                  "Unverbindliche Anfrage statt vorschneller Entscheidung",
+                  "Einschätzung, welcher Betreuungsweg zu dir passt",
                   "Rückmeldung in der Regel innerhalb von 24 Stunden",
                 ].map((item, i) => (
                   <motion.div

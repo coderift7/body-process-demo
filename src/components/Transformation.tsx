@@ -49,8 +49,8 @@ export default function Transformation() {
 
                 <div className="mt-8 overflow-hidden rounded-2xl border border-white/10">
                   <Image
-                    src={assetPath("/images/ernaehrung-flatlay.webp")}
-                    alt="Vorbereitete Obst- und Ernährungszutaten"
+                    src={assetPath("/images/process-planning-demo.png")}
+                    alt="Trainingsanalyse und Ernährungsplanung im Gym"
                     width={2048}
                     height={1536}
                     loading="lazy"

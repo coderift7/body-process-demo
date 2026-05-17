@@ -58,10 +58,30 @@ export default function Hero() {
               transition={{ duration: 0.75, delay: 0.42, ease }}
               className="mt-9 max-w-xl text-base leading-8 text-graphite/72 sm:text-lg md:max-w-[28rem] lg:max-w-[34rem]"
             >
-              Training, Ernährung und Kontrolle mit mir an deiner Seite: ruhig
-              geplant, präzise angepasst und verbindlich in deinen Alltag
-              übersetzt.
+              Training, Ernährung und Kontrolle mit mir an deiner Seite:
+              strukturiert geplant, sauber angepasst und so übersetzt, dass es
+              in deinem Alltag funktioniert.
             </motion.p>
+
+            <motion.div
+              initial={reduceMotion ? false : { opacity: 0, y: 18 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.75, delay: 0.54, ease }}
+              className="mt-8 flex flex-col gap-3 sm:flex-row"
+            >
+              <a
+                href="#kontakt"
+                className="inline-flex touch-manipulation items-center justify-center bg-graphite px-6 py-4 text-sm font-semibold text-editorial transition-[transform,background-color] duration-200 hover:-translate-y-0.5 hover:bg-graphite/90 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-copper/70"
+              >
+                Kostenloses Erstgespräch anfragen
+              </a>
+              <a
+                href="#fuer-wen"
+                className="inline-flex touch-manipulation items-center justify-center border border-graphite/18 px-6 py-4 text-sm font-semibold text-graphite transition-[transform,border-color,background-color] duration-200 hover:-translate-y-0.5 hover:border-graphite/34 hover:bg-graphite/[0.03] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-copper/70"
+              >
+                Passt das zu mir?
+              </a>
+            </motion.div>
           </motion.div>
 
           <motion.figure

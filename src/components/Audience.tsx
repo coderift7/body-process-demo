@@ -28,8 +28,8 @@ export default function Audience() {
                 />
               </div>
               <figcaption className="mt-5 border-l-2 border-copper pl-5 text-sm leading-7 text-graphite/68">
-                Für Menschen, die Leistung im Alltag brauchen und einen klaren,
-                realistischen Weg zu mehr Fitness, Energie und Stabilität suchen.
+                Für Menschen, die im Alltag funktionieren müssen und trotzdem
+                stärker, fitter und stabiler werden wollen.
               </figcaption>
             </figure>
           </Reveal>
@@ -40,7 +40,7 @@ export default function Audience() {
                 Qualifizierung
               </span>
               <h2 className="mt-4 max-w-3xl font-heading text-4xl font-bold leading-[0.95] tracking-[-0.035em] text-graphite sm:text-5xl lg:text-6xl">
-                Besonders sinnvoll für Menschen, die Fortschritt verbindlich angehen wollen.
+                Besonders sinnvoll, wenn Fortschritt zu deinem Leben passen muss.
               </h2>
               <p className="mt-6 max-w-2xl text-base leading-8 text-graphite/68 sm:text-lg">
                 {audience.intro}

@@ -9,27 +9,27 @@ import Container from "./Container";
 const paths = [
   {
     label: "Vor Ort",
-    title: "1:1 Training mit direkter Korrektur.",
+    title: "Wenn du direkte Korrektur brauchst.",
     description:
-      "Für Menschen, die Technik, Belastung und Verbindlichkeit nicht dem Zufall überlassen wollen.",
+      "Personal Training vor Ort für saubere Technik, passende Belastung und feste Termine.",
     image: "/images/service-personal-training-demo.png",
     href: "#kontakt",
     cta: "Termin anfragen",
   },
   {
     label: "Online",
-    title: "Plan, Formcheck und Ernährung im klaren Rahmen.",
+    title: "Wenn du selbst trainierst, aber nicht raten willst.",
     description:
-      "Für Selbsttrainer, die eigenständig umsetzen und trotzdem präzise Anpassung von mir brauchen.",
+      "Online-Coaching mit Trainingsplan, Formcheck, Ernährung und regelmäßiger Anpassung.",
     image: "/images/service-online-coaching-demo.png",
     href: "/online-coaching",
     cta: "Online-Coaching ansehen",
   },
   {
     label: "Hybrid",
-    title: "Persönlicher Start, digitale Führung im Alltag.",
+    title: "Wenn dein Alltag Flexibilität braucht.",
     description:
-      "Für volle Kalender: punktuelle Sessions vor Ort, laufende Struktur für Training und Ernährung.",
+      "Wir starten persönlich, prüfen Technik vor Ort und führen Training und Ernährung digital weiter.",
     image: "/images/service-hybrid-coaching-demo.png",
     href: "#kontakt",
     cta: "Termin anfragen",
@@ -54,8 +54,8 @@ export default function Services() {
               </h2>
             </div>
             <p className="max-w-2xl text-base leading-8 text-graphite/68 sm:text-lg">
-              Body Process ist kein Baukasten aus Einzelleistungen. Es ist eine
-              Entscheidung für den richtigen Betreuungsmodus: nah, digital oder
+              Entscheidend ist nicht, möglichst viel zu buchen. Entscheidend ist
+              der Rahmen, der zu deinem Alltag passt: nah, digital oder
               kombiniert.
             </p>
           </div>

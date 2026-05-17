@@ -16,7 +16,7 @@ export const siteConfig = {
     title:
       "Body Process — Personal Training & Online-Coaching in Hadamar",
     description:
-      "Personal Training in Hadamar, Limburg und Diez sowie Online-Coaching für Training, Ernährung und Fortschritt mit Justin Doms. Klarer Plan, ehrliche Betreuung und Endpreise inkl. MwSt.",
+      "Personal Training in Hadamar, Limburg und Diez sowie Online-Coaching für Training, Ernährung und Fortschritt mit Justin Doms. Klare Struktur, ehrliche Betreuung und ein Plan, der zu deinem Alltag passt.",
   },
 
   hero: {
@@ -94,13 +94,13 @@ export const siteConfig = {
   team: {
     heading: "Coaching, das sich an dein Leben anpasst",
     description:
-      "Wenn Beruf, Familie und Verpflichtungen viel Raum einnehmen, braucht Fitness keine zusätzliche Komplexität, sondern einen klaren Rahmen. Genau dafür ist Body Process gedacht.",
+      "Wenn Beruf, Familie und Verpflichtungen viel Raum einnehmen, braucht Fitness keine zusätzliche Komplexität. Du brauchst eine Struktur, die auch dann trägt, wenn dein Alltag voll wird.",
     members: [
       {
         name: "Justin Doms",
         role: "Personal Trainer & Ernährungscoach",
         description:
-          "Ich arbeite mit Menschen, die Ergebnisse wollen, aber keine Zeit für blindes Ausprobieren haben. Mein Ansatz verbindet fundiertes Training, alltagstaugliche Ernährung und ehrliche Betreuung, damit Fortschritt planbar wird.",
+          "Ich will zuerst verstehen, was in deinem Alltag wirklich funktioniert. Erst dann bauen wir Training, Ernährung und Kontrolle so auf, dass Fortschritt planbar wird.",
         image: "/images/team-justin-portrait-demo.png",
       },
     ],
@@ -114,22 +114,22 @@ export const siteConfig = {
   audience: {
     heading: "Personal Training in Hadamar, Limburg und Diez",
     intro:
-      "Body Process richtet sich an Menschen, die Fortschritt wollen und dafür einen klaren Rahmen brauchen: persönlich vor Ort oder digital begleitet.",
+      "Body Process richtet sich an Menschen, die Fortschritt wollen, aber keine Lust auf Rätselraten haben: persönlich vor Ort oder digital begleitet.",
     profiles: [
       {
         title: "Selbstständige mit wenig Zeit",
         description:
-          "Du brauchst einen Plan, der sich in einen vollen Kalender einfügt und nicht nach zwei stressigen Wochen zusammenbricht.",
+          "Du brauchst eine Struktur, die auch dann trägt, wenn dein Alltag voll wird.",
       },
       {
         title: "Berufstätige mit hoher Verantwortung",
         description:
-          "Wenn Energie, Belastbarkeit und Konzentration im Job zählen, muss Training unterstützen statt zusätzlich zu belasten.",
+          "Wenn Energie, Belastbarkeit und Konzentration im Job zählen, muss Training unterstützen statt zusätzlich Druck zu machen.",
       },
       {
         title: "Digital-affine Selbsttrainer",
         description:
-          "Du trainierst im Studio oder zuhause, willst aber nicht raten: Online-Coaching gibt dir Struktur, Kontrolle und direkte Korrektur.",
+          "Du trainierst im Studio oder zuhause, willst aber wissen, ob Plan, Technik und Ernährung wirklich zusammenpassen.",
       },
     ],
     locations: [
@@ -142,26 +142,26 @@ export const siteConfig = {
   process: {
     heading: "So läuft dein Einstieg ab",
     intro:
-      "Du bekommst keinen Standardplan, sondern einen klaren Ablauf mit Analyse, Strategie und Begleitung.",
+      "Ich schaue zuerst auf Ziel, Alltag und Trainingsstand. Daraus entsteht ein Plan, der nicht nur gut klingt, sondern umsetzbar bleibt.",
     steps: [
       {
         title: "1. Erstgespräch & Standortbestimmung",
         description:
-          "Wir klären Ziel, Alltag, Trainingsstand, Beschwerden und Zeitfenster. So sehen wir sofort, was realistisch und sinnvoll ist.",
+          "Wir klären Ziel, Alltag, Trainingsstand, Beschwerden und Zeitfenster. So sehen wir, was realistisch ist und wo der größte Hebel liegt.",
       },
       {
         title: "2. Individuelle Strategie",
         description:
-          "Du erhältst eine passende Kombination aus Training, Ernährung und Umsetzungsstruktur statt isolierter Einzeltipps.",
+          "Du bekommst eine passende Kombination aus Training, Ernährung und Umsetzungsstruktur statt isolierter Einzeltipps.",
       },
       {
         title: "3. Begleitung & Anpassung",
         description:
-          "Fortschritte werden regelmäßig überprüft und der Plan angepasst, damit du dranbleibst und nicht wieder in alte Muster fällst.",
+          "Fortschritt, Technik und Alltag werden regelmäßig überprüft. Der Plan wird angepasst, bevor du wochenlang in die falsche Richtung arbeitest.",
       },
     ],
     highlight:
-      "Besonders geeignet für Menschen, die wenig Zeit haben, aber ihren Körper und ihre Leistungsfähigkeit nicht dem Zufall überlassen wollen.",
+      "Besonders geeignet, wenn du mehr Kraft, bessere Körperform und verlässliche Energie willst, ohne deinen Alltag dafür komplett umzubauen.",
   },
 
   pricing: {
@@ -399,7 +399,7 @@ export const siteConfig = {
   appointment: {
     heading: "Kostenloses Erstgespräch anfragen",
     subheading:
-      "Schick mir kurz deine Infos. Die Anfrage ist so vorbereitet, dass ich direkt erkenne, ob Vor-Ort Training, Online-Coaching oder ein hybrider Weg sinnvoll ist.",
+      "Schick mir kurz deine Infos. Ich schaue mir Ziel, Alltag und Trainingsstand an und melde mich mit einer ehrlichen Einschätzung, welcher Weg sinnvoll ist.",
     treatmentTypes: [
       "Vor-Ort Training",
       "Online-Coaching",

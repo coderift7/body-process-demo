@@ -1,13 +1,12 @@
 import Link from "next/link";
 import { siteConfig } from "@/config/site";
-import { routePath } from "@/lib/paths";
 
 export default function Datenschutz() {
   return (
     <div className="min-h-screen bg-background">
       <div className="mx-auto max-w-3xl px-5 py-24 sm:px-6">
         <Link
-          href={routePath("/")}
+          href="/"
           className="text-sm text-accent transition-colors duration-200 hover:underline focus-visible:rounded-sm focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent/60"
         >
           ← Zurück zur Startseite

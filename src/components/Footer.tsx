@@ -20,7 +20,7 @@ export default function Footer() {
           <div>
             <div className="mb-5">
               <Link
-                href={routePath("/")}
+                href="/"
                 className="inline-block focus-visible:rounded-sm focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent/60"
               >
                 <Image
@@ -55,7 +55,7 @@ export default function Footer() {
               ))}
               <li>
                 <Link
-                  href={routePath("/impressum")}
+                  href="/impressum"
                   className="text-sm text-white/70 transition-colors duration-200 hover:text-white focus-visible:rounded-sm focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent/60"
                 >
                   Impressum
@@ -63,7 +63,7 @@ export default function Footer() {
               </li>
               <li>
                 <Link
-                  href={routePath("/datenschutz")}
+                  href="/datenschutz"
                   className="text-sm text-white/70 transition-colors duration-200 hover:text-white focus-visible:rounded-sm focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent/60"
                 >
                   Datenschutz

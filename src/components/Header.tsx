@@ -52,7 +52,7 @@ export default function Header() {
         <Container className="flex h-16 items-center justify-between sm:h-20">
           {/* Logo — always the same, dark header keeps it consistent */}
           <Link
-            href={routePath("/")}
+            href="/"
             className="relative z-50 focus-visible:rounded-sm focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent/60"
             aria-label="Body Process — Startseite"
           >

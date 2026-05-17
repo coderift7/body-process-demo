@@ -14,7 +14,7 @@ import {
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import { siteConfig } from "@/config/site";
-import { assetPath, routePath } from "@/lib/paths";
+import { assetPath } from "@/lib/paths";
 
 const coaching = siteConfig.onlineCoaching;
 const pricing = siteConfig.pricing.onlineCoaching;
@@ -87,7 +87,7 @@ export default function OnlineCoachingPage() {
 
               <div className="mt-8 flex flex-col gap-3 sm:flex-row">
                 <Link
-                  href={routePath("/#kontakt")}
+                  href="/#kontakt"
                   className="inline-flex touch-manipulation items-center justify-center gap-2 rounded-xl bg-cta px-6 py-3.5 text-sm font-semibold text-white shadow-[0_8px_24px_rgba(180,83,9,0.28)] transition-[transform,background-color,box-shadow] duration-200 hover:-translate-y-0.5 hover:bg-cta/90 hover:shadow-[0_12px_28px_rgba(180,83,9,0.32)] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent/70"
                 >
                   {coaching.hero.cta1}
@@ -317,14 +317,14 @@ export default function OnlineCoachingPage() {
 
             <div className="mt-10 flex flex-col items-center justify-center gap-4 sm:flex-row">
               <Link
-                href={routePath("/#kontakt")}
+                href="/#kontakt"
                 className="inline-flex touch-manipulation items-center justify-center gap-2 rounded-xl bg-cta px-6 py-3.5 text-sm font-semibold text-white shadow-[0_8px_24px_rgba(180,83,9,0.24)] transition-[transform,background-color,box-shadow] duration-200 hover:-translate-y-0.5 hover:bg-cta/90 hover:shadow-[0_12px_28px_rgba(180,83,9,0.3)] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent/70"
               >
                 Erstgespräch anfragen
                 <ArrowRight className="h-4 w-4" aria-hidden="true" />
               </Link>
               <Link
-                href={routePath("/#preise")}
+                href="/#preise"
                 className="text-sm font-semibold text-primary underline decoration-accent/40 underline-offset-4 transition-colors hover:text-accent focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent/60"
               >
                 Alle Angebote vergleichen

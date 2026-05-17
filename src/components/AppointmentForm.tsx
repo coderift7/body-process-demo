@@ -4,6 +4,7 @@ import { useState } from "react";
 import { CalendarDays, CheckCircle2, ArrowRight, MessageCircle, Phone } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
 import { siteConfig } from "@/config/site";
+import { routePath } from "@/lib/paths";
 import { Reveal, slideFromLeft, slideFromRight } from "./Motion";
 import Container from "./Container";
 
@@ -154,7 +155,7 @@ export default function AppointmentForm() {
                       />
                     </motion.div>
                     <h3 className="font-heading text-xl font-bold text-white">
-                      Terminanfrage gesendet!
+                      E-Mail vorbereitet
                     </h3>
                     <p className="mt-2 max-w-sm text-white/50">
                       {appointment.successMessage}
@@ -429,7 +430,7 @@ export default function AppointmentForm() {
                       <span className="text-xs leading-relaxed text-white/40">
                         Ich stimme der{" "}
                         <a
-                          href={`${process.env.__NEXT_ROUTER_BASEPATH || ""}/datenschutz`}
+                          href={routePath("/datenschutz")}
                           className="text-accent underline decoration-accent/30 transition-colors duration-200 hover:decoration-accent/60 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent/60"
                         >
                           Datenschutzerklärung
@@ -450,6 +451,10 @@ export default function AppointmentForm() {
                         aria-hidden="true"
                       />
                     </button>
+                    <p className="text-center text-xs leading-relaxed text-white/35">
+                      Dein E-Mail-Programm öffnet sich mit deiner vorbereiteten
+                      Anfrage.
+                    </p>
                   </motion.form>
                 )}
               </AnimatePresence>

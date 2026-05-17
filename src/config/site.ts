@@ -189,11 +189,11 @@ export const siteConfig = {
         featured: true,
       },
       {
-        name: "Online-Coaching 3 Monate",
-        price: "154,70 €",
+        name: "Online-Coaching",
+        price: "ab 119,00 €",
         unit: "pro Monat",
         description:
-          "Für eigenständiges Training mit Plan, Formcheck, Ernährung und Feedback.",
+          "Für eigenständiges Training mit Plan, Formcheck, Ernährung und Feedback. Laufzeiten im Vergleich unten.",
         tag: "digital",
       },
     ],
@@ -451,9 +451,9 @@ export const siteConfig = {
       "In 1-2 Monaten",
       "Später / erst orientieren",
     ],
-    submitLabel: "Anfrage per E-Mail vorbereiten",
+    submitLabel: "Kostenloses Erstgespräch anfragen",
     successMessage:
-      "Deine Anfrage wurde vorbereitet. Wenn sich kein E-Mail-Programm öffnet, nutze alternativ den WhatsApp- oder Telefon-Link direkt darunter.",
+      "Dein E-Mail-Programm wurde mit den vorbereiteten Angaben geöffnet. Bitte prüfe die Anfrage kurz und sende sie anschließend ab.",
   },
 
   faq: [

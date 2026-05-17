@@ -3,7 +3,7 @@
 import Image from "next/image";
 import { motion } from "framer-motion";
 import { Reveal, StaggerContainer, StaggerItem } from "./Motion";
-import { assetPath } from "@/lib/paths";
+import { assetPath, routePath } from "@/lib/paths";
 import Container from "./Container";
 
 const paths = [
@@ -65,7 +65,7 @@ export default function Services() {
           {paths.map((path, index) => (
             <StaggerItem key={path.label}>
               <motion.a
-                href={path.href}
+                href={routePath(path.href)}
                 whileHover={{ y: -4 }}
                 transition={{ duration: 0.25, ease: [0.22, 1, 0.36, 1] }}
                 className="group grid min-h-[31rem] overflow-hidden border border-graphite/12 bg-graphite text-editorial focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-copper/70 lg:grid-cols-[1.18fr_0.82fr]"
@@ -77,7 +77,7 @@ export default function Services() {
                 >
                   <Image
                     src={assetPath(path.image)}
-                    alt={path.title}
+                    alt={`${path.title} Body Process Personal Training Limburg`}
                     fill
                     sizes="(max-width: 1024px) 100vw, 58vw"
                     loading="lazy"

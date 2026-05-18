@@ -20,7 +20,7 @@ const paths = [
     label: "Online",
     title: "Wenn du selbst trainierst, aber gezielter vorankommen willst.",
     description:
-      "Online-Coaching mit Trainingsplan, Formcheck, Ernährung und regelmäßiger Anpassung.",
+      "Online Coaching mit Trainingsplan, Formcheck, Ernährung und regelmäßiger Anpassung.",
     image: "/images/service-online-coaching-demo.png",
     href: "/online-coaching",
     cta: "Mehr erfahren",
@@ -49,11 +49,11 @@ export default function Services() {
               Wähle den Rahmen, der zu deinem Alltag passt
             </span>
             <h2 className="display-heading mt-4 text-5xl text-graphite sm:text-6xl">
-              Coaching ohne Umwege.
+              Drei Wege. Ein Ziel.
             </h2>
             <p className="mx-auto mt-5 max-w-2xl text-base leading-8 text-graphite/68 sm:text-lg">
-              Vor Ort, digital oder kombiniert: Du bekommst den Rahmen, der zu
-              deinem Alltag passt und Fortschritt planbar macht.
+              Ob im Gym, online oder kombiniert - ich begleite dich mit einem
+              klaren System zu nachhaltigem Fortschritt.
             </p>
           </div>
         </Reveal>
@@ -70,7 +70,7 @@ export default function Services() {
                 <div className="relative min-h-[15rem] overflow-hidden">
                   <Image
                     src={assetPath(path.image)}
-                    alt={`${path.title} Body Process Personal Training Limburg`}
+                    alt={`${path.title} Body Process Coaching`}
                     fill
                     sizes="(max-width: 768px) 100vw, 33vw"
                     loading="lazy"

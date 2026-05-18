@@ -27,7 +27,7 @@ export default function FAQ() {
             </h2>
             <p className="mx-auto mt-4 max-w-xl text-lg text-muted-foreground">
               Hier findest du Antworten auf typische Fragen zu Ablauf,
-              Betreuung, Standorten und Zusammenarbeit.
+              Betreuung und Zusammenarbeit.
             </p>
           </div>
         </Reveal>

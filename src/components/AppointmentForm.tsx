@@ -18,7 +18,7 @@ export default function AppointmentForm() {
   const [isSubmitted, setIsSubmitted] = useState(false);
   const [selectedTreatment, setSelectedTreatment] = useState("");
   const isOnlineLead =
-    selectedTreatment === "Online-Coaching" ||
+    selectedTreatment === "Online Coaching" ||
     selectedTreatment === "Hybrid / unsicher";
 
   const handleSubmit = (e: React.FormEvent) => {
@@ -87,9 +87,9 @@ export default function AppointmentForm() {
           <Reveal variants={slideFromLeft}>
             <div className="lg:sticky lg:top-28">
               <span className="text-sm font-semibold uppercase tracking-widest text-cta">
-                Online-Terminbuchung
+                Kontakt
               </span>
-              <h2 className="mt-3 font-heading text-3xl font-bold tracking-tight text-white sm:text-4xl lg:text-5xl">
+              <h2 className="display-heading mt-3 text-5xl text-white sm:text-6xl">
                 {appointment.heading}
               </h2>
               <p className="mt-4 text-lg leading-relaxed text-white/50">

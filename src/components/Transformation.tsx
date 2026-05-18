@@ -1,15 +1,9 @@
 "use client";
 
-import { ArrowRight, BadgeCheck, ShieldCheck, Wrench } from "lucide-react";
+import { ArrowRight } from "lucide-react";
 import { siteConfig } from "@/config/site";
 import { Reveal, StaggerContainer, StaggerItem } from "./Motion";
 import Container from "./Container";
-
-const featureItems = [
-  { icon: BadgeCheck, title: "Individuell", text: "Keine Standardpläne" },
-  { icon: ShieldCheck, title: "Nachhaltig", text: "Langfristige Ergebnisse" },
-  { icon: Wrench, title: "Praxisnah", text: "Umsetzung im Alltag" },
-];
 
 export default function Transformation() {
   const { process } = siteConfig;
@@ -62,25 +56,6 @@ export default function Transformation() {
             </StaggerItem>
           ))}
         </StaggerContainer>
-
-        <Reveal>
-          <div className="mt-10 grid gap-4 border border-border bg-white p-5 sm:grid-cols-3">
-            {featureItems.map((item) => {
-              const Icon = item.icon;
-              return (
-                <div key={item.title} className="flex items-center gap-4 p-3">
-                  <Icon className="h-8 w-8 shrink-0 text-accent" aria-hidden="true" />
-                  <div>
-                    <p className="font-heading text-xl font-semibold tracking-normal text-primary">
-                      {item.title}
-                    </p>
-                    <p className="text-sm text-muted-foreground">{item.text}</p>
-                  </div>
-                </div>
-              );
-            })}
-          </div>
-        </Reveal>
       </Container>
     </section>
   );

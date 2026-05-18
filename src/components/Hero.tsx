@@ -1,7 +1,7 @@
 "use client";
 
 import Image from "next/image";
-import { MapPin, ShieldCheck, Users } from "lucide-react";
+import { Award, ShieldCheck, Users } from "lucide-react";
 import { motion, useReducedMotion } from "framer-motion";
 import { siteConfig } from "@/config/site";
 import { assetPath } from "@/lib/paths";
@@ -10,14 +10,13 @@ import Container from "./Container";
 const ease = [0.16, 1, 0.3, 1] as const;
 
 const principles = [
-  { label: "FORTSCHRITT.", className: "text-white" },
-  { label: "STRUKTUR.", className: "text-accent" },
-  { label: "ERGEBNIS.", className: "text-white" },
+  { label: "DEIN WEG.", className: "text-white" },
+  { label: "DEIN ZIEL.", className: "text-accent" },
 ];
 
 const heroStats = [
   { icon: Users, value: "100+", label: "betreute Kunden" },
-  { icon: MapPin, value: "Limburg", label: "und Umgebung" },
+  { icon: Award, value: "10+", label: "Jahre Erfahrung" },
   { icon: ShieldCheck, value: "1:1", label: "individuelle Betreuung" },
 ];
 
@@ -134,7 +133,7 @@ export default function Hero() {
                   Justin Doms
                 </p>
                 <p className="mt-1 text-sm leading-relaxed text-white/68">
-                  Personal Trainer & Ernährungscoach in Hadamar
+                  Personal Trainer & Ernährungscoach
                 </p>
               </div>
               <p className="text-[0.68rem] font-semibold uppercase tracking-[0.2em] text-accent sm:justify-self-end">
@@ -147,7 +146,7 @@ export default function Hero() {
               Justin Doms
             </p>
             <p className="mt-1 text-sm leading-relaxed text-white/68">
-              Personal Trainer & Ernährungscoach in Hadamar
+              Personal Trainer & Ernährungscoach
             </p>
           </div>
         </div>

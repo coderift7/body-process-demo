@@ -33,7 +33,7 @@ export default function Footer() {
               </Link>
             </div>
             <p className="text-sm leading-relaxed text-white/70">
-              {siteConfig.company.tagline} In {siteConfig.company.serviceArea}.
+              {siteConfig.company.tagline}
             </p>
           </div>
 
@@ -84,7 +84,7 @@ export default function Footer() {
                   aria-hidden="true"
                 />
                 <span className="text-sm text-white/70">
-                  {siteConfig.company.address}
+                  Vor Ort nach Absprache und digital
                 </span>
               </li>
               <li className="flex items-center gap-2.5">

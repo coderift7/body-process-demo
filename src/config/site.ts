@@ -14,16 +14,16 @@ export const siteConfig = {
 
   meta: {
     title:
-      "Body Process — Personal Training & Online-Coaching in Hadamar",
+      "Body Process — Personal Training & Online Coaching",
     description:
-      "Personal Training in Hadamar, Limburg und Diez sowie Online-Coaching für Training, Ernährung und Fortschritt mit Justin Doms. Klare Struktur, ehrliche Betreuung und ein Plan, der zu deinem Alltag passt.",
+      "Personal Training und Online Coaching mit Justin Doms für mehr Stärke, Energie und Selbstbewusstsein. Klare Struktur, realistische Pläne und Betreuung, die zu deinem Leben passt.",
   },
 
   hero: {
-    eyebrow: "Personal Training vor Ort · Online-Coaching digital",
-    headline: "Fortschritt. Struktur. Ergebnis.",
+    eyebrow: "Personaltrainer vor Ort • Online Coaching Digital",
+    headline: "Dein Weg. Dein Ziel.",
     subheadline:
-      "Personal Training und Coaching für Menschen mit vollem Alltag, die fit werden wollen, ohne Fitness zum Vollzeitjob zu machen.",
+      "Personaltraining das zu deinem Leben passt - für mehr Stärke, Energie und Selbstbewusstsein.",
     cta1: "Kostenloses Erstgespräch sichern",
     cta2: "Coaching ansehen",
     benefits: [
@@ -31,7 +31,7 @@ export const siteConfig = {
       "Online-Coaching für Plan, Formchecks und Ernährung",
       "Ehrliche Betreuung im vereinbarten Rahmen statt anonymer Standardplan",
     ],
-    note: "Vor Ort in Hadamar, Limburg & Diez. Digital begleitbar für Training und Ernährung.",
+    note: "Vor Ort und digital begleitbar für Training, Ernährung und Fortschritt.",
   },
 
   trustStats: [
@@ -92,22 +92,22 @@ export const siteConfig = {
   ],
 
   team: {
-    heading: "Struktur. Erfahrung. Ehrliche Betreuung.",
+    heading: "Hi, ich bin Justin.",
     description:
-      "Ich bin Personal Trainer und Ernährungscoach aus Leidenschaft. Seit über 10 Jahren helfe ich Menschen dabei, fitter, leistungsfähiger und gesünder zu werden - ohne leere Versprechen, ohne komplizierte Regeln.",
+      "Personal Trainer und Ernährungscoach aus Leidenschaft. Seit über 10 Jahren helfe ich Menschen dabei, fitter, leistungsfähiger und gesünder zu werden.",
     members: [
       {
         name: "Justin Doms",
         role: "Personal Trainer & Ernährungscoach",
         description:
-          "Mein Ansatz: klare Strukturen, realistische Pläne und Betreuung, die wirklich weiterbringt.",
+          "Mein Ansatz: klare Strukturen, realistische Pläne und Betreuung, die dich wirklich weiterbringt.",
         image: "/images/team-justin-portrait-demo.png",
       },
     ],
     stats: [
-      { value: "1:1", label: "Betreuung mit klarer Verantwortung" },
-      { value: "100+", label: "Kunden auf ihrem Weg begleitet" },
-      { value: "3", label: "Hebel: Training, Ernährung, Umsetzung" },
+      { value: "Individuell", label: "Keine Standardpläne" },
+      { value: "Nachhaltig", label: "Langfristige Ergebnisse" },
+      { value: "Praxisnah", label: "Umsetzung im Alltag" },
     ],
   },
 
@@ -140,14 +140,14 @@ export const siteConfig = {
   },
 
   process: {
-    heading: "So läuft dein Einstieg ab",
+    heading: "Klarer Ablauf. Klare Ergebnisse.",
     intro:
-      "Wir starten nicht mit einem Standardplan, sondern mit deinem Alltag. Daraus entsteht eine klare Strategie, die regelmäßig angepasst wird.",
+      "In drei Schritten zu mehr Struktur, Leistung und einem Körper, der zu deinem Leben passt.",
     steps: [
       {
         title: "Analyse",
         description:
-          "Wir schauen auf Alltag, Ziel, Trainingsstand und Zeitfenster.",
+          "Wir schauen auf Alltag, Ziele, Trainingsstand, Ernährung und Zeitfenster.",
       },
       {
         title: "Strategie",
@@ -157,7 +157,7 @@ export const siteConfig = {
       {
         title: "Umsetzung & Anpassung",
         description:
-          "Training und Ernährung werden laufend angepasst, damit Fortschritt stabil bleibt.",
+          "Training und Ernährung werden laufend angepasst, damit dein Fortschritt stabil bleibt.",
       },
     ],
     highlight:
@@ -165,36 +165,55 @@ export const siteConfig = {
   },
 
   pricing: {
-    heading: "Betreuungsmöglichkeiten",
+    heading: "Mein Angebot für deinen Erfolg",
     intro:
-      "Wähle den Rahmen, der zu deinem Alltag passt. Alle Preise sind Endpreise inkl. gesetzlicher MwSt.",
+      "Individuell. Flexibel. Effektiv.",
     note:
       "Das Erstgespräch ist kostenlos und unverbindlich. Die genaue Empfehlung richtet sich nach Ziel, Trainingsstand, Alltag und freien Betreuungskapazitäten.",
     recommended: [
       {
         name: "Personal Training",
-        price: "ab 83 €",
-        unit: "pro Einheit",
+        price: "ab 70 €",
+        unit: "pro Einheit inkl. MwSt.",
         description:
-          "1:1 Betreuung vor Ort mit direkter Korrektur, individueller Trainingsplanung und festen Terminen.",
+          "1:1 Betreuung vor Ort mit voller Konzentration auf dich und deine Ziele.",
         tag: "1:1 Betreuung vor Ort",
         featured: true,
+        features: [
+          "Individuelle Trainingserklärung",
+          "Technik, Korrektur und Erklären",
+          "Motivation und Verantwortung",
+          "Maximale Ergebnisse",
+        ],
       },
       {
-        name: "Online-Coaching",
+        name: "Online Coaching",
         price: "ab 119 €",
-        unit: "pro Monat",
+        unit: "pro Monat inkl. MwSt.",
         description:
-          "Digitale Betreuung mit Trainingsplan, Formcheck, Ernährung & Anpassung und WhatsApp-Support.",
+          "Dein Training, deine Ernährung, dein Fortschritt - egal wo du bist.",
         tag: "digitale Betreuung",
+        features: [
+          "Individuelle Trainingspläne",
+          "Ernährungsstrategie und Tracking",
+          "Regelmäßige Anpassung",
+          "Direkter Support & Formcheck",
+        ],
       },
       {
-        name: "Hybrid Coaching",
-        price: "individuell",
-        unit: "vor Ort + digital",
+        name: "Ernährungsberatung",
+        price: "ab 150 €",
+        unit: "inkl. MwSt.",
         description:
-          "Persönlicher Start, digitale Betreuung im Alltag und maximale Flexibilität.",
+          "Für Einsteiger, die endlich verstehen wollen wie Ernährung funktioniert oder ambitionierte Sportler, die ihr Training und ihre Ernährung gezielter steuern wollen.",
         tag: "vor Ort + digital",
+        features: [
+          "Kalorien und Makroanpassung",
+          "Mikronährstoffoptimierung",
+          "Kalorientracking oder Ernährungspläne",
+          "Strategien und Anpassungen auf deine Trainingsziele",
+          "Supplement Beratung",
+        ],
       },
     ],
     personalTraining: {
@@ -368,7 +387,7 @@ export const siteConfig = {
       {
         question: "Kann ich Online-Coaching nutzen, obwohl ich aus der Region komme?",
         answer:
-          "Ja. Es ist nicht nur für Kunden weit weg gedacht, sondern auch für Menschen aus Hadamar, Limburg und Diez, die selbst trainieren und meine Struktur digital nutzen wollen.",
+          "Ja. Es ist nicht nur für Kunden weit weg gedacht, sondern auch für Menschen, die selbst trainieren und meine Struktur digital nutzen wollen.",
       },
     ],
     boundaries:
@@ -397,12 +416,12 @@ export const siteConfig = {
   ],
 
   appointment: {
-    heading: "Kostenloses Erstgespräch anfragen",
+    heading: "Bereit für den nächsten Schritt?",
     subheading:
-      "Schick mir kurz deine Infos. Ich schaue mir Ziel, Alltag und Trainingsstand an und melde mich mit einer ehrlichen Einschätzung, welcher Weg sinnvoll ist.",
+      "Egal, wo du gerade stehst - gemeinsam finden wir heraus, wie du deine Ziele erreichst und dein volles Potenzial entfaltest. Schick mir kurz deine Infos und ich freue mich darauf, dich kennenzulernen.",
     treatmentTypes: [
       "Vor-Ort Training",
-      "Online-Coaching",
+      "Online Coaching",
       "Hybrid / unsicher",
       "Regeneration / Comeback",
       "Outdoor-Training",
@@ -483,9 +502,9 @@ export const siteConfig = {
         "Feedback läuft im vereinbarten Rahmen. Du bekommst verlässliche Rückmeldungen und Anpassungen, aber kein unrealistisches 24/7-Versprechen.",
     },
     {
-      question: "Kann ich Online-Coaching auch nutzen, wenn ich aus Hadamar oder Limburg komme?",
+      question: "Kann ich Online-Coaching auch nutzen, wenn ich in der Nähe wohne?",
       answer:
-        "Ja. Online-Coaching ist nicht nur für weit entfernte Kunden gedacht, sondern auch für Menschen aus der Region, die selbst trainieren und meine Struktur digital nutzen möchten.",
+        "Ja. Online-Coaching ist nicht nur für weit entfernte Kunden gedacht, sondern auch für Menschen, die selbst trainieren und meine Struktur digital nutzen möchten.",
     },
     {
       question: "Kann ich auch vor Ort mit dir trainieren?",
@@ -510,13 +529,12 @@ export const siteConfig = {
   ],
 
   nav: [
-    { label: "Leistungen", href: "/#leistungen" },
-    { label: "Für wen", href: "/#fuer-wen" },
     { label: "Über mich", href: "/#ueber-mich" },
+    { label: "Leistungen", href: "/#leistungen" },
     { label: "Ablauf", href: "/#ablauf" },
     { label: "Angebote", href: "/#preise" },
-    { label: "Online-Coaching", href: "/online-coaching" },
     { label: "Bewertungen", href: "/#bewertungen" },
     { label: "Kontakt", href: "/#kontakt" },
+    { label: "FAQ", href: "/#faq" },
   ],
 };
